@@ -10,7 +10,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#define MAX_SIZE 2048
 struct cmdin
 {
     char **args;
@@ -27,8 +27,11 @@ struct cmdin * parse(char *cmd)
     struct cmdin *ped = malloc(sizeof(struct cmdin)); 
     ped->nargs = 1;
     ped->args =  malloc(sizeof(char*) * 2048);
-    sscanf(cmd, "%s %[^\n]", ped->args[0], cmd);
+    ped->args[0] = malloc(sizeof(char) * 2048);
 
+    sscanf(cmd, "%s %[^\n]", ped->args[0], cmd);
+    printf("%s", ped->args[0]);
+    fflush(0);
     while(sscanf(cmd, "%s %[^\n]", ped->args[ped->nargs], cmd))
      {
         ped->nargs++;

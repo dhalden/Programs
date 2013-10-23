@@ -11,4 +11,28 @@ Variables
             -an int has 4 bytes
     -a value
 
+Aliases
+    -More than on ename associated to the same memory address
 
+Type
+    -defines what kinds of values are allowed to be stored
+    -how they are to be interpreted.
+
+Size
+    -depends on what kinds of variables are going to be included
+
+Value
+    -what's actually stored in the array
+
+Binding
+    -is an association between
+        -an attribute and an entity
+        -an operation and a symbol
+Times when Binding takes place
+    --language(compiler) design time
+    --Language implementation time
+    --Compile time
+    --Link time (when your compiled code is linked to other libraries)
+    --Load time (when the program is executed it gets loaded into memory)
+    --Run time (when the program starts executing after being loaded into
+      memory)

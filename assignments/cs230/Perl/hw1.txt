@@ -1,0 +1,12 @@
+1.
+   <switch> -> switch(<primitive var>){<case>}
+         
+   
+
+
+
+
+
+3. <AB> -> (a<BC>bb)
+   <BC> -> (aabbbb|aa<BC>bbbb|)
+

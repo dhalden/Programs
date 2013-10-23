@@ -1,0 +1,11 @@
+Denotational Semantics
+    
+    -provides a rigorous way to think about programs
+    -can be an aid to language design
+
+Lexical & Syntax Analysis
+    
+    -Given a potentially valid sentence, a language recognizer tells you if 
+    the sentence is correct.
+    -
+

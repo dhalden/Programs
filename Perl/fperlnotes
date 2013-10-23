@@ -1,0 +1,35 @@
+#! /usr/bin/perl
+
+{
+$seed = 1;
+sub my_rand
+{
+    $seed = int(($seed * 11035245 + 12345)/ 65536) %368;
+    return $seed;
+}
+}
+for (1 .. 9)
+{
+    $returned = &my_rand();
+    print("$returned\n");
+}
+
+@mylist = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q');
+print foreach @mylist;
+$string = "notchomped\n";
+$unequalstring = "notchomped";
+if($string eq $unequalstring)
+{
+    print "They were equal!";
+}
+else
+{
+    print "They weren't equal";
+    chomp($string);
+    if($string eq $unequalstring)
+    {
+        print ", but now they are!";
+    }
+
+}
+

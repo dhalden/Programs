@@ -1,0 +1,9 @@
+Compile Instructions:
+#I did not use word_list.c
+gcc -Wall -g dictionary.c anagrams.c -o anagrams
+
+
+#I am including the instructions for how I compiled dict_modify, but DO NOT RUN
+#It takes on the order of 2 hours to run, please just use the new_dict.txt that I
+#created from it.
+gcc -Wall -g -o dict_modify dict_modify.c

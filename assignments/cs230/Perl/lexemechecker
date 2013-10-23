@@ -1,0 +1,28 @@
+#! /usr/bin/perl
+
+open(INF, "<", "infile.txt") or die "couldn't open input file\n";
+
+{
+    local $/;
+    $in_buffer = <INF>;
+}
+while ($in_buffer =~ /(\S+)/)
+{
+#    print("$in_buffer\n");
+    $in_buffer =~ /(\S+)(\s+)(.*)/s;
+    $in_buffer = $3;
+#    print("$in_buffer\n");
+    $lexeme = $1;
+    if($lexeme =~ /^(program|while|begin|end|for|if|else|and|or|not)$/)
+    {
+        print("KNOWN KEYWORD: $&\n");
+    }
+    elsif($lexeme =~ /(\+|\-|\*|\{|\}|\;)/)
+    {
+        print("KNOWN SYMBOL: $&\n");
+    }
+    else
+    {
+        print("UNKNOWN LEXEME: $lexeme\n");
+    }
+}

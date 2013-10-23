@@ -1,0 +1,27 @@
+1. signed or unsigned integers of arbitrary length
+$integerstr =~ m/^(\-|\+)?(\d)+$/;
+matches integers only.
+
+2.
+    a. any number of 1's followed by 1 or more z's
+      $onezee =~ m/(1)*z+/;
+    b. 1 or more copies of what is contained in $matchword
+      $stringcheese =~ m/($matchword)+/;
+    c. one $ followed by one or more digits followed by a . followed by exactly
+       two digits.
+      $dollarvalue =~ m/\$(\d)+(\.)(\d){2}/;
+    d. match an expression that represents two integers being multiplied.
+       whitespace may or may not be between the numbers and the *.
+      $multiplication =~m/(\d)+(\s)*[*x](\s)*(\d)+/;
+
+
+3. What does this do?  /([^:]+):\/\/([^\/]+)\/(.*)/;
+    this finds 1 or more characters that are not colon, followed by a colon,
+    followed by 2 slashes, followed by one or more characters that are not
+    slashes, or backslashes, followed by a forward slash, followed by any number
+    of any characters.
+    It might look something like hello://whatisup?/anythingyoulike/
+    or like a url                https://www.google.com/reader
+4.
+
+

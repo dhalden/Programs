@@ -1,0 +1,27 @@
+
+
+Operational semantics-
+    1.  describe the meaning of a program by specifying it with more easily
+        understood constructs (usually in a lower level language)
+        - while(expr)           - label:if(expr)
+           {                            {
+            //statements                //statements
+           }                            goto label
+                                        }
+
+axiomatic semantics-
+    1. based on formal logic (predicate calculus)
+        an assertion before a statement is a precondition
+        an assertion after a statement is a postcondition
+        {P} is precondition {Q} is post condition
+        Ex.
+            a = b + 1 {a > 1}
+            -Read this as a must be greater than one after this statement 
+             executes.
+            - One possible precondition: {b > 0}
+            - the weakest precondition: {b > 0} is the least restrictive 
+              precondition that will guarantee the post condition.
+            - more difficult to find weakest precondition in a while loop.
+
+        =>implies. as in X => Y "If X is true, then Y is true."
+

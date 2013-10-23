@@ -1,0 +1,114 @@
+#! /usr/bin/perl
+
+$movieQuote = "Good afternoon, gentlemen. I am a HAL 9000 computer.";
+if($movieQuote =~ /(.*)en\.(.*)(\d+)/)
+{
+    print "1A.\n";
+    print "\$` = $`\n";
+    print "\$& = $&\n";
+    print "\$' = $'\n";
+    print "\$1 = $1\n";
+    print "\$2 = $2\n";
+    print "\$3 = $3\n"; 
+}
+else
+{
+    print "didn't match\n";
+}
+
+$movieQuote = "Good afternoon, gentlemen. I am a HAL 9000 computer.";
+if($movieQuote =~ /(.*)en\.(.*)(\d*)/)
+{
+    print "1B.\n";
+    print "\$` = $`\n";
+    print "\$& = $&\n";
+    print "\$' = $'\n";
+    print "\$1 = $1\n";
+    print "\$2 = $2\n";
+    print "\$3 = $3\n"; 
+}
+else
+{
+    print "didn't match\n";
+}
+
+$movieQuote = "Good afternoon, gentlemen. I am a HAL 9000 computer.";
+if($movieQuote =~ /(.*)en(.*)(\d{2,3})/)
+{
+    print "1C.\n";
+    print "\$` = $`\n";
+    print "\$& = $&\n";
+    print "\$' = $'\n";
+    print "\$1 = $1\n";
+    print "\$2 = $2\n";
+    print "\$3 = $3\n"; 
+}
+else
+{
+    print "didn't match\n";
+}
+
+$movieQuote = "Good afternoon, gentlemen. I am a HAL 9000 computer.";
+if($movieQuote =~ /(.*)HAL\ (\d+)/)
+{
+    print "1D.\n";
+    print "\$` = $`\n";
+    print "\$& = $&\n";
+    print "\$' = $'\n";
+    print "\$1 = $1\n";
+    print "\$2 = $2\n";
+    print "\$3 = $3\n"; 
+}
+else
+{
+    print "didn't match\n";
+}
+
+$movieQuote = "Good afternoon, gentlemen. I am a HAL 9000 computer.";
+if($movieQuote =~ /(.*)a(.*)\d+/)
+{
+    print "1E.\n";
+    print "\$` = $`\n";
+    print "\$& = $&\n";
+    print "\$' = $'\n";
+    print "\$1 = $1\n";
+    print "\$2 = $2\n";
+    print "\$3 = $3\n"; 
+}
+else
+{
+    print "didn't match\n";
+}
+
+
+$movieQuote = "Good afternoon, gentlemen. I am a HAL 9000 computer.";
+if($movieQuote =~ m/(.*)a(.*)\d+/i)
+{
+    print "1F.\n";
+    print "\$` = $`\n";
+    print "\$& = $&\n";
+    print "\$' = $'\n";
+    print "\$1 = $1\n";
+    print "\$2 = $2\n";
+    print "\$3 = $3\n"; 
+}
+else
+{
+    print "didn't match\n";
+}
+
+$movieQuote = "Good afternoon, gentlemen. I am a HAL 9000 computer.";
+if($movieQuote =~ m/a(.*)\d+/i)
+{
+    print "1G.\n";
+    print "\$` = $`\n";
+    print "\$& = $&\n";
+    print "\$' = $'\n";
+    print "\$1 = $1\n";
+    print "\$2 = $2\n";
+    print "\$3 = $3\n"; 
+}
+else
+{
+    print "didn't match\n";
+}

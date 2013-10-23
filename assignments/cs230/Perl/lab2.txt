@@ -1,0 +1,70 @@
+1.
+$movieQuote = "Good afternoon, gentlemen. I am a HAL 9000 computer.";
+
+ 1.A.
+ $movieQuote =~ m/(.*)en\.(.*)(\d+)/
+    a) matches
+
+    b) $` = ""
+       $& = "Good afternoon, gentlmen. I am a HAL 900"
+       $' = " computer."
+       $1 = "Good afternoon, gentlem"
+       $2 = " I am a HAL 900"
+       $3 = "0"
+
+
+ 1.B.
+ $movieQuote =~ m/(.*)en\.(.*)(\d*)/
+    a) matches
+
+    b) $` = ""
+       $& = "Good afternoon, gentlemen. I am a HAL 9000 computer."
+       $' = ""
+       $1 = "Good afternoon, gentlem"
+       $2 = " I am a HAL 9000 computer."
+       $3 = ""
+ 1.C.
+ $movieQuote =~ m/(.*)en(.*)(\d{2,3})/
+    a) matches
+
+    b) $` = ""
+       $& = "Good afternoon, gentlemen. I am a HAL 9000"
+       $' = " computer."
+       $1 = "Good afternoon, gentlem"
+       $2 = ". I am a HAL 90"
+       $3 = "00"
+ 1.D.
+ $movieQuote =~ m/(.*)HAL\ (\d+)/
+    a) matches
+
+    b) $` = ""
+       $& = "Good afternoon, gentlemen. I am a HAL 9"
+       $' = " computer."
+       $1 = "Good afternoon, gentlemen. I am a "
+       $2 = "9000"
+ 1.E.
+ $movieQuote =~ m/(.*)a(.*)\d+/
+    a) matches
+
+    b) $` = "" 
+       $& = "Good afternoon, gentlemen. I am a HAL 9000"
+       $' = " computer."
+       $1 = "Good afternoon, gentlemen. I am "
+       $2 = " HAL 900"
+ 1.F.
+ $movieQuote =~ m/(.*)a(.*)\d+/i
+    a) matches
+
+    b) $` = ""
+       $& = "Good afternoon, gentlemen. I am a HAL 9000"
+       $' = " computer."
+       $1 = "Good afternoon, gentlemen. I am a H"
+       $2 = "L 900"
+ 1.G.
+ $movieQuote =~ m/a(.*)\d+/i
+    a) matches
+
+    b) $` = "Good "
+       $& = "afternoon, gentlemen. I am a HAL 9000"
+       $' = "computer"
+       $1 = "fternoon, gentlemen. I am a HAL 900"

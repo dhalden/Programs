@@ -1,0 +1,10 @@
+
+program ABC
+begin
+
+    while true
+    {
+     print "Hello"
+    }
+
+end

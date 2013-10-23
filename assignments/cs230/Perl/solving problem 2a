@@ -1,0 +1,37 @@
+<Program>
+a.   program <identifier>; <block>.
+b.   program validprogram; <block>.
+c.   program validprogram;
+ <variable declaration part>
+<procedure declaration part>
+<statement part>.
+
+d.  program validprogram;
+     var  <identifier> : <type>
+     <procedure declaration part>
+     <statement part>.
+
+e. program validprogram;
+    var validvariable : int
+    <procedure declaration>
+    <compound statement>
+
+f. program validprogram;
+   var validvariable : int
+   procedure validprocedure; <block>
+   begin <statement> end
+
+g. program validprogram;
+   var validvariable : int
+   procedure validprocedure;
+   <variable declaration part>
+   <procedure declaration part>
+   <statement part>
+   begin <write statement> end.
+
+h. program validprogram;
+    var validvariable : int
+    procedure validprocedure;
+    newvariable : int
+    begin <simple statement>
+    begin write (<expression>) end.

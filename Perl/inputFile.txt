@@ -1,0 +1,13 @@
+Eggs
+1.23
+Milk
+3.50
+Cookies
+2.34
+Cow
+500.00
+water
+1.29
+soda
+2.45
+eof

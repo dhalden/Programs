@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #define MAX_SIZE 2048
+#define MAX_CLEN 2097152
 struct cmdin
 {
     char **args;
@@ -21,22 +22,39 @@ struct backlog
     struct cmdin *cmd;
 };
 
+//free the command after each runthrough
+int freeze(struct cmdin *cmd)
+{
+    int i;
+    for(i=0; i <= (cmd->nargs); i++)
+    {
+        free(cmd->args[i]);
+    }
+    free(cmd->args);
+    free(cmd);
+    return 0;
+}
+//parse input, and add a null to the end
 struct cmdin * parse(char *cmd)
 {
     
     struct cmdin *ped = malloc(sizeof(struct cmdin)); 
     ped->nargs = 1;
-    ped->args =  malloc(sizeof(char*) * 2048);
-    ped->args[0] = malloc(sizeof(char) * 2048);
+    ped->args =  malloc(sizeof(char*) * MAX_SIZE);
+    ped->args[0] = malloc(sizeof(char) * MAX_SIZE);
 
     sscanf(cmd, "%s %[^\n]", ped->args[0], cmd);
-    printf("%s", ped->args[0]);
-    fflush(0);
-    while(sscanf(cmd, "%s %[^\n]", ped->args[ped->nargs], cmd))
+    ped->args[1] =  malloc(sizeof(char) * MAX_SIZE);
+    while(sscanf(cmd, " %s %[^\n]", ped->args[ped->nargs], cmd) == 2)
      {
+        
         ped->nargs++;
+        ped->args[ped->nargs] = malloc(sizeof(char) * MAX_SIZE);
+        printf("\ncmd: >%s<\n", cmd);
      }
-     ped->nargs++;
+    strcpy(ped->args[ped->nargs],cmd);
+    ped->nargs++;
+    ped->args[ped->nargs] = malloc(sizeof(char) * MAX_SIZE);
     ped->args[ped->nargs] = NULL;
     return ped;
 
@@ -45,10 +63,10 @@ struct cmdin * parse(char *cmd)
 
 int main()
 {
-    char cwd[2097152];
+    char cwd[MAX_CLEN];
     getcwd(cwd, sizeof(cwd));
 
-    char input[2097152]; 
+    char input[MAX_CLEN]; 
     char *exit  = "exit\n";
     char *cd = "cd";
     //Command to take input
@@ -67,13 +85,13 @@ int main()
             chdir(cmd->args[1]); 
             getcwd(cwd, sizeof(cwd));
         }
-        else if(!strcmp(input, exit))
+        else if(strcmp(input, exit))
         {
             //command to run input
             //int child_pid;
             //int curr_pid;
             int i;
-            for(i=0; i<cmd->nargs;i++)
+            for(i=0; i <cmd->nargs; i++)
             {
                 printf("\nargs[%d]: >%s<\n",i, cmd->args[i]); 
             }
@@ -92,8 +110,7 @@ int main()
             */
         }
         printf("tosh$ ");
-        free(cmd->args);
-        free(cmd);
+        freeze(cmd);
         fgets(input, sizeof input, stdin);
         
     }

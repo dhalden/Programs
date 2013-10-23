@@ -1,0 +1,14 @@
+Names
+    -readibility, writeability
+        -Not special characters
+        -Not special words
+        -Allowable length
+        -What starting characters?
+Variables
+    -a name + a memory location + a type identifier
+    -can have a type.
+        -implies a size
+            -an int has 4 bytes
+    -a value
+
+

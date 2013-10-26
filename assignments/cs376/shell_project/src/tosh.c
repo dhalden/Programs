@@ -10,10 +10,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 #define MAX_SIZE 2048
 #define MAX_CLEN 2097152
 struct cmdin
 {
+    char *cmd;
     char **args;
     int nargs;
 };
@@ -39,20 +41,23 @@ struct cmdin * parse(char *cmd)
 {
     
     struct cmdin *ped = malloc(sizeof(struct cmdin)); 
-    ped->nargs = 1;
+    ped->nargs = 0;
     ped->args =  malloc(sizeof(char*) * MAX_SIZE);
-    ped->args[0] = malloc(sizeof(char) * MAX_SIZE);
+    ped->cmd = malloc(sizeof(char) * MAX_SIZE);
 
-    sscanf(cmd, "%s %[^\n]", ped->args[0], cmd);
-    ped->args[1] =  malloc(sizeof(char) * MAX_SIZE);
+    sscanf(cmd, "%s %[^\n]", ped->cmd, cmd);
+    ped->args[ped->nargs] =  malloc(sizeof(char) * MAX_SIZE);
+    strcpy(ped->args[ped->nargs], ped->cmd);
+    ped->nargs++;
+    ped->args[ped->nargs] =  malloc(sizeof(char) * MAX_SIZE);
     while(sscanf(cmd, " %s %[^\n]", ped->args[ped->nargs], cmd) == 2)
      {
         
         ped->nargs++;
         ped->args[ped->nargs] = malloc(sizeof(char) * MAX_SIZE);
-        printf("\ncmd: >%s<\n", cmd);
      }
-    strcpy(ped->args[ped->nargs],cmd);
+     
+    strncpy(ped->args[ped->nargs], cmd, strlen(cmd)-1);
     ped->nargs++;
     ped->args[ped->nargs] = malloc(sizeof(char) * MAX_SIZE);
     ped->args[ped->nargs] = NULL;
@@ -65,20 +70,20 @@ int main()
 {
     char cwd[MAX_CLEN];
     getcwd(cwd, sizeof(cwd));
-
     char input[MAX_CLEN]; 
     char *exit  = "exit\n";
     char *cd = "cd";
+
     //Command to take input
     printf("tosh$ ");
     fgets(input, sizeof input, stdin);    
+    
     while(strcmp(input, exit))
     {
         //Command to parse input
         struct cmdin *cmd;
         cmd = parse(input);
-        
-        printf("this happens");
+
         //Change directories
         if(!strcmp(cd, cmd->args[0]))
         {
@@ -88,27 +93,29 @@ int main()
         else if(strcmp(input, exit))
         {
             //command to run input
-            //int child_pid;
-            //int curr_pid;
-            int i;
-            for(i=0; i <cmd->nargs; i++)
-            {
-                printf("\nargs[%d]: >%s<\n",i, cmd->args[i]); 
-            }
-           /* 
+            int child_pid;
             child_pid = fork();
-            //curr_pid = getpid(); 
+
             if(child_pid == 0)
             {
-                execvp(input, NULL);
+                if(strcmp(cmd->args[1],cmd->args[0]))
+                {
+                    execvp(cmd->cmd, cmd->args);
+                }
+                else
+                {
+                    cmd->args[1] = NULL;
+                    execvp(cmd->cmd, cmd->args);
+                }
             }
             else
             {
-                wait(child_pid);
+                wait(&child_pid);
             }
-            //Command to take input
-            */
+            
         }
+
+        //Command to take input
         printf("tosh$ ");
         freeze(cmd);
         fgets(input, sizeof input, stdin);

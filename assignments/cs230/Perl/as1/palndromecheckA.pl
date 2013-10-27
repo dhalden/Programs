@@ -17,7 +17,6 @@ FOO:
             last FOO;
         }
 
-
     }
 }
 if(length($input) <= 1)

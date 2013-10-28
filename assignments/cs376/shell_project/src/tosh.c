@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#define MAX_SIZE 2048
+#define MAX_SIZE 1024
 #define MAX_CLEN 2097152
 struct cmdin
 {
@@ -50,15 +50,15 @@ int conpipe(struct cmdin * cmd)
 }
 
 //free the command after each runthrough
-int freeze(struct cmdin *cmd)
+int freeze(struct cmdin cmd)
 {
     int i;
-    for(i=0; i <= (cmd->nargs); i++)
+    for(i=0; i <= (cmd.nargs); i++)
     {
-        free(cmd->args[i]);
+        free(cmd.args[i]);
     }
-    free(cmd->args);
-    free(cmd);
+    free(cmd.args);
+    free(cmd.cmd);
     return 0;
 }
 
@@ -147,6 +147,7 @@ int main()
                     wait(&child_pid);
                 }
             }
+            freeze(*cmd);
         }
         else
         {
@@ -157,7 +158,7 @@ int main()
             pcmd[1].nargs = 0;
             int i;
             int j = 0;
-            pcmd[1].cmd = cmd->args[(cmd->pipeflag + 1)];
+            strcpy(pcmd[1].cmd, cmd->args[(cmd->pipeflag + 1)]);
             for(i = (cmd->pipeflag + 1); i < cmd->nargs; i++)
             {
                pcmd[1].args[j] = malloc(sizeof(char) * MAX_SIZE);
@@ -169,14 +170,18 @@ int main()
             for(i = cmd->pipeflag; i < cmd->nargs; i++)
             {
                 pcmd[0].args[i] = NULL;
+                free(pcmd[0].args[i]);
+                pcmd[0].nargs--;
             }
 
 
 
+            freeze(pcmd[0]);
+            freeze(pcmd[1]);
+            free(cmd);
         }
         //Command to take input
         printf("tosh$ ");
-        freeze(cmd);
         fgets(input, sizeof input, stdin);
     }
     return 0;

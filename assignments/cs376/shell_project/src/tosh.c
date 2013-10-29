@@ -13,6 +13,9 @@
 #include <sys/wait.h>
 #define MAX_SIZE 1024
 #define MAX_CLEN 2097152
+#define READ_END 0
+#define WRITE_END 1
+#define CHILD_STATUS 0
 struct cmdin
 {
     char *cmd;
@@ -55,6 +58,7 @@ int freeze(struct cmdin cmd)
     int i;
     for(i=0; i <= (cmd.nargs); i++)
     {
+        //printf("cmd.args[%d]: %s\n",i, cmd.args[i]);
         free(cmd.args[i]);
     }
     free(cmd.args);
@@ -92,7 +96,7 @@ struct cmdin * parse(char *cmd)
  
     strncpy(ped->args[ped->nargs], cmd, strlen(cmd)-1);
     ped->nargs++;
-    ped->args[ped->nargs] = malloc(sizeof(char) * MAX_SIZE);
+    //ped->args[ped->nargs] = malloc(sizeof(char) * MAX_SIZE);
     ped->args[ped->nargs] = NULL;
 
     return ped;
@@ -138,6 +142,7 @@ int main()
                     }
                     else
                     {
+                        free(cmd->args[1]);
                         cmd->args[1] = NULL;
                         execvp(cmd->cmd, cmd->args);
                     }
@@ -148,6 +153,7 @@ int main()
                 }
             }
             freeze(*cmd);
+            free(cmd);
         }
         else
         {
@@ -169,13 +175,62 @@ int main()
             pcmd[0] = *cmd;
             for(i = cmd->pipeflag; i < cmd->nargs; i++)
             {
-                pcmd[0].args[i] = NULL;
                 free(pcmd[0].args[i]);
+                pcmd[0].args[i] = NULL;
                 pcmd[0].nargs--;
             }
 
+            //run the pipe commands.
+            int fd[2];
+            //pid_t pid;
+            //pid_t pid2;
+            char buffer[MAX_CLEN];
+            if (pipe(fd) == -1)
+            {
+                fprintf(stderr, "Pipe Failed");
+            }
 
+            int child_process = fork();
+            if(child_process > 0)
+            {
+                int child_process2 = fork();
+                if (child_process2 < 0)
+                {
+                    fprintf(stderr, "Fork Failed");
+                }
+                if (child_process2 == 0)
+                {
+                    //child child process
+                    close(1);
+                    dup(fd[WRITE_END]);
+                    close(fd[READ_END]);
 
+                    write(fd[WRITE_END], stdin, MAX_CLEN);
+                    execvp(pcmd[0].cmd, pcmd[0].args);
+                }
+                else
+                {
+                    //child parent process
+                    wait(CHILD_STATUS);
+                    close(fd[WRITE_END]);
+                    close(0);
+                    dup(fd[READ_END]);
+                    read(fd[READ_END], buffer , MAX_CLEN);
+                    execvp(pcmd[1].cmd, pcmd[1].args);
+
+                }
+            }
+            else if (child_process == 0)
+            {
+                //parent parent process
+                wait(CHILD_STATUS);
+                close(fd[READ_END]);
+            }
+            else
+            {
+                fprintf(stderr, "Fork Failed");
+            }
+            //free cmds.
             freeze(pcmd[0]);
             freeze(pcmd[1]);
             free(cmd);

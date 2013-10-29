@@ -36,3 +36,12 @@ Times when Binding takes place
     --Load time (when the program is executed it gets loaded into memory)
     --Run time (when the program starts executing after being loaded into
       memory)
+
+Types of Binding
+    -static
+        -fist occurs before run time and stays the same throughout the
+         program execution
+    -Dynamic 
+        -either it first occurs during run time
+        -OR it can change during execution
+

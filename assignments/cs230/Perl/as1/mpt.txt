@@ -1,0 +1,17 @@
+program Prog
+begin 
+hello := 9 + 1;
+read (hello);
+write (hello);
+if hello <> (9 - 3)
+then
+read (hello)
+else
+write (hello);
+while (hello) <= (9+22)
+do
+hello := hello + 4;
+begin
+hi := hello
+end
+end

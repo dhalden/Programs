@@ -1,7 +1,7 @@
 #! /usr/bin/perl
 
 
-open (INFILE, "<", "expression.txt") or die ("Couldn't find file to open.");
+open (INFILE, "<", "mpt.txt") or die ("Couldn't find file to open.");
 
 {
     local $/;
@@ -10,11 +10,11 @@ open (INFILE, "<", "expression.txt") or die ("Couldn't find file to open.");
 
 sub lex
 {
-    if ($input =~ /^\s*(\;|\:\=|\(|\)|\,|\+|\-|\*|\/|\=|\<\>|\<|\<\=|\>\=|\>)/)
+    if ($input =~ /^\s*(\;|\:\=|\(|\)|\,|\+|\-|\*|\/|\=|\<\>|\<\=|\>\=|\>|\<)/)
     {
         #non-word terminals
         $nextToken = $1;
-        $actToken = $1
+        $actToken = $1;
         $input = $'; #input equals everything after the terminal
     }
     elsif ($input =~ /^\s*(program|begin|read|write|if|then|else|while|do|end)/)
@@ -56,7 +56,7 @@ sub lex
     {
         &error("didn't find a valid token, saw >$input<");
     }
-    print "Found token >$nextToken<\n";
+    print "Found token >$actToken<\n";
 }
 
 
@@ -114,7 +114,7 @@ sub compoundstmt
 
 sub stmt
 {
-  if(($nextToken ne "begin") or ($nextToken ne "if") or ($nextToken ne "while"))
+  if(($nextToken ne "begin") xor ($nextToken ne "if") xor ($nextToken ne "while"))
     {
         &simplestmt(); #done
     }
@@ -300,6 +300,7 @@ sub whilestmt
         &expression(); #done
         if($nextToken eq "do")
         {
+            &lex(); #done
             &stmt(); #done
         }
         else
@@ -332,6 +333,7 @@ sub simplexpr
     &term(); #done
     while(($nextToken eq "+") or ($nextToken eq "-")) #this counts as &add_op
     {
+        &lex(); #done
         &term(); #done
     }
 }
@@ -341,7 +343,7 @@ sub term
     &factor(); #queued
     while(($nextToken eq "*") or ($nextToken eq "/")) #this counts as &mult_op
     {
-        &factor(); #not done
+        &factor(); # done
     }
 }
 

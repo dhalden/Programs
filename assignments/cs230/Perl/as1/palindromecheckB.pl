@@ -17,7 +17,7 @@ if(!$ispal)
 {
 BAR:
     {
-        if($imp =~ /([a-zA-Z])(.*)/)
+        if($imp =~ /([^\s.;,])(.*)/)
         {
             $buildstr = $buildstr.$1;
             $imp = $2;

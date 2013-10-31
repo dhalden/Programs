@@ -32,12 +32,10 @@ struct backlog
 //if it has already found a pipe, it will return the position of that pipe
 int conpipe(struct cmdin * cmd)
 {
-    //printf("arg[]: >%s<\n", cmd->args[cmd->nargs]);
     if(!cmd->pipeflag)
     {
         if(!strcmp(cmd->args[cmd->nargs], "|"))
         {
-            //printf("PIPE\n");
             return cmd->nargs;
         }
         else
@@ -47,7 +45,6 @@ int conpipe(struct cmdin * cmd)
     }
     else
     {
-        //printf("pipeflag: %d\n", cmd->pipeflag);
         return (cmd->pipeflag);
     }
 }
@@ -58,7 +55,6 @@ int freeze(struct cmdin cmd)
     int i;
     for(i=0; i <= (cmd.nargs); i++)
     {
-        //printf("cmd.args[%d]: %s\n",i, cmd.args[i]);
         free(cmd.args[i]);
     }
     free(cmd.args);
@@ -96,7 +92,6 @@ struct cmdin * parse(char *cmd)
  
     strncpy(ped->args[ped->nargs], cmd, strlen(cmd)-1);
     ped->nargs++;
-    //ped->args[ped->nargs] = malloc(sizeof(char) * MAX_SIZE);
     ped->args[ped->nargs] = NULL;
 
     return ped;
@@ -144,7 +139,9 @@ int main()
                     {
                         free(cmd->args[1]);
                         cmd->args[1] = NULL;
+                        cmd->nargs--;
                         execvp(cmd->cmd, cmd->args);
+
                     }
                 }
                 else

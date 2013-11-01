@@ -1,8 +1,7 @@
 #! /usr/bin/perl
 
 
-open (INFILE, "<", "mpt.txt") or die ("Couldn't find file to open.");
-
+open (INFILE, "<", $ARGV[0]) or die ("Couldn't find file to open.");
 {
     local $/;
     $input = <INFILE>;
@@ -51,18 +50,29 @@ sub lex
     elsif($input =~ /^\s*$/)
     {
         #if there is only space left
+        $nextToken = "";
     }
     else
     {
+        chomp($input);
         &error("didn't find a valid token, saw >$input<");
+        #as tested by err1.txt
     }
-    print "Found token >$actToken<\n";
+    #print "Found token >$nextToken<\n";
 }
 
 
 &lex(); #done
 &program(); #done
-
+if($nextToken ne "")
+{
+    &error("Unexpected addition at the End of File >$actToken<")
+    #as tested by err2.txt
+}
+else
+{
+    print "\n"; 
+}
 
 sub program
 {
@@ -76,11 +86,13 @@ sub program
         }
         else
         {
+            #as tested by err3.txt
             &error("expected PROGNAME instead found >$actToken<");
         }
     }
     else
     {
+        #as tested by err4.txt
         &error("expected 'program' instead found >$actToken<"); 
     }
 }
@@ -103,11 +115,13 @@ sub compoundstmt
         }
         else
         {
+            #as tested by err5.txt
             &error("expected 'end' instead found >$actToken<");
         }
     }
     else
     {
+        #as tested by err6.txt
         &error("expected 'begin' instead found >$actToken<");
     }
 }
@@ -141,7 +155,8 @@ sub simplestmt
     }
     else
     {
-        &error("expected 'read', 'write', or variable, instead found
+        #as tested by err7.txt
+        &error("expected beginning of a statement, instead found
         >$actToken<");
     }
 }
@@ -177,6 +192,7 @@ sub readstmt
              }
              else
              {
+                # as tested by err8.txt
                 &error("expected variable, instead found >$actToken<");
              }
              while ($nextToken eq ",")
@@ -188,6 +204,8 @@ sub readstmt
                 }
                 else
                 {
+                    # this would be the same check as err8, there would just
+                    # be more variables in the statement.
                     &error("expected variable, instead found >$actToken<");
                 }
              }
@@ -197,17 +215,21 @@ sub readstmt
              }
              else
              {
+                #as tested by err9.txt
                 &error("expected ')'  instead found >$actToken<");
              }
         }
         else
         {
+            #as tested by err10.txt
             &error("expected '(' instead found >$actToken<");
         }
     }
     else
     {
      &error("expected 'read' instead found >$actToken<");
+     # I actually guarantee ahead of time, in &simplestmt that this can't happen
+     # that said, I wrote it anyways just in case it actually does happen
     }
 }
 
@@ -222,6 +244,7 @@ sub writestmt
            &expression(); #done
            while($nextToken eq ",")
            {
+                &lex();
                 &expression(); #done
            }
            if($nextToken eq ")")
@@ -230,17 +253,20 @@ sub writestmt
            }
            else
            {
+                # as tested by err12.txt
                 &error("expected ')'  instead found >$actToken<");
            }
         }
         else
         {
+            # as tested by err11.txt
             &error("expected '(' instead found >$actToken<");
         }
     }
     else
     {
         &error("expected 'write' instead found >$actToken<");
+        # this also cannot happen because of &simplestmt
     }
 }
 
@@ -256,12 +282,14 @@ sub assignstmt
         }
         else
         {
+            # as tested by err13.txt
             &error("expected ':=', instead found >$actToken<");
         }
     }
     else
     {
         &error("expected variable, instead found >$actToken<");
+        # this also cannot happen because of &simplestmt
     }
 }
 
@@ -283,12 +311,14 @@ sub ifstmt
         }
         else
         {
-            &error("expected 'if', instead found >$actToken<");
+            # as tested by err14.txt
+            &error("expected 'then', instead found >$actToken<");
         }
     }
     else
     {
         &error("expected 'if', instead found >$actToken<");
+        # this line, is unreachable because of the &stmt method
     }
 }
 
@@ -305,12 +335,14 @@ sub whilestmt
         }
         else
         {
+            #as tested by err15.txt
             &error("expected 'do', instead found >$actToken<");
         }
     }
     else
     {
         &error("expected 'while', instead found >$actToken<");
+        # this line, is similarly unreachable because of the &stmt, method
     }
 }
 
@@ -340,9 +372,10 @@ sub simplexpr
 
 sub term
 {
-    &factor(); #queued
+    &factor(); #done
     while(($nextToken eq "*") or ($nextToken eq "/")) #this counts as &mult_op
     {
+        &lex();
         &factor(); # done
     }
 }
@@ -366,12 +399,14 @@ sub factor
             &lex();
         }
         else
-        {
+        {   
+            # as tested by err17.txt
             &error("expected ')' instead found >$actToken<");
         }
     }
     else
     {
+         #as tested by err18.txt
        &error("expected variable, constant, or '(', instead found >$actToken<");
     }
 }

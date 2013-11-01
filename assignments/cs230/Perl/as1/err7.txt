@@ -1,0 +1,6 @@
+program Prog
+begin
+hello := 9+1;
+end
+
+expected beginning of a statement, instead found >end<

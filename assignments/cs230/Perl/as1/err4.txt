@@ -1,0 +1,3 @@
+program program
+
+expected PROGNAME instead found >program<

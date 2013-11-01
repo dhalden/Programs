@@ -1,0 +1,7 @@
+program Prog
+begin
+hello := 9 + 1;
+while hello <> (9-3)
+end
+
+expected 'do', instead found >end<

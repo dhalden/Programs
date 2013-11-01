@@ -1,0 +1,7 @@
+program Prog
+begin
+hello := 9 + 1;
+read (hello
+end
+
+expected ')' instead found >end<

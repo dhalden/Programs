@@ -1,0 +1,4 @@
+program Prog
+begin
+write (hello, how, are, you)
+end

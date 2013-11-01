@@ -1,0 +1,6 @@
+program Program
+begin variable := 4 + 3
+end
+write
+
+Unexpected addition at the End of File

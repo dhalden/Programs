@@ -10,7 +10,7 @@ else
 write (hello);
 while (hello) <= (9+22)
 do
-hello := hello + 4;
+hello := (hello * 2 + 4) / 9;
 begin
 hi := hello
 end

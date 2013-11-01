@@ -188,7 +188,7 @@ int main()
             }
 
             int child_process = fork();
-            if(child_process > 0)
+            if(child_process == 0)
             {
                 int child_process2 = fork();
                 if (child_process2 < 0)
@@ -201,8 +201,8 @@ int main()
                     close(1);
                     dup(fd[WRITE_END]);
                     close(fd[READ_END]);
-
-                    write(fd[WRITE_END], stdin, MAX_CLEN);
+                    close(fd[WRITE_END]);
+                    //write(fd[WRITE_END], stdin, MAX_CLEN);
                     execvp(pcmd[0].cmd, pcmd[0].args);
                 }
                 else
@@ -212,16 +212,19 @@ int main()
                     close(fd[WRITE_END]);
                     close(0);
                     dup(fd[READ_END]);
-                    read(fd[READ_END], buffer , MAX_CLEN);
+                    close(fd[WRITE_END]);
+                    close(fd[READ_END]);                    
+                    //read(fd[READ_END], buffer , MAX_CLEN);
                     execvp(pcmd[1].cmd, pcmd[1].args);
 
                 }
             }
-            else if (child_process == 0)
+            else if (child_process > 0)
             {
                 //parent parent process
                 wait(CHILD_STATUS);
                 close(fd[READ_END]);
+                close(fd[WRITE_END]);
             }
             else
             {

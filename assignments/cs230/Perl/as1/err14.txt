@@ -1,0 +1,7 @@
+program Prog
+begin
+hello := 9 + 1;
+if  hello <> (9-3)
+end
+
+expected 'then', instead found >end<

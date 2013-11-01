@@ -1,0 +1,6 @@
+program Prog
+begin
+hello := Pog;
+end
+
+expected variable, constant, or '(', instead found >Pog<

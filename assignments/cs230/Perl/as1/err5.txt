@@ -1,0 +1,4 @@
+program Program
+hello := 9 + 1
+
+expected 'begin' instead found >hello<

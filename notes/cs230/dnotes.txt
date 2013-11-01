@@ -1,0 +1,17 @@
+11/1/13
+dynamic - during runtime
+static - fixed prior to runtime, and remains the same throughout runtime
+
+Dynamic type binding
+    advantages
+        flexible - generic program units, doesn't assign types until the program
+               runs.
+  
+    disadvantages
+        type error detection by the compiler is difficult or impossible
+        compiler can't detect errors involving incorrect assignment of types.
+
+        high cost at runtime, do to type checking.
+
+Type Interface
+    

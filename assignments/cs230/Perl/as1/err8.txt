@@ -1,7 +1,7 @@
 program Prog
 begin
 hello := 9 + 1;
-read (Hello)
+read (;)
 end
 
-expected variable, instead found >Hello<
+expected variable, instead found >;<

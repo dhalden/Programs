@@ -149,7 +149,7 @@ sub simplestmt
     {
         &writestmt(); #done
     }
-    elsif($nextToken eq "VARIABLE")
+    elsif($nextToken eq "VARIABLE" || $nextToken eq "PROGNAME")
     {
         &assignstmt(); #done
     }
@@ -186,7 +186,7 @@ sub readstmt
         if($nextToken eq "(")
         {
              &lex(); #done
-             if($nextToken eq "VARIABLE")
+             if($nextToken eq "VARIABLE" || $nextToken eq "PROGNAME")
              {
                 &lex(); #done
              }
@@ -198,7 +198,7 @@ sub readstmt
              while ($nextToken eq ",")
              {
                 &lex(); #done
-                if ($nextToken eq "VARIABLE")
+                if ($nextToken eq "VARIABLE"|| $nextToken eq "PROGNAME")
                 {
                     &lex(); #done
                 }
@@ -272,7 +272,7 @@ sub writestmt
 
 sub assignstmt
 {
-    if($nextToken eq "VARIABLE")
+    if($nextToken eq "VARIABLE" || $nextToken eq "PROGNAME")
     {
         &lex(); #done
         if($nextToken eq ":=")
@@ -382,7 +382,7 @@ sub term
 
 sub factor
 {
-    if($nextToken eq "VARIABLE")
+    if($nextToken eq "VARIABLE" || $nextToken eq "PROGNAME")
     {
         &lex();
     }

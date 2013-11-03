@@ -144,10 +144,6 @@ int main()
 
                     }
                 }
-                else
-                {
-                    wait(&child_pid);
-                }
             }
             freeze(*cmd);
             free(cmd);
@@ -165,7 +161,7 @@ int main()
             for(i = (cmd->pipeflag + 1); i < cmd->nargs; i++)
             {
                pcmd[1].args[j] = malloc(sizeof(char) * MAX_SIZE);
-               pcmd[1].args[j] = cmd->args[i];
+               strcpy(pcmd[1].args[j], cmd->args[i]);
                pcmd[1].nargs++;
                j++; 
             }
@@ -179,62 +175,45 @@ int main()
 
             //run the pipe commands.
             int fd[2];
-            //pid_t pid;
-            //pid_t pid2;
-            char buffer[MAX_CLEN];
             if (pipe(fd) == -1)
             {
                 fprintf(stderr, "Pipe Failed");
             }
 
-            int child_process = fork();
-            if(child_process == 0)
+            if(fork() == 0)
             {
-                int child_process2 = fork();
-                if (child_process2 < 0)
-                {
-                    fprintf(stderr, "Fork Failed");
-                }
-                if (child_process2 == 0)
-                {
-                    //child child process
+                    //child process
                     close(1);
                     dup(fd[WRITE_END]);
                     close(fd[READ_END]);
                     close(fd[WRITE_END]);
-                    //write(fd[WRITE_END], stdin, MAX_CLEN);
                     execvp(pcmd[0].cmd, pcmd[0].args);
-                }
-                else
-                {
-                    //child parent process
-                    wait(CHILD_STATUS);
-                    close(fd[WRITE_END]);
-                    close(0);
-                    dup(fd[READ_END]);
-                    close(fd[WRITE_END]);
-                    close(fd[READ_END]);                    
-                    //read(fd[READ_END], buffer , MAX_CLEN);
-                    execvp(pcmd[1].cmd, pcmd[1].args);
-
-                }
             }
-            else if (child_process > 0)
+            if(fork() == 0)
             {
-                //parent parent process
-                wait(CHILD_STATUS);
-                close(fd[READ_END]);
+                    //child process2
                 close(fd[WRITE_END]);
+                close(0);
+                dup(fd[READ_END]);
+                close(fd[WRITE_END]);
+                close(fd[READ_END]);                    
+                execvp(pcmd[1].cmd, pcmd[1].args);
+
             }
-            else
-            {
-                fprintf(stderr, "Fork Failed");
-            }
+            
+            
+             //parent parent process
+             wait(CHILD_STATUS);
+             close(fd[READ_END]);
+             close(fd[WRITE_END]);
+
             //free cmds.
             freeze(pcmd[0]);
             freeze(pcmd[1]);
             free(cmd);
         }
+        
+        wait(CHILD_STATUS);
         //Command to take input
         printf("tosh$ ");
         fgets(input, sizeof input, stdin);

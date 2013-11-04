@@ -26,13 +26,13 @@ public class largest_int
                 
                 if(i1 > i2)
                 {
-                    s2 = st.nextToken()
+                    s2 = st.nextToken();
                 }
                 else
                 {
-                    s1 = s2
+                    s1 = s2;
                     i1 = Integer.parseInt(s1);
-                    s2 = st.nextToken()
+                    s2 = st.nextToken();
                 }
                 i2 = Integer.parseInt(s2);
             }   

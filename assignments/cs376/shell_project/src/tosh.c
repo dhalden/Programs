@@ -23,6 +23,7 @@ struct cmdin
 {
     char *cmd;
     char **args;
+    int andflag;
     int nargs;
     int pipeflag;
     int iored[3];
@@ -58,7 +59,7 @@ int conpipe(struct cmdin * cmd)
 //otherwise, return 0
 int coniored(struct cmdin * cmd)
 {
-    if(cmd->iored[cmd->iocount] == 0)
+    if(cmd->iored[cmd->iocount + 1] == 0)
     {
         if(!strcmp(cmd->args[cmd->nargs], "<"))
         {
@@ -121,6 +122,7 @@ struct cmdin * parse(char *cmd)
     ped->nargs = 0;
     ped->iocount = -1;
     ped->iored[0] = 0;
+    ped->andflag = 0;
     //allocate space for the array of strings, and for the string cmd.
     if(!(ped->args =  malloc(sizeof(char*) * MAX_SIZE)))
     {
@@ -151,7 +153,7 @@ struct cmdin * parse(char *cmd)
     //loop that allocates space for a command, and then assigns
     //the next arg to it.
     while(sscanf(cmd, " %s %[^\n]", ped->args[ped->nargs], cmd) == 2)
-     {
+    {
         ped->pipeflag = conpipe(ped);
         if(coniored(ped))
         {
@@ -164,14 +166,20 @@ struct cmdin * parse(char *cmd)
             fprintf(stderr, "Memory Error: failed to Malloc");
             exit(1);
         }
-     }
- 
+    } 
     strncpy(ped->args[ped->nargs], cmd, strlen(cmd)-1);
-    ped->nargs++;
-    ped->args[ped->nargs] = NULL;
-
+    if(!strcmp(ped->args[ped->nargs], "&"))
+    {
+        free(ped->args[ped->nargs]);
+        ped->args[ped->nargs] = NULL;
+        ped->andflag = 1;
+    }
+    else
+    {
+        ped->nargs++;
+        ped->args[ped->nargs] = NULL;
+    }
     return ped;
-
 }
 
 int main()
@@ -188,9 +196,11 @@ int main()
  
     while(strcmp(input, exits))
     {
+        pid_t child_pid; 
         //Command to parse input
         struct cmdin *cmd;
         cmd = parse(input);
+
         if(cmd->iocount == -1)
         {
             //if there is not a pipeflag
@@ -205,7 +215,6 @@ int main()
                 else if(strcmp(input, exits))
                 {
                     //command to run input
-                    int child_pid;
                     child_pid = fork();
                     if(child_pid == 0)
                     {
@@ -222,12 +231,17 @@ int main()
     
                         }
                     }
+                    else if (child_pid < 0)
+                    {
+                        fprintf(stderr, "Fork Failed");
+                    }
                 }
                 freeze(*cmd);
                 free(cmd);
             }
             else
             {
+                pid_t pid2;
                 //piped commands
                 struct cmdin pcmd[2]; 
                 if(!(pcmd[1].cmd = malloc(sizeof(char) * MAX_SIZE)))
@@ -243,6 +257,7 @@ int main()
                 pcmd[1].nargs = 0;
                 int i;
                 int j = 0;
+                //check the commands here.
                 strcpy(pcmd[1].cmd, cmd->args[(cmd->pipeflag + 1)]);
                 for(i = (cmd->pipeflag + 1); i < cmd->nargs; i++)
                 {
@@ -269,8 +284,8 @@ int main()
                 {
                     fprintf(stderr, "Pipe Failed");
                 }
-                int child_pid; 
-                if(!(child_pid = fork()))
+                
+                if(!(pid2 = fork()))
                 {
                     //child process
                     close(1);
@@ -279,7 +294,7 @@ int main()
                     close(fd[WRITE_END]);
                     execvp(pcmd[0].cmd, pcmd[0].args);
                 }
-                else if (child_pid < 0)
+                else if (pid2 < 0)
                 {
                     fprintf(stderr, "Fork Failed");
                 }
@@ -300,7 +315,7 @@ int main()
             
             
                  //parent parent process
-                 wait(CHILD_STATUS);
+                 waitpid(pid2, CHILD_STATUS, 0);
                  close(fd[READ_END]);
                  close(fd[WRITE_END]);
 
@@ -319,11 +334,6 @@ int main()
             char file1[MAX_SIZE];
             char file2[MAX_SIZE];
             int i;
-            for(i = 0; i <= cmd->nargs; i++)
-            {
-                printf("cmd->args[%d]: %s\n", i, cmd->args[i]);
-                //printf("iocount: %d\n", cmd->iocount);
-            }
             for(i = 0; i <= cmd->iocount; i++)
             {
                 if(!strcmp(cmd->args[cmd->iored[i]], "<"))
@@ -335,7 +345,6 @@ int main()
                       goto ifeof;
                       fprintf(stderr, "cat: tosh.c: input file is output file");
                     }
-                    printf("File0: %s\n", file0);
                 }
                 if(!strcmp(cmd->args[cmd->iored[i]], "1>"))
                 {
@@ -346,11 +355,9 @@ int main()
                       goto ifeof;
                       fprintf(stderr, "cat: tosh.c: input file is output file");
                     }
-                    printf("File1: %s\n", file1);
                 }
                 if(!strcmp(cmd->args[cmd->iored[i]], "2>"))
                 {
-                    printf("this happens2\n");
                     io2 = 2;
                     strcpy(file2, cmd->args[cmd->iored[i] + 1]);
                     if(!strcmp(cmd->args[cmd->iored[0] - 1], file2))
@@ -358,7 +365,6 @@ int main()
                       goto ifeof;
                       fprintf(stderr, "cat: tosh.c: input file is output file");
                     }
-                    printf("File2: %s\n", file2);
                 }
             }
             //printf("%s\n", cmd->args[cmd->iored[0] - 1]);
@@ -367,14 +373,14 @@ int main()
                 free(cmd->args[cmd->nargs]);
                 cmd->args[cmd->nargs] = NULL;
             }
-            
-            int child_id = fork();
-            if(child_id < 0)
+
+            child_pid = fork();
+            if(child_pid < 0)
             {
                 fprintf(stderr, "Fork Failed");
                 exit(1);
             }
-            else if(child_id == 0)
+            else if(child_pid == 0)
             {
                 if(io0 != -1)
                 {
@@ -390,7 +396,6 @@ int main()
                 }
                 if(io1 != -1)
                 {
-                    printf("this happens1\n");
                     int fid1 =  open(file1, O_WRONLY | O_CREAT, 0666);
                     if(fid1 < 0)
                     {
@@ -401,10 +406,8 @@ int main()
                     dup(fid1);
                     close(fid1);
                 }
-                printf("io2 = %d\n\n\n", io2);
                 if(io2 != -1)
                 {
-                    printf("this happens2\n");
                     int fid2 =  open(file2, O_WRONLY | O_CREAT, 0666);
                     if(fid2 < 0)
                     {
@@ -424,7 +427,14 @@ int main()
             
 
         }
-        wait(CHILD_STATUS);
+        if(cmd->andflag)
+        {
+            waitpid(child_pid, CHILD_STATUS, WNOHANG);
+        }
+        else
+        {
+            waitpid(child_pid, CHILD_STATUS, 0);
+        }
         //Command to take input
         printf("tosh$ ");
         fgets(input, sizeof input, stdin);

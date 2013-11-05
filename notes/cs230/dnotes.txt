@@ -13,5 +13,6 @@ Dynamic type binding
 
         high cost at runtime, do to type checking.
 
-Type Interface
     
+    
+

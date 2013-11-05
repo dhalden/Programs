@@ -1,0 +1,7 @@
+{
+  "/opt/jdk1.6.0_45/jre/lib/rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "/opt/jdk1.6.0_45/jre/lib/rt.jar",
+    "status": "RESOLVED"
+  }
+}

@@ -1,0 +1,13 @@
+ls
+ls -al
+cat README
+cd src
+ls
+cd ..
+cat README | grep commands
+firefox &
+|
+1>
+cat README 1> test.out
+exit
+

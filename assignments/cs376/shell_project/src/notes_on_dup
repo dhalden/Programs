@@ -1,7 +1,0 @@
-int fid = open ("temp.txt", O_WRONLY | O_CREAT, 0666);
-close(1); (stdout)
-dup(fid); this copies the filedescripter to the lowest open descriptor
-          hence this put fid as the output of stdout
-close(fid); close the original descriptor
-            if you are the child, let's execute something new
-execvp

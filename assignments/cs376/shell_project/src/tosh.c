@@ -114,7 +114,7 @@ struct cmdin * parse(char *cmd)
     struct cmdin *ped;
     if(!(ped = malloc(sizeof(struct cmdin))))
     {
-        fprintf(stderr, "Memory Error: failed to Malloc");
+        fprintf(stderr, "Memory Error: failed to Malloc\n");
         exit(1);
     }
     //declare pipeflag, and nargs as 0
@@ -126,12 +126,12 @@ struct cmdin * parse(char *cmd)
     //allocate space for the array of strings, and for the string cmd.
     if(!(ped->args =  malloc(sizeof(char*) * MAX_SIZE)))
     {
-       fprintf(stderr, "Memory Error: failed to Malloc");
+       fprintf(stderr, "Memory Error: failed to Malloc\n");
        exit(1);
     }
     if(!(ped->cmd = malloc(sizeof(char) * MAX_SIZE)))
     {
-       fprintf(stderr, "Memory Error: failed to Malloc");
+       fprintf(stderr, "Memory Error: failed to Malloc\n");
        exit(1);
     }
     //scan the input, and put the first argument into the cmd string
@@ -139,7 +139,7 @@ struct cmdin * parse(char *cmd)
     //allocate space for the next string, and then copy cmd to it.
     if(!(ped->args[ped->nargs] =  malloc(sizeof(char) * MAX_SIZE)))
     {
-        fprintf(stderr, "Memory Error: failed to Malloc");
+        fprintf(stderr, "Memory Error: failed to Malloc\n");
         exit(1);
     }
     strcpy(ped->args[ped->nargs], ped->cmd);
@@ -147,7 +147,7 @@ struct cmdin * parse(char *cmd)
     ped->nargs++;
     if(!(ped->args[ped->nargs] =  malloc(sizeof(char) * MAX_SIZE)))
     {
-        fprintf(stderr, "Memory Error: failed to Malloc");
+        fprintf(stderr, "Memory Error: failed to Malloc\n");
         exit(1);
     }
     //loop that allocates space for a command, and then assigns
@@ -163,22 +163,19 @@ struct cmdin * parse(char *cmd)
         ped->nargs++;
         if(!(ped->args[ped->nargs] = malloc(sizeof(char) * MAX_SIZE)))
         {
-            fprintf(stderr, "Memory Error: failed to Malloc");
+            fprintf(stderr, "Memory Error: failed to Malloc\n");
             exit(1);
         }
     } 
     strncpy(ped->args[ped->nargs], cmd, strlen(cmd)-1);
     if(!strcmp(ped->args[ped->nargs], "&"))
     {
-        free(ped->args[ped->nargs]);
-        ped->args[ped->nargs] = NULL;
+        //free(ped->args[ped->nargs]);
+        //ped->args[ped->nargs] = NULL;
         ped->andflag = 1;
     }
-    else
-    {
-        ped->nargs++;
-        ped->args[ped->nargs] = NULL;
-    }
+    ped->nargs++;
+    ped->args[ped->nargs] = NULL;
     return ped;
 }
 
@@ -201,6 +198,26 @@ int main()
         struct cmdin *cmd;
         cmd = parse(input);
 
+        if(!strcmp(cmd->args[(cmd->nargs-1)], "|"))
+        {
+            fprintf(stderr, "tosh: syntax error near unexpected token '|'\n");
+            goto ifeof;
+        }
+        if(!strcmp(cmd->args[cmd->nargs-1], "<"))
+        {
+            fprintf(stderr, "tosh: syntax error near unexpected token '<'\n");
+            goto ifeof;
+        }
+        if(!strcmp(cmd->args[cmd->nargs-1], "1>"))
+        {
+            fprintf(stderr, "tosh: syntax error near unexpected token '1>'\n");
+            goto ifeof;
+        }
+        if(!strcmp(cmd->args[cmd->nargs-1], "2>"))
+        {
+            fprintf(stderr, "tosh: syntax error near unexpected token '2>'\n");
+            goto ifeof;
+        }
         if(cmd->iocount == -1)
         {
             //if there is not a pipeflag
@@ -209,7 +226,14 @@ int main()
                 //Change directories
                 if(!strcmp(cd, cmd->args[0]))
                 {
-                    chdir(cmd->args[1]); 
+                    if(strcmp(cmd->args[1], "cd"))
+                    {
+                        chdir(cmd->args[1]); 
+                    }
+                    else
+                    {
+                        chdir("/home");
+                    }
                     getcwd(cwd, sizeof(cwd));
                 }
                 else if(strcmp(input, exits))
@@ -218,23 +242,34 @@ int main()
                     child_pid = fork();
                     if(child_pid == 0)
                     {
-                        if(strcmp(cmd->args[1],cmd->args[0]))
+                        if(!(strcmp(cmd->args[1],cmd->args[0])))
                         {
+                            if(cmd->args[1] != NULL)
+                            {
+                                free(cmd->args[1]);
+                                cmd->args[1] = NULL;
+                                cmd->nargs--;
+                            }
                             execvp(cmd->cmd, cmd->args);
                         }
                         else
                         {
-                            free(cmd->args[1]);
-                            cmd->args[1] = NULL;
-                            cmd->nargs--;
-                            execvp(cmd->cmd, cmd->args);
     
+                            if(cmd->andflag)
+                            {
+                                cmd->args[cmd->nargs -1] = NULL;
+                            }
+                            execvp(cmd->cmd, cmd->args);
                         }
                     }
                     else if (child_pid < 0)
                     {
-                        fprintf(stderr, "Fork Failed");
+                        fprintf(stderr, "Fork Failed\n");
                     }
+                }
+                else if(!strcmp(input, exits))
+                {
+                    goto ifeof;
                 }
                 freeze(*cmd);
                 free(cmd);
@@ -246,12 +281,12 @@ int main()
                 struct cmdin pcmd[2]; 
                 if(!(pcmd[1].cmd = malloc(sizeof(char) * MAX_SIZE)))
                 {
-                    fprintf(stderr, "Memory Error: failed to Malloc");
+                    fprintf(stderr, "Memory Error: failed to Malloc\n");
                     exit(1);
                 }
                 if(!(pcmd[1].args = malloc(sizeof(char*) * MAX_SIZE)))
                 {
-                    fprintf(stderr, "Memory Error: failed to Malloc");
+                    fprintf(stderr, "Memory Error: failed to Malloc\n");
                     exit(1);
                 }
                 pcmd[1].nargs = 0;
@@ -263,7 +298,7 @@ int main()
                 {
                    if(!(pcmd[1].args[j] = malloc(sizeof(char) * MAX_SIZE)))
                    {
-                        fprintf(stderr, "Memory Error: failed to Malloc");
+                        fprintf(stderr, "Memory Error: failed to Malloc\n");
                         exit(1);
                    }
                    strcpy(pcmd[1].args[j], cmd->args[i]);
@@ -282,7 +317,7 @@ int main()
                 int fd[2];
                 if (pipe(fd) == -1)
                 {
-                    fprintf(stderr, "Pipe Failed");
+                    fprintf(stderr, "Pipe Failed\n");
                 }
                 
                 if(!(pid2 = fork()))
@@ -296,7 +331,7 @@ int main()
                 }
                 else if (pid2 < 0)
                 {
-                    fprintf(stderr, "Fork Failed");
+                    fprintf(stderr, "Fork Failed\n");
                 }
                 if(!(child_pid = fork()))
                 {
@@ -310,7 +345,7 @@ int main()
                 }
                 else if (child_pid < 0)
                 {
-                    fprintf(stderr, "Fork Failed");
+                    fprintf(stderr, "Fork Failed\n");
                 }
             
             
@@ -338,33 +373,33 @@ int main()
             {
                 if(!strcmp(cmd->args[cmd->iored[i]], "<"))
                 {
-                    io0 = 0;
-                    strcpy(file0, cmd->args[cmd->iored[i] + 1]);
-                    if(!strcmp(cmd->args[cmd->iored[0] - 1], file1))
-                    {
-                      goto ifeof;
-                      fprintf(stderr, "cat: tosh.c: input file is output file");
-                    }
+                  io0 = 0;
+                  strcpy(file0, cmd->args[cmd->iored[i] + 1]);
+                  if(!strcmp(cmd->args[cmd->iored[0] - 1], file1))
+                  {
+                    goto ifeof;
+                    fprintf(stderr, "cat: tosh.c: input file is output file\n");
+                  }
                 }
                 if(!strcmp(cmd->args[cmd->iored[i]], "1>"))
                 {
-                    io1 = 1;
-                    strcpy(file1, cmd->args[cmd->iored[i] + 1]);
-                    if(!strcmp(cmd->args[cmd->iored[0] - 1], file1))
-                    {
-                      goto ifeof;
-                      fprintf(stderr, "cat: tosh.c: input file is output file");
-                    }
+                  io1 = 1;
+                  strcpy(file1, cmd->args[cmd->iored[i] + 1]);
+                  if(!strcmp(cmd->args[cmd->iored[0] - 1], file1))
+                  {
+                    goto ifeof;
+                    fprintf(stderr, "cat: tosh.c: input file is output file\n");
+                  }
                 }
                 if(!strcmp(cmd->args[cmd->iored[i]], "2>"))
                 {
-                    io2 = 2;
-                    strcpy(file2, cmd->args[cmd->iored[i] + 1]);
-                    if(!strcmp(cmd->args[cmd->iored[0] - 1], file2))
-                    {
-                      goto ifeof;
-                      fprintf(stderr, "cat: tosh.c: input file is output file");
-                    }
+                  io2 = 2;
+                  strcpy(file2, cmd->args[cmd->iored[i] + 1]);
+                  if(!strcmp(cmd->args[cmd->iored[0] - 1], file2))
+                  {
+                    goto ifeof;
+                    fprintf(stderr, "cat: tosh.c: input file is output file\n");
+                  }
                 }
             }
             //printf("%s\n", cmd->args[cmd->iored[0] - 1]);
@@ -377,7 +412,7 @@ int main()
             child_pid = fork();
             if(child_pid < 0)
             {
-                fprintf(stderr, "Fork Failed");
+                fprintf(stderr, "Fork Failed\n");
                 exit(1);
             }
             else if(child_pid == 0)
@@ -387,7 +422,7 @@ int main()
                     int fid0 = open(file0, O_RDONLY, 0666);
                     if(fid0 < 0)
                     {
-                        fprintf(stderr, "File Not Found");
+                        fprintf(stderr, "File Not Found\n");
                         exit(1);
                     }
                     close(io0);
@@ -399,7 +434,7 @@ int main()
                     int fid1 =  open(file1, O_WRONLY | O_CREAT, 0666);
                     if(fid1 < 0)
                     {
-                        fprintf(stderr, "File Not Found");
+                        fprintf(stderr, "File Not Found\n");
                         exit(1);
                     }
                     close(io1);
@@ -411,7 +446,7 @@ int main()
                     int fid2 =  open(file2, O_WRONLY | O_CREAT, 0666);
                     if(fid2 < 0)
                     {
-                        fprintf(stderr, "File Not Found");
+                        fprintf(stderr, "File Not Found\n");
                         exit(1);
                     }
                     close(io2);

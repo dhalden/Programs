@@ -3,11 +3,11 @@ Derek Halden
     Features
         - simple commands (e.g. cat)
         - built-in commands (e.g. cd and exit)
-    Missing Features
         - IO Redirection
         - Pipes
         - Launching background commands with &
         - Error handling
          
-    How to find the comments in your output script file
-        
+    How to compile
+        ~$ make tosh
+

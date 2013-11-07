@@ -1,0 +1,85 @@
+SCHEME
+    - functional
+    - No loops
+    - Static scoping exclusively
+    - Small size
+    - Functions are first-class citizens
+        - can be values of expressions
+        - can be elements of lists
+        - can be assigned to variables
+        - can be passed as parameters
+    - "simple" syntax --- more correct to say consistent?
+    - "simple semantics
+    - expressions are evaluated by the function EVAL
+    - literals evaluate to themselves
+    - Function calls are evaluated by
+        - first evaluate all the parameter expressions
+        - then evaluate the function after the values of the parameter
+          are known
+        - the value of the last expression in the body is the value of
+          the function
+    
+    -Primitive Functions
+        -Arithmetic: +. -, *, /, ABS, SQRT, REMAINDER, MIN, MAX
+
+        what does (- 24(*5 3)) = 24-15 = 9
+        (-10 5 3) = 10 - 8 = 2
+        
+        if * is given no parameters, it returns 1
+        if + is given no parameters, it returns 0
+
+    -QUOTE -takes one parameter ; returns the parameter without 
+            evaluation
+            -QUOTE is required because the scheme interpreter, named 
+             EVAL, always evaluates parameters to function applications
+             before applying the function. QUOTE is used to avoid
+             parameter evaluation when it is not appropriate
+             '(/ 8 4) would make this not evaluate yet.
+     -lambda expressions
+        - (LAMBDA (x)(*x x))
+            -this is a nameless function that evaluates the square of 
+             the input parameter
+        - ((LAMBDA (x) (*x x))5)  evaluates to 25
+        - used to create nameless functions
+        - x may look like a variable, but it is not.
+     - DEFINE
+        -binds a name to a value
+            - Different than a variable - it is a named constant
+        - Binds a name to a lambda expression
+        - (DEFINE hello 5.6)
+        - If you wanted the symbol hello instead of the value in some
+          constant named hello
+         'hello
+           vs.
+          hello
+          
+            -the first one gives us hello
+            -the second one evaluates to 5.6
+      - CAR
+            -takes a list parameter; returns the first element of that 
+             list
+
+             (CAR '(A B C)) Yields A
+             (CAR '((A B) (C D)) yields (A B))
+             - CAR can evaluate to an atom or a list.
+
+      - CDR takes a list parameter; returns the list after removing its 
+        first element
+          -(CDR '(A B C)) yields (B C)
+          -(CDR '((A B) C D)) yields (B C)
+          -(CDR '(A B)) yields (B)
+
+      - CONS
+        (CONS 'A '(B C)) returns (A B C)
+        (CONS '(A B) '(B C)) returns ((A B) B C)
+      - LIST
+        (LIST 'A 'B 'C) returns (A B C)
+        (list 'A '(B C) 'D) returns (A (B C) D)
+
+       -DEFINE (func_name parameters
+            expression {expression}
+            )
+       (DEFINE (square x) (* x x))
+       (DEFINE (hypotenuse side1 side1)
+               (SQRT (+ square side1)
+               (swuare side2)))

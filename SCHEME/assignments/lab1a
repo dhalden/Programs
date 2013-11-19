@@ -1,0 +1,40 @@
+(define (factorial n)
+     (if (= n 0)
+         1
+         (* n (factorial (- n 1)))
+     )
+)
+
+(define (sumUpTo n)
+     (if (= n 1)
+         1
+         (+ n (sumUpTo (- n 1)))
+     )
+)
+; the function above assumes that the parameter will always be > 0
+(define (myPower n p)
+     (if (= p 0)
+         1
+         (if (> p 0)
+             (* n (myPower n (- p 1)))
+             (/ 1 (myPower n (- 0 p)))
+         )   
+     )
+)
+; the function above assumes that the parameter will always be > 0
+
+(define (sizeList n)
+     (if (null? n)
+         0
+         (+ 1 (sizeList (cdr n)))
+      )
+)
+
+(define (thirdElement n)
+    (if (< (sizeList n) 3)
+     0    
+     (car(cdr(cdr n)))
+     )
+)
+
+

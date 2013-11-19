@@ -80,12 +80,16 @@ int main (int argc, char * argv [])
     Processes *proc = proc_create(filename);
    
    //setup first job
-   // You may assume that there is a job 0 which arrived at time 0 and is ready to go
+   // You may assume that there is a job 0 which arrived
+   // at time 0 and is ready to go
 
 
-   // Here is the bulk of your work.  You will need to run until you've finished running all the
-   // incoming processes.  (You may assume that when you have finished all the jobs you know about, you are
-   // done.  Arrival times will always be early enough to ensure future processes have arrived before
+   // Here is the bulk of your work.  
+   // You will need to run until you've finished running all the
+   // incoming processes.  (You may assume that when you have
+   // finished all the jobs you know about, you are
+   // done.  Arrival times will always be early enough
+   // to ensure future processes have arrived before
    // you have finished previous ones.)
 
    print_finished();

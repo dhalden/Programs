@@ -17,30 +17,40 @@
 
 // represents a single job
 struct Proc{
-	int start_time;		// start time
-	int array[INIT_SIZE];	// array of time intervals to run between blocking events
-	int num_events;		// how many elements are in the array
-	int curr_event;		// which "event" (index into array) is currently running
-	int progress;		// how much progress you've made in that event
-				// progress<= array[curr_event]
-	int done;		// if this process is done this is 1, else 0
-	int announced;		// if you've announced this process to the parent, mark as 1
-	int total_time;		// total time required to finish this job (just the sum of array)
-	int total_progress;	// total time you've run this job
-				// total_time - total_progress is needed to report time remaining efficiently
+    int start_time; // start time
+
+    // array of time intervals to run between blocking events
+    int array[INIT_SIZE];
+
+    int num_events;	// how many elements are in the array
+    int curr_event;	// which "event" (index into array) is currently running
+    int progress;   // how much progress you've made in that event
+                    // progress<= array[curr_event]
+
+    int done;       // if this process is done this is 1, else 0
+    int announced;	// if you've announced this process to the parent, mark as 1
+
+    // total time required to finish this job (just the sum of array)
+    int total_time;
+
+    int total_progress;	// total time you've run this job
+
+ // total_time - total_progress is needed to report time remaining efficiently
 };
 
 // struct for all the jobs
 struct Processes{
-   struct Proc *array;		// array of Processes
-   int internal_size;		// how big the array is total
-   int size;			// how many valid Procs in the array
+   struct Proc *array;      // array of Processes
+   int internal_size;       // how big the array is total
+   int size;                // how many valid Procs in the array
 };
 
 Processes * proc_create(char *filename)
 {
-   // This function is provided for you.  You will need to read through it to better understand
-   // how this is setup and how to write the missing functions.
+   // This function is provided for you.
+   // You will need to read through it to 
+   // better understand how this is setup and
+   // how to write the missing functions.
    Processes * retval = malloc(sizeof(Processes));
 
    int i =0,j=0,total_time=0;
@@ -142,39 +152,99 @@ void proc_print(Processes *proc)
    }
 }
 
-int proc_norun_check_arrival(Processes *proc, int time_interval, int current_time, int *arrival, int *proc_arrival)
+int proc_norun_check_arrival(Processes *proc, int time_interval,
+                             int current_time, int *arrival, int *proc_arrival)
 {
 	// YOU NEED TO COMPLETE THIS
-	// See run_proc for directions.  In this case, you aren't running any processes, but you need to report if
+	// See run_proc for directions.  
+    // In this case, you aren't running any processes, but you need to report if
 	// a process arrives during this time interval
-	return 0;
+	int i;
+    for(i = 0; i < time_interval; i++)
+    {
+        
+        if(count == proc_arrival[count + current_time])
+        {
+            proc[arrival[count + current_time]].announced++;
+            current_time += count; 
+            return 1;
+        }
+    }
+    
+    return 0;
+
 }
 
-int run_proc(Processes * proc, int proc_id, int time_interval, int * block, int * finish, int current_time, int *arrival, int *proc_arrival)
+int run_proc(Processes * proc, int proc_id, int time_interval, int * block,
+             int * finish, int current_time, int *arrival, int *proc_arrival)
 {
 	// YOU NEED TO COMPLETE THIS
 	// return -1 if proc is invalid or proc_id is invalid.
-	// return -1 if this job is already done (you shouldn't be trying to run finished jobs)
-	//
-	// check to see if anyone arrives during this time interval
-	//
-	// See if the processs blocks during this time interval
-	//
-	// run to the shortest of (someone arriving, someone blocking, time_interval).
-	//
-	// if you ran the whole time interval without an event. You are done.
-	// if you blocked, be sure to set the variables properly to notify the parent that a blocking event
-	// occurred
-	// 
-	// if you encountered a new process, be sure to mark that process as having been announced and be sure
-	// to set the variables properly to notify the parent that a new process arrived.
-	// return how long you ran.
-	return -1;
+    if(!proc->array[proc_id])
+    {
+        return 0;
+    }
+
+	// return -1 if this job is already done
+    // (you shouldn't be trying to run finished jobs)
+    //
+    if(proc->array[proc_id]->done)
+    {
+        return 0;
+    }
+
+
+    int count;
+    for(count = 0; count <= time_interval; count++)
+    {
+    	// check to see if anyone arrives during this time interval
+	    //
+        if(count == proc_arrival[count + current_time])
+        {
+            proc->array[arrival[count + current_time]].announced++;
+            proc->array[proc_id].total_progress += count;
+            current_time += count; 
+            return -1;
+        }
+    	// See if the process blocks during this time interval
+	    //
+        if(count == block)
+        {
+            proc->array[proc_id].total_progress += count;
+            current_time += count; 
+            return -1; 
+        }
+	    // run to the shortest of (someone arriving,
+        //                         someone blocking, time_interval).
+	    //
+
+        if((proc->array[proc_id].total_progress + count) == total_time)
+        {
+            proc->array[proc_id].total_progress += time_interval;
+            proc->array[proc_id]->done++;
+            current_time += count; 
+            return -1;
+        }
+    	// if you ran the whole time interval without an event. You are done.
+	    // if you blocked, be sure to set the variables properly to notify the 
+    	// parent that a blocking event occurred
+	    //
+    	// if you encountered a new process,
+        // be sure to mark that process as having 
+	    // been announced and be sure to set the
+        // variables properly to notify the 
+	    // parent that a new process arrived.
+        // return how long you ran.
+	}
+    proc->array[proc_id].total_progress += time_interval;
+    current_time += time_interval; 
+    return -1;
 }
 
 int proc_time_remaining(Processes *proc, int proc_id)
 {
-	// this function is provided to you for your shortest_remaining_time schedule
+	// this function is provided to you for your
+    // shortest_remaining_time schedule
 	if(proc == 0)
 	{
 		return -1;
@@ -187,7 +257,8 @@ int proc_time_remaining(Processes *proc, int proc_id)
 	{
 		return 0;
 	}
-	return proc->array[proc_id].total_time - proc->array[proc_id].total_progress;
+	return proc->array[proc_id].total_time -
+           proc->array[proc_id].total_progress;
 }
 
 void proc_destroy(Processes *proc)

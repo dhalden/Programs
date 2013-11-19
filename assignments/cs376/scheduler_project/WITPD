@@ -1,0 +1,10 @@
+Processes is given a time block. While the counter is less than the time, block,
+increment the time block.
+If the process blocks, return to the scheduler
+If the process finishes, return to the scheduler
+If a new process arrives, return to the scheduler?
+    -and mark the new process as announced.
+Increment the counter.
+
+Each time, make sure that the time steps for the process have been counted.
+

@@ -1,0 +1,7 @@
+(define (removeAtom atr lis)
+  (cond
+    ((null? lis)  )
+    ((eq? atr (car lis)) (cdr lis))
+    (else (cons (car lis) (removeAtom atr (cdr lis))))
+  )
+)

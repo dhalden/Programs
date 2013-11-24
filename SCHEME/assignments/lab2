@@ -8,7 +8,8 @@
 (define (multiinsertL l1 l2 lis)
   (cond
     ((null? lis) '() )
-    ((eq? l2 (car lis)) (cons l1 (cons l2 (multiinsertL l1 l2 (cdr lis)))))
+    ((eq? l2 (car lis)) 
+       (cons l1 (cons l2 (multiinsertL l1 l2 (cdr lis)))))
     (else (cons (car lis) (multiinsertL l1 l2 (cdr lis))))
   )
 )
@@ -16,7 +17,9 @@
 (define (removeAllDeep rem lis)
   (cond
     ((null? lis) '())
-    ((list? (car lis)) (cons (removeAllDeep rem (car lis)) (removeAllDeep rem (cdr lis))))
+    ((list? (car lis)) 
+        (cons (removeAllDeep rem (car lis)) 
+              (removeAllDeep rem (cdr lis))))
     ((eq? rem (car lis)) (removeAllDeep rem (cdr lis)))
     (else (cons (car lis) (removeAllDeep rem (cdr lis))))
    )
@@ -37,4 +40,16 @@
           (cons rv (inputlis))
       )
    )
+)
+
+;(map floor '(1.2 -1.2 4.2 1.9 42.3 7.6))
+;(apply < '(3 4 5 1 ))
+;(apply + '(1 2 3 4 5 5 6 7 8 9))
+
+(define (count-if fun lis)
+  (count-t (map fun lis))
+ )
+
+(define (every fun lis)
+   (= (length lis) (count-if fun lis))   
 )

@@ -1,0 +1,4554 @@
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 9068.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 100 arrival 0
+q->end: 0 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 0. Curr Progress = 100. Total Progress = 100. Total Runtime = 9068.
+
+
+
+i 0 tr 10 block 0 finish 0 current_time 110 arrival 1
+q->end: 0 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 0. Curr Progress = 110. Total Progress = 110. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 500.
+
+
+
+i 0 tr 90 block 0 finish 0 current_time 200 arrival 0
+q->end: 1 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 0. Curr Progress = 200. Total Progress = 200. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 500.
+
+
+
+i 0 tr 50 block 1 finish 0 current_time 250 arrival 0
+q->end: 1 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 0. Total Progress = 250. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 500.
+
+
+
+blocked[2]: 0
+tr = 50
+blocked[1]: 0
+tr = 50
+blocked[0]: 200
+tr = 50
+k 1 tr 50 block 0 finish 0 current_time 300 arrival 0 progress 50
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 0. Total Progress = 250. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 0. Curr Progress = 50. Total Progress = 50. Total Runtime = 500.
+
+
+
+blocked[2]: -50
+tr = 100
+blocked[1]: -50
+tr = 100
+blocked[0]: 150
+tr = 100
+k 1 tr 100 block 0 finish 0 current_time 400 arrival 0 progress 150
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 0. Total Progress = 250. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 0. Curr Progress = 150. Total Progress = 150. Total Runtime = 500.
+
+
+
+blocked[2]: -150
+tr = 50
+blocked[1]: -150
+tr = 50
+blocked[0]: 50
+tr = 50
+k 1 tr 50 block 1 finish 0 current_time 450 arrival 0 progress 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 0. Total Progress = 250. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+
+
+
+i 0 tr 50 block 0 finish 0 current_time 500 arrival 0
+q->end: 1 q->begin: 0 i: 0
+blocked2[1]: 200
+blocked2[0]: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 50. Total Progress = 300. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+
+
+
+i 0 tr 20 block 0 finish 0 current_time 520 arrival 1
+q->end: 1 q->begin: 0 i: 0
+blocked2[1]: 150
+blocked2[0]: -50
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 70. Total Progress = 320. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 80 block 0 finish 0 current_time 600 arrival 0
+q->end: 2 q->begin: 0 i: 0
+blocked2[2]: -200
+blocked2[1]: 130
+blocked2[0]: -70
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 150. Total Progress = 400. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 50 block 0 finish 0 current_time 650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+blocked2[2]: -280
+blocked2[1]: 50
+blocked2[0]: -150
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 200. Total Progress = 450. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 300. Total Progress = 550. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 400. Total Progress = 650. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 500. Total Progress = 750. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 1050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 600. Total Progress = 850. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 1150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 1. Curr Progress = 700. Total Progress = 950. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 50 block 1 finish 0 current_time 1200 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 2. Curr Progress = 0. Total Progress = 1000. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 0. Total Progress = 200. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+blocked[2]: -330
+tr = 50
+blocked[1]: 0
+tr = 50
+blocked[0]: 200
+tr = 50
+k 1 tr 50 block 0 finish 0 current_time 1250 arrival 0 progress 50
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 2. Curr Progress = 0. Total Progress = 1000. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 50. Total Progress = 250. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+blocked[2]: -380
+tr = 100
+blocked[1]: -50
+tr = 100
+blocked[0]: 150
+tr = 100
+k 1 tr 100 block 0 finish 0 current_time 1350 arrival 0 progress 150
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 2. Curr Progress = 0. Total Progress = 1000. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 150. Total Progress = 350. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+blocked[2]: -480
+tr = 100
+blocked[1]: -150
+tr = 100
+blocked[0]: 50
+tr = 100
+k 1 tr 100 block 0 finish 0 current_time 1450 arrival 0 progress 250
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 2. Curr Progress = 0. Total Progress = 1000. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 250. Total Progress = 450. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+i 0 tr 4 block 1 finish 0 current_time 1454 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 3. Curr Progress = 0. Total Progress = 1004. Total Runtime = 9068.
+PID: 1	200	300	
+Curr Event = 1. Curr Progress = 250. Total Progress = 450. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 0. Total Progress = 0. Total Runtime = 30000.
+
+
+
+blocked[2]: -580
+tr = 96
+blocked[1]: -250
+tr = 96
+blocked[0]: 200
+tr = 96
+k 2 tr 96 block 0 finish 0 current_time 1550 arrival 0 progress 96
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 3. Curr Progress = 0. Total Progress = 1004. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 96. Total Progress = 96. Total Runtime = 30000.
+
+
+
+blocked[2]: -676
+tr = 100
+blocked[1]: -346
+tr = 100
+blocked[0]: 104
+tr = 100
+k 2 tr 100 block 0 finish 0 current_time 1650 arrival 0 progress 196
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 3. Curr Progress = 0. Total Progress = 1004. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 196. Total Progress = 196. Total Runtime = 30000.
+
+
+
+blocked[2]: -776
+tr = 100
+blocked[1]: -446
+tr = 100
+blocked[0]: 4
+tr = 100
+k 2 tr 100 block 0 finish 0 current_time 1750 arrival 0 progress 296
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 3. Curr Progress = 0. Total Progress = 1004. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 296. Total Progress = 296. Total Runtime = 30000.
+
+
+
+i 0 tr 9 block 1 finish 0 current_time 1759 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 4. Curr Progress = 0. Total Progress = 1013. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 296. Total Progress = 296. Total Runtime = 30000.
+
+
+
+blocked[2]: -876
+tr = 91
+blocked[1]: -546
+tr = 91
+blocked[0]: 200
+tr = 91
+k 2 tr 91 block 0 finish 0 current_time 1850 arrival 0 progress 387
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 4. Curr Progress = 0. Total Progress = 1013. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 387. Total Progress = 387. Total Runtime = 30000.
+
+
+
+blocked[2]: -967
+tr = 100
+blocked[1]: -637
+tr = 100
+blocked[0]: 109
+tr = 100
+k 2 tr 100 block 0 finish 0 current_time 1950 arrival 0 progress 487
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 4. Curr Progress = 0. Total Progress = 1013. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 487. Total Progress = 487. Total Runtime = 30000.
+
+
+
+blocked[2]: -1067
+tr = 100
+blocked[1]: -737
+tr = 100
+blocked[0]: 9
+tr = 100
+k 2 tr 100 block 0 finish 0 current_time 2050 arrival 0 progress 587
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 4. Curr Progress = 0. Total Progress = 1013. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 587. Total Progress = 587. Total Runtime = 30000.
+
+
+
+i 0 tr 55 block 1 finish 0 current_time 2105 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 0. Total Progress = 1068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 587. Total Progress = 587. Total Runtime = 30000.
+
+
+
+blocked[2]: -1167
+tr = 45
+blocked[1]: -837
+tr = 45
+blocked[0]: 200
+tr = 45
+k 2 tr 45 block 0 finish 0 current_time 2150 arrival 0 progress 632
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 0. Total Progress = 1068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 632. Total Progress = 632. Total Runtime = 30000.
+
+
+
+blocked[2]: -1212
+tr = 100
+blocked[1]: -882
+tr = 100
+blocked[0]: 155
+tr = 100
+k 2 tr 100 block 0 finish 0 current_time 2250 arrival 0 progress 732
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 0. Total Progress = 1068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 732. Total Progress = 732. Total Runtime = 30000.
+
+
+
+blocked[2]: -1312
+tr = 100
+blocked[1]: -982
+tr = 100
+blocked[0]: 55
+tr = 100
+k 2 tr 100 block 0 finish 0 current_time 2350 arrival 0 progress 832
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 0. Total Progress = 1068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 2450 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 100. Total Progress = 1168. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 2550 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 200. Total Progress = 1268. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 2650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 300. Total Progress = 1368. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 2750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 400. Total Progress = 1468. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 2850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 500. Total Progress = 1568. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 2950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 600. Total Progress = 1668. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 700. Total Progress = 1768. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 800. Total Progress = 1868. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3250 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 900. Total Progress = 1968. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3350 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1000. Total Progress = 2068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3450 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1100. Total Progress = 2168. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3550 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1200. Total Progress = 2268. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1300. Total Progress = 2368. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1400. Total Progress = 2468. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1500. Total Progress = 2568. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 3950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1600. Total Progress = 2668. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1700. Total Progress = 2768. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1800. Total Progress = 2868. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4250 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 1900. Total Progress = 2968. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4350 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2000. Total Progress = 3068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4450 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2100. Total Progress = 3168. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4550 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2200. Total Progress = 3268. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2300. Total Progress = 3368. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2400. Total Progress = 3468. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2500. Total Progress = 3568. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 4950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2600. Total Progress = 3668. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2700. Total Progress = 3768. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2800. Total Progress = 3868. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5250 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 2900. Total Progress = 3968. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5350 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3000. Total Progress = 4068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5450 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3100. Total Progress = 4168. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5550 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3200. Total Progress = 4268. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3300. Total Progress = 4368. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3400. Total Progress = 4468. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3500. Total Progress = 4568. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 5950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3600. Total Progress = 4668. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3700. Total Progress = 4768. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3800. Total Progress = 4868. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6250 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 3900. Total Progress = 4968. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6350 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4000. Total Progress = 5068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6450 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4100. Total Progress = 5168. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6550 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4200. Total Progress = 5268. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4300. Total Progress = 5368. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4400. Total Progress = 5468. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4500. Total Progress = 5568. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 6950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4600. Total Progress = 5668. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4700. Total Progress = 5768. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4800. Total Progress = 5868. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7250 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 4900. Total Progress = 5968. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7350 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5000. Total Progress = 6068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7450 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5100. Total Progress = 6168. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7550 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5200. Total Progress = 6268. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5300. Total Progress = 6368. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5400. Total Progress = 6468. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5500. Total Progress = 6568. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 7950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5600. Total Progress = 6668. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5700. Total Progress = 6768. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5800. Total Progress = 6868. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8250 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 5900. Total Progress = 6968. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8350 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6000. Total Progress = 7068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8450 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6100. Total Progress = 7168. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8550 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6200. Total Progress = 7268. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6300. Total Progress = 7368. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6400. Total Progress = 7468. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6500. Total Progress = 7568. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 8950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6600. Total Progress = 7668. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6700. Total Progress = 7768. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6800. Total Progress = 7868. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9250 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 6900. Total Progress = 7968. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9350 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7000. Total Progress = 8068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9450 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7100. Total Progress = 8168. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9550 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7200. Total Progress = 8268. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9650 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7300. Total Progress = 8368. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9750 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7400. Total Progress = 8468. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9850 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7500. Total Progress = 8568. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 9950 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7600. Total Progress = 8668. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 10050 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7700. Total Progress = 8768. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 10150 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7800. Total Progress = 8868. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 0 tr 100 block 0 finish 0 current_time 10250 arrival 0
+q->end: 2 q->begin: 0 i: 0
+PID: 0	250	750	4	9	55	8000	
+Curr Event = 5. Curr Progress = 7900. Total Progress = 8968. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 832. Total Progress = 832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 10350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 932. Total Progress = 932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 10450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1032. Total Progress = 1032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 10550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1132. Total Progress = 1132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 10650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1232. Total Progress = 1232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 10750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1332. Total Progress = 1332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 10850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1432. Total Progress = 1432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 10950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1532. Total Progress = 1532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1632. Total Progress = 1632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1732. Total Progress = 1732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1832. Total Progress = 1832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 1932. Total Progress = 1932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2032. Total Progress = 2032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2132. Total Progress = 2132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2232. Total Progress = 2232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2332. Total Progress = 2332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2432. Total Progress = 2432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 11950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2532. Total Progress = 2532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2632. Total Progress = 2632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2732. Total Progress = 2732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2832. Total Progress = 2832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 2932. Total Progress = 2932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3032. Total Progress = 3032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3132. Total Progress = 3132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3232. Total Progress = 3232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3332. Total Progress = 3332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3432. Total Progress = 3432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 12950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3532. Total Progress = 3532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3632. Total Progress = 3632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3732. Total Progress = 3732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3832. Total Progress = 3832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 3932. Total Progress = 3932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4032. Total Progress = 4032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4132. Total Progress = 4132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4232. Total Progress = 4232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4332. Total Progress = 4332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4432. Total Progress = 4432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 13950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4532. Total Progress = 4532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4632. Total Progress = 4632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4732. Total Progress = 4732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4832. Total Progress = 4832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 4932. Total Progress = 4932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5032. Total Progress = 5032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5132. Total Progress = 5132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5232. Total Progress = 5232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5332. Total Progress = 5332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5432. Total Progress = 5432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 14950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5532. Total Progress = 5532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5632. Total Progress = 5632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5732. Total Progress = 5732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5832. Total Progress = 5832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 5932. Total Progress = 5932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6032. Total Progress = 6032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6132. Total Progress = 6132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6232. Total Progress = 6232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6332. Total Progress = 6332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6432. Total Progress = 6432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 15950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6532. Total Progress = 6532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6632. Total Progress = 6632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6732. Total Progress = 6732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6832. Total Progress = 6832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 6932. Total Progress = 6932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7032. Total Progress = 7032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7132. Total Progress = 7132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7232. Total Progress = 7232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7332. Total Progress = 7332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7432. Total Progress = 7432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 16950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7532. Total Progress = 7532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7632. Total Progress = 7632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7732. Total Progress = 7732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7832. Total Progress = 7832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 7932. Total Progress = 7932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8032. Total Progress = 8032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8132. Total Progress = 8132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8232. Total Progress = 8232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8332. Total Progress = 8332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8432. Total Progress = 8432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 17950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8532. Total Progress = 8532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8632. Total Progress = 8632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8732. Total Progress = 8732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8832. Total Progress = 8832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 8932. Total Progress = 8932. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18450 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9032. Total Progress = 9032. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18550 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9132. Total Progress = 9132. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18650 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9232. Total Progress = 9232. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18750 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9332. Total Progress = 9332. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18850 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9432. Total Progress = 9432. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 18950 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9532. Total Progress = 9532. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 19050 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9632. Total Progress = 9632. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 19150 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9732. Total Progress = 9732. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 19250 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9832. Total Progress = 9832. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 19350 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 0. Curr Progress = 9932. Total Progress = 9932. Total Runtime = 30000.
+
+
+
+i 2 tr 68 block 1 finish 0 current_time 19418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 0. Total Progress = 10000. Total Runtime = 30000.
+
+
+
+blocked2[2]: 200
+blocked2[1]: -1082
+blocked2[0]: -45
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 0. Total Progress = 10000. Total Runtime = 30000.
+
+
+
+blocked2[2]: 168
+blocked2[1]: -1114
+blocked2[0]: -77
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 0. Total Progress = 10000. Total Runtime = 30000.
+
+
+
+blocked2[2]: 68
+blocked2[1]: -1214
+blocked2[0]: -177
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 0. Total Progress = 10000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 19718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 100. Total Progress = 10100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 19818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 200. Total Progress = 10200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 19918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 300. Total Progress = 10300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 400. Total Progress = 10400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 500. Total Progress = 10500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 600. Total Progress = 10600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 700. Total Progress = 10700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 800. Total Progress = 10800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 900. Total Progress = 10900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1000. Total Progress = 11000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1100. Total Progress = 11100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1200. Total Progress = 11200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 20918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1300. Total Progress = 11300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1400. Total Progress = 11400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1500. Total Progress = 11500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1600. Total Progress = 11600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1700. Total Progress = 11700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1800. Total Progress = 11800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 1900. Total Progress = 11900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2000. Total Progress = 12000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2100. Total Progress = 12100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2200. Total Progress = 12200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 21918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2300. Total Progress = 12300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2400. Total Progress = 12400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2500. Total Progress = 12500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2600. Total Progress = 12600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2700. Total Progress = 12700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2800. Total Progress = 12800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 2900. Total Progress = 12900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3000. Total Progress = 13000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3100. Total Progress = 13100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3200. Total Progress = 13200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 22918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3300. Total Progress = 13300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3400. Total Progress = 13400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3500. Total Progress = 13500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3600. Total Progress = 13600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3700. Total Progress = 13700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3800. Total Progress = 13800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 3900. Total Progress = 13900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4000. Total Progress = 14000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4100. Total Progress = 14100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4200. Total Progress = 14200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 23918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4300. Total Progress = 14300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4400. Total Progress = 14400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4500. Total Progress = 14500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4600. Total Progress = 14600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4700. Total Progress = 14700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4800. Total Progress = 14800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 4900. Total Progress = 14900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5000. Total Progress = 15000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5100. Total Progress = 15100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5200. Total Progress = 15200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 24918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5300. Total Progress = 15300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5400. Total Progress = 15400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5500. Total Progress = 15500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5600. Total Progress = 15600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5700. Total Progress = 15700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5800. Total Progress = 15800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 5900. Total Progress = 15900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6000. Total Progress = 16000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6100. Total Progress = 16100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6200. Total Progress = 16200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 25918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6300. Total Progress = 16300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6400. Total Progress = 16400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6500. Total Progress = 16500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6600. Total Progress = 16600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6700. Total Progress = 16700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6800. Total Progress = 16800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 6900. Total Progress = 16900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7000. Total Progress = 17000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7100. Total Progress = 17100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7200. Total Progress = 17200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 26918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7300. Total Progress = 17300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7400. Total Progress = 17400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7500. Total Progress = 17500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7600. Total Progress = 17600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7700. Total Progress = 17700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7800. Total Progress = 17800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 7900. Total Progress = 17900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8000. Total Progress = 18000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8100. Total Progress = 18100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8200. Total Progress = 18200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 27918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8300. Total Progress = 18300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8400. Total Progress = 18400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8500. Total Progress = 18500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8600. Total Progress = 18600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8700. Total Progress = 18700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8800. Total Progress = 18800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 8900. Total Progress = 18900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9000. Total Progress = 19000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9100. Total Progress = 19100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9200. Total Progress = 19200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 28918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9300. Total Progress = 19300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9400. Total Progress = 19400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9500. Total Progress = 19500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9600. Total Progress = 19600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9700. Total Progress = 19700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9800. Total Progress = 19800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 9900. Total Progress = 19900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10000. Total Progress = 20000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10100. Total Progress = 20100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10200. Total Progress = 20200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 29918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10300. Total Progress = 20300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10400. Total Progress = 20400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10500. Total Progress = 20500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10600. Total Progress = 20600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10700. Total Progress = 20700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10800. Total Progress = 20800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 10900. Total Progress = 20900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11000. Total Progress = 21000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11100. Total Progress = 21100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11200. Total Progress = 21200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 30918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11300. Total Progress = 21300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11400. Total Progress = 21400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11500. Total Progress = 21500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11600. Total Progress = 21600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11700. Total Progress = 21700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11800. Total Progress = 21800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 11900. Total Progress = 21900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12000. Total Progress = 22000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12100. Total Progress = 22100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12200. Total Progress = 22200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 31918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12300. Total Progress = 22300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12400. Total Progress = 22400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12500. Total Progress = 22500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12600. Total Progress = 22600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12700. Total Progress = 22700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12800. Total Progress = 22800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 12900. Total Progress = 22900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13000. Total Progress = 23000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13100. Total Progress = 23100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13200. Total Progress = 23200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 32918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13300. Total Progress = 23300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13400. Total Progress = 23400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13500. Total Progress = 23500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13600. Total Progress = 23600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13700. Total Progress = 23700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13800. Total Progress = 23800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 13900. Total Progress = 23900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14000. Total Progress = 24000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14100. Total Progress = 24100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14200. Total Progress = 24200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 33918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14300. Total Progress = 24300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14400. Total Progress = 24400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14500. Total Progress = 24500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14600. Total Progress = 24600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14700. Total Progress = 24700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14800. Total Progress = 24800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 14900. Total Progress = 24900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15000. Total Progress = 25000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15100. Total Progress = 25100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15200. Total Progress = 25200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 34918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15300. Total Progress = 25300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15400. Total Progress = 25400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15500. Total Progress = 25500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15600. Total Progress = 25600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15700. Total Progress = 25700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15800. Total Progress = 25800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 15900. Total Progress = 25900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16000. Total Progress = 26000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16100. Total Progress = 26100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16200. Total Progress = 26200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 35918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16300. Total Progress = 26300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16400. Total Progress = 26400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16500. Total Progress = 26500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16600. Total Progress = 26600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16700. Total Progress = 26700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16800. Total Progress = 26800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 16900. Total Progress = 26900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17000. Total Progress = 27000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17100. Total Progress = 27100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17200. Total Progress = 27200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 36918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17300. Total Progress = 27300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17400. Total Progress = 27400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17500. Total Progress = 27500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17600. Total Progress = 27600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17700. Total Progress = 27700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17800. Total Progress = 27800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 17900. Total Progress = 27900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18000. Total Progress = 28000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18100. Total Progress = 28100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18200. Total Progress = 28200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 37918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18300. Total Progress = 28300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18400. Total Progress = 28400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18500. Total Progress = 28500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18600. Total Progress = 28600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18700. Total Progress = 28700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18800. Total Progress = 28800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 18900. Total Progress = 28900. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38618 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19000. Total Progress = 29000. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38718 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19100. Total Progress = 29100. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38818 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19200. Total Progress = 29200. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 38918 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19300. Total Progress = 29300. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 39018 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19400. Total Progress = 29400. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 39118 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19500. Total Progress = 29500. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 39218 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19600. Total Progress = 29600. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 39318 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19700. Total Progress = 29700. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 39418 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19800. Total Progress = 29800. Total Runtime = 30000.
+
+
+
+i 2 tr 100 block 0 finish 0 current_time 39518 arrival 0
+q->end: 2 q->begin: 2 i: 2
+* PID: 0	250	750	4	9	55	8000	
+Curr Event = 6. Curr Progress = 0. Total Progress = 9068. Total Runtime = 9068.
+* PID: 1	200	300	
+Curr Event = 2. Curr Progress = 0. Total Progress = 500. Total Runtime = 500.
+PID: 2	10000	20000	
+Curr Event = 1. Curr Progress = 19900. Total Progress = 29900. Total Runtime = 30000.
+
+
+
+**********  SUMMARY ***********
+	Start	end	run	blocks	util percent
+PID0:	0	 	9068
+PID1:	110	 	500
+PID2:	520	 	30000
+Total idle time:	200

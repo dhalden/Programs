@@ -16,7 +16,7 @@
 
 
 // represents a single job
-struct Proc{
+/*struct Proc{
     int start_time; // start time
 
     // array of time intervals to run between blocking events
@@ -36,15 +36,15 @@ struct Proc{
     int total_progress;	// total time you've run this job
 
  // total_time - total_progress is needed to report time remaining efficiently
-};
+};*/
 
 // struct for all the jobs
-struct Processes{
+/*struct Processes{
    struct Proc *array;      // array of Processes
    int internal_size;       // how big the array is total
    int size;                // how many valid Procs in the array
 };
-
+*/
 Processes * proc_create(char *filename)
 {
    // This function is provided for you.
@@ -147,9 +147,10 @@ void proc_print(Processes *proc)
 		   printf("Curr Event = %d. ",end = proc->array[i].curr_event);
 		   printf("Curr Progress = %d. ",end = proc->array[i].progress);
 		   printf("Total Progress = %d. ",end = proc->array[i].total_progress);
-		   printf("Total Runtime = %d.\n ",end = proc->array[i].total_time);
+		   printf("Total Runtime = %d.\n",end = proc->array[i].total_time);
 	   }
    }
+   printf("\n\n\n");
 }
 
 int proc_norun_check_arrival(Processes *proc, int time_interval,
@@ -159,71 +160,112 @@ int proc_norun_check_arrival(Processes *proc, int time_interval,
 	// See run_proc for directions.  
     // In this case, you aren't running any processes, but you need to report if
 	// a process arrives during this time interval
+    //printf("\n\nThis totally happens\n\n");
 	int i;
     for(i = 0; i < time_interval; i++)
     {
         
-        if(count == proc_arrival[count + current_time])
+        if((i + current_time) == proc->array[*proc_arrival].start_time)
         {
-            proc[arrival[count + current_time]].announced++;
-            current_time += count; 
-            return 1;
+            proc->array[i].announced++;
+            *arrival = 1;
+            current_time += i; 
+            return i;
         }
     }
-    
-    return 0;
+    *arrival = 0;
+    return time_interval;
 
 }
 
 int run_proc(Processes * proc, int proc_id, int time_interval, int * block,
-             int * finish, int current_time, int *arrival, int *proc_arrival)
+             int * finish, int current_time, int * arrival, int * proc_arrival)
 {
 	// YOU NEED TO COMPLETE THIS
 	// return -1 if proc is invalid or proc_id is invalid.
-    if(!proc->array[proc_id])
+    // THIS MAY NOT BE CORRECT!!! CHECK THIS LATER!
+    if((proc->array[proc_id].array[0] == 0))
     {
-        return 0;
+        return -1;
     }
 
 	// return -1 if this job is already done
     // (you shouldn't be trying to run finished jobs)
     //
-    if(proc->array[proc_id]->done)
+    if(proc->array[proc_id].done)
     {
-        return 0;
+        *finish = 1;
+        return -1;
     }
 
 
+    int tr;
     int count;
-    for(count = 0; count <= time_interval; count++)
+    for(count = 1; count <= time_interval; count++)
     {
+        if(time_interval < 0)
+            {
+                //printf("Time Interval is Negative: %d", time_interval);
+            }
     	// check to see if anyone arrives during this time interval
 	    //
-        if(count == proc_arrival[count + current_time])
+        tr = (proc->array[proc_id].total_time -
+             (proc->array[proc_id].total_progress + count));
+        if((count + current_time) == (proc->array[*proc_arrival].start_time))
         {
-            proc->array[arrival[count + current_time]].announced++;
+            proc->array[*proc_arrival].announced++;
             proc->array[proc_id].total_progress += count;
-            current_time += count; 
-            return -1;
+            proc->array[proc_id].progress += count;
+            *arrival = 1;
+            current_time += count;
+            if(tr <= 0)
+            {
+                proc->array[proc_id].done++;
+                *finish = 1;
+            }
+            //printf("This is the exit1\n");
+            return count;   
         }
     	// See if the process blocks during this time interval
 	    //
-        if(count == block)
+        if((count + proc->array[proc_id].progress) ==
+            proc->array[proc_id].array[proc->array[proc_id].curr_event])
         {
+            proc->array[proc_id].curr_event++;
+            proc->array[proc_id].progress = 0;
             proc->array[proc_id].total_progress += count;
             current_time += count; 
-            return -1; 
+            *arrival = 0;
+            if(tr <= 0)
+            {
+                proc->array[proc_id].done++;
+                *finish = 1;
+            }
+            else
+            {
+                *block = 1;
+            }
+            //printf("This is the exit2\n");
+            return count;   
         }
 	    // run to the shortest of (someone arriving,
         //                         someone blocking, time_interval).
 	    //
 
-        if((proc->array[proc_id].total_progress + count) == total_time)
+        //finished early
+        if(tr <= 0)
         {
-            proc->array[proc_id].total_progress += time_interval;
-            proc->array[proc_id]->done++;
+            proc->array[proc_id].total_progress += count;
+            proc->array[proc_id].progress += count;
             current_time += count; 
-            return -1;
+            *arrival = 0;
+            if(tr == 0)
+            {
+                proc->array[proc_id].done++;
+                *finish = 1;
+            }
+            //printf("This is the exit3\n\n");
+            return count;   
         }
     	// if you ran the whole time interval without an event. You are done.
 	    // if you blocked, be sure to set the variables properly to notify the 
@@ -237,8 +279,16 @@ int run_proc(Processes * proc, int proc_id, int time_interval, int * block,
         // return how long you ran.
 	}
     proc->array[proc_id].total_progress += time_interval;
+    proc->array[proc_id].progress += time_interval;
     current_time += time_interval; 
-    return -1;
+    *arrival = 0;
+    if(tr <= 0)
+    {
+         proc->array[proc_id].done++;
+         *finish = 1;
+    }
+    //printf("This is the exit4\n");
+    return time_interval;   
 }
 
 int proc_time_remaining(Processes *proc, int proc_id)

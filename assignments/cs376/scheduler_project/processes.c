@@ -16,7 +16,7 @@
 
 
 // represents a single job
-/*struct Proc{
+struct Proc{
     int start_time; // start time
 
     // array of time intervals to run between blocking events
@@ -36,15 +36,15 @@
     int total_progress;	// total time you've run this job
 
  // total_time - total_progress is needed to report time remaining efficiently
-};*/
+};
 
 // struct for all the jobs
-/*struct Processes{
+struct Processes{
    struct Proc *array;      // array of Processes
    int internal_size;       // how big the array is total
    int size;                // how many valid Procs in the array
 };
-*/
+
 Processes * proc_create(char *filename)
 {
    // This function is provided for you.

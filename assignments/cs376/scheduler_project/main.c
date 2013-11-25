@@ -46,16 +46,21 @@ void print_finished(Queue * q, int num_jobs, int itime)
 	printf("Total idle time:\t%d\n",XX);
 	*/
 	int i;
+    int mttf = 0;
 	printf("**********  SUMMARY ***********\n");
-	printf("\tStart\tend\t\trun\tblocks\tutil percent\n");
+	printf("\tStart\tend\trun\tblocks\tutil percent\n");
 	for(i = 0; i <= num_jobs; i++)
 	{
         int s = q->start_times[i];
         int b = q->blocks[i];
         int r = q->run_times[i];
         int e = q->end_times[i];
-		printf("PID%d:\t%d\t%d\t%d\t\t%d\n", i, s, e, r, b);//XX);
+        float up =((float)r)/((float)e-(float)s);
+        mttf += r;
+		printf("PID%d:\t%d\t%d\t%d\t%d\t%1.3f\n", i, s, e, r, b, up);
 	}
+    mttf = mttf/(num_jobs);
+    printf("Mean Time to Finish: \t%d\n", mttf);
 	printf("Total idle time:\t%d\n", itime);
 	
 }
@@ -132,7 +137,7 @@ int main (int argc, char * argv [])
        //proc_print(proc);
        //printf("\ntime left: %d\n", time_left);
        //printf("current_time: %d\n", current_time);
-       if(time_left == 0)
+       if(!arrival)
        { 
            time_left = time_step;
        } 
@@ -142,6 +147,7 @@ int main (int argc, char * argv [])
 
        if(q->blocked[i] <= 0)  
        {
+           //time ran
              tr = run_proc(proc, i, time_left, &block, &finish,
                         current_time, &arrival, &proc_arrival); 
              if(tr != -1 && tr != -2 && !(finish))
@@ -155,9 +161,9 @@ int main (int argc, char * argv [])
                  if(finish)
                  {
                     time_left -= tr;
-                    current_time += tr;
                     q->run_times[i] += tr;
                     q->end_times[i] = current_time;
+                    current_time += tr;
                     i++;
                     q->begin++;
                  }
@@ -448,7 +454,7 @@ int main (int argc, char * argv [])
                     }
                 }
             }
-        }        
+        }
     }
     else if (algorithm == 3)
     {

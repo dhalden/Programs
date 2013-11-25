@@ -3,34 +3,8 @@
 
 // Macro.  if(1) disables printing, if(0) turns it on.
 #define DEBUGPRINTF if(1){}else printf
-typedef struct Proc{
-    int start_time; // start time
 
-    // array of time intervals to run between blocking events
-    int array[1024];
-
-    int num_events;	// how many elements are in the array
-    int curr_event;	// which "event" (index into array) is currently running
-    int progress;   // how much progress you've made in that event
-                    // progress<= array[curr_event]
-
-    int done;       // if this process is done this is 1, else 0
-    int announced;	// if you've announced this process to the parent, mark as 1
-
-    // total time required to finish this job (just the sum of array)
-    int total_time;
-
-    int total_progress;	// total time you've run this job
-
- // total_time - total_progress is needed to report time remaining efficiently
-} Proc;
-
-typedef struct Processes
-{
-   struct Proc *array;      // array of Processes
-   int internal_size;       // how big the array is total
-   int size;                // how many valid Procs in the array
-} Processes;
+typedef struct Processes Processes;
 // Create your Processes struct using the filename of a schedule.txt
 Processes * proc_create(char *filename);
 

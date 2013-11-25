@@ -1,6 +1,0 @@
-**********  SUMMARY ***********
-	Start	end		run	blocks	util percent
-PID0:	0	10072	9068		5
-PID1:	110	1500	500		1
-PID2:	520	39768	30000		1
-Total idle time:	200

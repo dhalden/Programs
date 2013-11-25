@@ -12,6 +12,7 @@
 typedef struct Queue{
     int blocked[MAX_JOBS];
     int blocks[MAX_JOBS];
+    int run_times[MAX_JOBS];
     int start_times[MAX_JOBS];
     int end_times[MAX_JOBS];
     int begin;
@@ -46,13 +47,14 @@ void print_finished(Queue * q, int num_jobs, int itime)
 	*/
 	int i;
 	printf("**********  SUMMARY ***********\n");
-	printf("\tStart\tend\trun\tblocks\tutil percent\n");
+	printf("\tStart\tend\t\trun\tblocks\tutil percent\n");
 	for(i = 0; i <= num_jobs; i++)
 	{
-        //THIS PART NEXT!!!!
-        int d = proc->array[i].start_time;
-		printf("PID%d:\t%d\t \t%d\n", i, d,
-                proc->array[i].total_time);//,XX,XX,XX);
+        int s = q->start_times[i];
+        int b = q->blocks[i];
+        int r = q->run_times[i];
+        int e = q->end_times[i];
+		printf("PID%d:\t%d\t%d\t%d\t\t%d\n", i, s, e, r, b);//XX);
 	}
 	printf("Total idle time:\t%d\n", itime);
 	
@@ -112,55 +114,65 @@ int main (int argc, char * argv [])
    int tr = 0;
    int proc_arrival;
    int arrival;
+   q->start_times[0] = 0;
+   q->end_times[0] = 0;
+   q->run_times[0] = 0;
+   q->blocks[0] = 0;
    q->begin = 0;
    q->end = 0;
-   while((q->end >= q->begin))
+   if((algorithm == 0))
+   {
+
+   }
+   else if((algorithm == 1))
+   {
+   //First Come First Serve
+   while((q->end >= q->begin)&& q->end_times[q->end] ==0)
    {
        //proc_print(proc);
        //printf("\ntime left: %d\n", time_left);
+       //printf("current_time: %d\n", current_time);
        if(time_left == 0)
        { 
            time_left = time_step;
        } 
        int finish = 0;
-       /*if(q->end < proc->size)
-       {
-           proc_arrival = proc->array[q->end].start_time;
-           arrival = q->end;
-       }
-       else
-       {*/
-           //proc_arrival = proc->array[proc->size].start_time;
        proc_arrival = q->end + 1;
        arrival = 0;
-       //arrival = proc->size;
-       //}
 
        if(q->blocked[i] <= 0)  
-        {
-               /* proc->array[k].announced &&*/
-             
-                 tr = run_proc(proc, i, time_left, &block, &finish,
-                            current_time, &arrival, &proc_arrival); 
-                 if(tr != -1 && tr != 0 && !(finish))
+       {
+             tr = run_proc(proc, i, time_left, &block, &finish,
+                        current_time, &arrival, &proc_arrival); 
+             if(tr != -1 && tr != -2 && !(finish))
+             {
+                time_left -= tr;
+                current_time += tr;
+                q->run_times[i] += tr;
+             }
+             else
+             {
+                 if(finish)
                  {
                     time_left -= tr;
                     current_time += tr;
+                    q->run_times[i] += tr;
+                    q->end_times[i] = current_time;
+                    i++;
+                    q->begin++;
                  }
-                 else
+                 else if(tr == -2)
                  {
-                     if(finish)
-                     {
-                        i++;
-                        q->begin++;
-                     }
-                goto pastblock;
+                    i++;
+                    q->begin++;
                  }
+                 goto pastblock;
+             }
              
-/*printf("i %d tr %d block %d finish %d current_time %d arrival %d\n",
-       i, tr, block, finish, current_time, arrival); 
-       printf("q->end: %d q->begin: %d i: %d\n", q->end, q->begin, i);
-*/      }
+       /* printf("i %d tr %d block %d finish %d current_time %d arrival %d\n",
+                                 i, tr, block, finish, current_time, arrival); 
+        printf("q->end: %d q->begin: %d i: %d\n", q->end, q->begin, i);
+*/       }
        else if ((q->end - q->begin) == 0)// more than one process
        {
            tr = proc_norun_check_arrival(proc, time_left,
@@ -183,19 +195,26 @@ int main (int argc, char * argv [])
                     
                     tr = run_proc(proc, k, time_left, &block, &finish,
                                     current_time, &arrival, &proc_arrival); 
-                    if(tr != -1 && tr != 0 && !(finish))
+                    if(tr != -1 && tr != -2 && !(finish))
                     {
                         time_left -= tr;
                         current_time += tr;
+                        q->run_times[k] += tr;
                     }
                     else
                     {
+                        if(finish)
+                        {
+                           q->end_times[k] = current_time;
+                           current_time += tr;
+                           q->run_times[k] += tr;
+                        }
                         finish = 0;
                         goto middlefinished;
                     }
                     break;
                 }
-                else if ((q->end - q->begin) == 0) // if more than one process
+                else if ((q->end - k) == 0) // if more than one process
                 {
                     tr = proc_norun_check_arrival(proc, time_left,
                                 current_time, &arrival, &proc_arrival);
@@ -211,23 +230,33 @@ int main (int argc, char * argv [])
                 }
             }
             
-            if(q->somethingIsBlocked)
+            if(q->somethingIsBlocked && tr > 0)
             {
                 int p;
                 int num_blocked = 0;
-                for(p=proc->size; p >= 0; p--)
+                for(p=q->end; p >= 0; p--)
                 {
                       //printf("blocked[%d]: %d\n", p, q->blocked[p]);
-                      //printf("tr = %d\n", tr);
+                      /*printf("tr = %d\n", tr);
+                      printf("time Left1 = %d\n", time_left);*/
                       q->blocked[p] -= (tr);
                       if(q->blocked[p] > 0)
                       {
                           num_blocked++;
-                          if(q->blocked[p] <= time_left)
+                         if(q->blocked[p] <= time_left)
+                          {
+                              time_left = q->blocked[p];
+                          }
+                         else if ((q->blocked[p] < time_step) && time_left == 0)
                           {
                               time_left = q->blocked[p];
                           }
                       }
+                      else
+                      {
+                            q->blocked[p] = 0;
+                      }
+                     // printf("time Left2 = %d\n", time_left);
                 }
                 if(!num_blocked)
                 {
@@ -237,22 +266,21 @@ int main (int argc, char * argv [])
             if(block)
             {
                 q->blocked[k] = 200;
+                q->blocks[k]++;
                 q->somethingIsBlocked = 1;
             }
-       int progressive = proc->array[k].progress;
-/*printf("k %d tr %d block %d finish %d current_time %d
-           arrival %d progress %d\n",
-        k, tr, block, finish, current_time, arrival, progressive); 
-*/
+        //printf("k %d tr %d block %d finish %d current_time %d arrival %d\n",
+        //k, tr, block, finish, current_time, arrival); 
+
             goto pastblock; 
        }
-       if(q->somethingIsBlocked)
+       if(q->somethingIsBlocked && tr > 0)
        {
           int p;
           int num_blocked = 0;
           for(p=q->end; p >= 0; p--)
           {
-              printf("blocked2[%d]: %d\n", p, q->blocked[p]);
+              //printf("blocked2[%d]: %d\n", p, q->blocked[p]);
               //printf("tr = %d\n", tr);
               q->blocked[p] -= (tr);
               if(q->blocked[p] > 0)
@@ -276,15 +304,157 @@ int main (int argc, char * argv [])
        if(block)
        {
           q->blocked[i] = 200;
+          q->blocks[i]++;
           q->somethingIsBlocked = 1;
        }
        pastblock:
        if(arrival)
        {
            q->end++;
+           q->start_times[q->end] = current_time;
+           q->end_times[q->end] = 0;
+           q->blocked[q->end] = 0;
+           q->run_times[q->end] = 0;
+           q->blocks[q->end] = 0;
        }
        block = 0;
    }
+   }
+   else if (algorithm == 2)
+   {
+       //round-robin
+        int total_finished = 0; 
+        int finish = 0;
+        q->somethingIsBlocked = 0;
+        proc_arrival = q->end+1;
+        while(total_finished <= q->end)
+        {
+            
+           //proc_print(proc); 
+           int eib = 1;    // everything is blocked. 1 if true.
+           for(i = q->begin; i <= q->end; i++)
+           {
+            if(q->blocked[i] <= 0)
+            {
+                if(!q->end_times[i])
+                {
+                    tr = run_proc(proc, i , time_left, &block, &finish,
+                                  current_time, &arrival, &proc_arrival); 
+                    if(tr >= 0)
+                    {
+                        q->run_times[i] += tr;
+                        current_time += tr;
+                        if(arrival)
+                        {
+                            i--; // run for remaining time quanta
+                            time_left = time_step - tr;
+                            q->end++;
+                            proc_arrival = q->end+1;
+                            //add the new process to the list
+                            q->blocked[q->end] = 0;
+                            q->blocks[q->end] = 0;
+                            q->run_times[q->end] = 0;
+                            q->start_times[q->end] = current_time;
+                            q->end_times[q->end] = 0;
+                            arrival = 0;
+                        }
+                        else
+                        {
+                            time_left = time_step;
+                        }
+                        if(q->somethingIsBlocked)
+                        {
+                            int p;
+                            int num_blocked = 0;
+                            for(p=q->begin; p <= q->end; p++)
+                            {
+                                q->blocked[p] -= tr;
+                                if(q->blocked[p] > 0)
+                                {
+                                    num_blocked++;
+                                } 
+                                else
+                                {
+                                    q->blocked[p] = 0;
+                                }
+                            }
+                            if(!num_blocked)
+                            {
+                                q->somethingIsBlocked=0;
+                            }
+                        }
+                        if(block)
+                        {
+                            q->blocked[i] = 200;
+                            q->blocks[i]++;
+                            q->somethingIsBlocked = 1;
+                            block = 0;
+                        }
+                        if(finish)
+                        {
+                            q->end_times[i] = current_time;
+                            total_finished++;
+                            finish = 0;
+                        }
+                        eib = 0;
+                    }
+                }
+            }
+
+           }
+           if (eib)
+           {
+               tr = proc_norun_check_arrival(proc, time_left, current_time,
+                                                    &arrival, &proc_arrival);
+                current_time += tr;
+                if(arrival)
+                {
+                    time_left = time_step;
+                    time_waited += tr;
+                    q->end++;
+                    proc_arrival = q->end+1;
+                    //add the new process to the list
+                    q->blocked[q->end] = 0;
+                    q->blocks[q->end] = 0;
+                    q->run_times[q->end] = 0;
+                    q->start_times[q->end] = current_time;
+                    q->end_times[q->end] = 0;
+                    arrival = 0;
+                }
+                else
+                {
+                    time_left = time_step;
+                    time_waited += tr;
+                }
+                if(q->somethingIsBlocked)
+                {
+                    int p;
+                    int num_blocked = 0;
+                    for(p=q->begin; p <= q->end; p++)
+                    {
+                        q->blocked[p] -= tr;
+                        if(q->blocked[p] > 0)
+                        {
+                            num_blocked++;
+                        } 
+                        else
+                        {
+                            q->blocked[p] = 0;
+                        }
+                    }
+                    if(!num_blocked)
+                    {
+                        q->somethingIsBlocked=0;
+                    }
+                }
+            }
+        }        
+    }
+    else if (algorithm == 3)
+    {
+        //Multi-level Queue
+
+    }
 
    // Here is the bulk of your work.  
    // You will need to run until you've finished running all the
@@ -294,7 +464,7 @@ int main (int argc, char * argv [])
    // to ensure future processes have arrived before
    // you have finished previous ones.)
 
-   print_finished(proc, q->end, time_waited);
+   print_finished(q, q->end, time_waited);
 
    proc_destroy(proc);
    free(proc);

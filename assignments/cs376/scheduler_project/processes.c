@@ -161,7 +161,25 @@ int proc_norun_check_arrival(Processes *proc, int time_interval,
     // In this case, you aren't running any processes, but you need to report if
 	// a process arrives during this time interval
     //printf("\n\nThis totally happens\n\n");
-	int i;
+    int start_time = proc->array[*proc_arrival].start_time;
+    //printf("start_time %d, current_time %d, proc_arrival %d\n",
+     //start_time, current_time, *proc_arrival);
+    if(*proc_arrival <= proc->size)
+    {
+        if(time_interval+current_time > start_time)
+        {
+            if(!proc->array[*proc_arrival].announced)
+            {
+            //printf("start_time %d, current_time %d, proc_arrival %d\n",
+            // start_time, current_time, *proc_arrival);
+            proc->array[*proc_arrival].announced++;
+            *arrival = 1;
+            return ((start_time) - current_time);
+            }
+        }
+    }
+    return time_interval;
+	/*int i;
     for(i = 0; i < time_interval; i++)
     {
         
@@ -175,7 +193,7 @@ int proc_norun_check_arrival(Processes *proc, int time_interval,
     }
     *arrival = 0;
     return time_interval;
-
+*/
 }
 
 int run_proc(Processes * proc, int proc_id, int time_interval, int * block,
@@ -194,10 +212,8 @@ int run_proc(Processes * proc, int proc_id, int time_interval, int * block,
     //
     if(proc->array[proc_id].done)
     {
-        *finish = 1;
-        return -1;
+        return -2;
     }
-
 
     int tr;
     int count;

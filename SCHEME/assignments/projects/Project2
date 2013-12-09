@@ -1,0 +1,52 @@
+(define (absall1 lis)
+  (if (null? lis)
+      '()
+      (cons (abs (car lis)) (absall1 (cdr lis)))
+   )
+)
+
+(define (absall2 lis)
+  (map abs lis))
+
+(define (multiinsertL l1 l2 lis)
+  (cond
+    ((null? lis) '() )
+    ((eq? l2 (car lis))
+       (cons l1 (cons l2 (multiinsertL l1 l2 (cdr lis)))))
+    (else (cons (car lis) (multiinsertL l1 l2 (cdr lis))))
+  )
+)
+
+(define (removeAllDeep rem lis)
+  (cond
+    ((null? lis) '())
+    ((list? (car lis))
+        (cons (removeAllDeep rem (car lis))
+              (removeAllDeep rem (cdr lis))))
+    ((eq? rem (car lis)) (removeAllDeep rem (cdr lis)))
+    (else (cons (car lis) (removeAllDeep rem (cdr lis))))
+   )
+ )
+
+(define (inputlis)
+  (let ((rv (read)))
+      (if (eq? rv 'q)
+          '()
+          (cons rv (inputlis))
+      )
+   )
+)
+
+(define (last lis . opt)
+  (cond
+    ((null? opt)
+        (if (null? (cdr lis)) (car lis)))
+    ((null? lis) '())
+    ((= (length lis) (car opt)) lis)
+    (else (last (cdr lis) (+ 1 (car opt))))
+  )
+)
+
+
+
+

@@ -1,8 +1,0 @@
-(define (my-list-ref lis idx)
-  (cond
-    ((null? lis) '())
-    ((=idx 0) (car lis))
-    (else (my-list-ref lis (- idx 1)))
-    
-   )
- )

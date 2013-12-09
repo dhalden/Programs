@@ -12,9 +12,10 @@
 
 #define MAX_STUDENTS 1000 // Maximum number of students in the simulation
 
-typedef struct { //Information for each student
-  char gender; //b or g
-  int arrival_time;  // time between the arrival of this student and the previous student
+typedef struct {     // Information for each student
+  char gender;       // b or g
+  int arrival_time;  // time between the arrival of this 
+                     // student and the previous student
 } student_info;
 
 //Commandline parameters
@@ -23,7 +24,7 @@ int group_size; //Size of each group
 
 //You are responsible for maintaining and updating the following variables
 int total_groups; //Complete groups formed so far (<= max_groups)
-int grouped; //Number of students added to current group (<= group_size)
+int grouped;      //Number of students added to current group (<= group_size)
 
 //Add further variables here, including synchronization variables
 

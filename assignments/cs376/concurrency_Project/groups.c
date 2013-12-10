@@ -61,7 +61,7 @@ void * boy(void * num) {
     //Write this!
     beginning:
     sem_wait(&groups);
-    if((g+b) <= group_size)
+    if((g+b+1) <= group_size)
     {
         if((b+1) < group_size)
         {
@@ -111,16 +111,18 @@ void * boy(void * num) {
         }
         sem_post(&groups);
     }
-    else if ((grouped) >= group_size)
+    else if ((g+b) > group_size)
     {
+        //printf("\n\t\tb: %d ", b);
+        //printf("g: %d\n", g);
         sem_post(&groups);
-        while((grouped) > 0);
+        while((g+b) > group_size);
         goto beginning;
     }
     else
     {
         // add it to the group
-        if((b+1) < group_size)
+        if((b+1) < group_size && ((g+b+1) <= group_size))
         {
             grrr[grouped] = 'B';
             grouped++;
@@ -130,7 +132,7 @@ void * boy(void * num) {
         else
         {
             sem_post(&groups);
-            while((b >= group_size));
+            while((b >= group_size) && ((g+b+1) > group_size));
             goto beginning;
         }
     }
@@ -143,7 +145,7 @@ void * girl(void * num) {
     //Write this!
     beginning:
     sem_wait(&groups);
-    if((g+b) <= group_size)
+    if((g+b+1) <= group_size)
     {
         if((g+1) < group_size)
         {
@@ -164,15 +166,17 @@ void * girl(void * num) {
             goto beginning;
         }
     }
-    else if((grouped) >= group_size)
+    else if((g+b) > group_size)
     {
+        //printf("\n\t\tb: %d ", b);
+        //printf("g: %d\n", g);
         sem_post(&groups);
-        while((grouped) > 0);
+        while((g+b) > group_size);
         goto beginning;
     }
     else
     {
-        if((g+1) < group_size)
+        if((g+1) < group_size && ((g+b+1) <= group_size))
         {
             grrr[grouped] = 'G';
             grouped++;
@@ -182,7 +186,7 @@ void * girl(void * num) {
         else
         {
             sem_post(&groups);
-            while((b >= group_size));
+            while((b >= group_size) && ((g+b+1) > group_size));
             goto beginning;
         }
     }

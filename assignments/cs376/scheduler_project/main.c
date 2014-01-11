@@ -257,9 +257,9 @@ int main (int argc, char * argv [])
    //First Come First Serve
    while((q->end >= q->begin) && q->end_times[q->end] == 0)
    {
-       //proc_print(proc);
-       //printf("\ntime left: %d\n", time_left);
-       //printf("current_time: %d\n", current_time);
+       proc_print(proc);
+       printf("\ntime left: %d\n", time_left);
+       printf("current_time: %d\n", current_time);
        if(!arrival)
        { 
            time_left = time_step;
@@ -281,8 +281,10 @@ int main (int argc, char * argv [])
              }
              else
              {
+		
                  if(finish)
                  {
+	     	    printf("This totally happens");
                     time_left -= tr;
                     q->run_times[i] += tr;
                     q->end_times[i] = current_time;
@@ -298,10 +300,10 @@ int main (int argc, char * argv [])
                  goto pastblock;
              }
              
-       /* printf("i %d tr %d block %d finish %d current_time %d arrival %d\n",
+        printf("i %d tr %d block %d finish %d current_time %d arrival %d\n",
                                  i, tr, block, finish, current_time, arrival); 
         printf("q->end: %d q->begin: %d i: %d\n", q->end, q->begin, i);
-*/       }
+       }
        else if ((q->end - q->begin) == 0)// more than one process
        {
            tr = proc_norun_check_arrival(proc, time_left,
@@ -365,9 +367,9 @@ int main (int argc, char * argv [])
                 int num_blocked = 0;
                 for(p=q->end; p >= 0; p--)
                 {
-                      //printf("blocked[%d]: %d\n", p, q->blocked[p]);
-                      /*printf("tr = %d\n", tr);
-                      printf("time Left1 = %d\n", time_left);*/
+                      printf("blocked[%d]: %d\n", p, q->blocked[p]);
+                      printf("tr = %d\n", tr);
+                      printf("time Left1 = %d\n", time_left);
                       q->blocked[p] -= (tr);
                       if(q->blocked[p] > 0)
                       {
@@ -385,7 +387,7 @@ int main (int argc, char * argv [])
                       {
                             q->blocked[p] = 0;
                       }
-                     // printf("time Left2 = %d\n", time_left);
+                      printf("time Left2 = %d\n", time_left);
                 }
                 if(!num_blocked)
                 {
@@ -398,8 +400,8 @@ int main (int argc, char * argv [])
                 q->blocks[k]++;
                 q->somethingIsBlocked = 1;
             }
-        //printf("k %d tr %d block %d finish %d current_time %d arrival %d\n",
-        //k, tr, block, finish, current_time, arrival); 
+        printf("k %d tr %d block %d finish %d current_time %d arrival %d\n",
+        k, tr, block, finish, current_time, arrival); 
 
             goto pastblock; 
        }
@@ -409,8 +411,8 @@ int main (int argc, char * argv [])
           int num_blocked = 0;
           for(p=q->end; p >= 0; p--)
           {
-              //printf("blocked2[%d]: %d\n", p, q->blocked[p]);
-              //printf("tr = %d\n", tr);
+              printf("blocked2[%d]: %d\n", p, q->blocked[p]);
+              printf("tr = %d\n", tr);
               q->blocked[p] -= (tr);
               if(q->blocked[p] > 0)
               {
@@ -448,6 +450,9 @@ int main (int argc, char * argv [])
        }
        block = 0;
    }
+        printf("i %d tr %d block %d finish %d current_time %d arrival %d\n",
+                                 i, tr, block, finish, current_time, arrival); 
+        printf("q->end: %d q->begin: %d i: %d\n", q->end, q->begin, i);
    }
    else if (algorithm == 2)
    {

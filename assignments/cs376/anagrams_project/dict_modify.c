@@ -21,6 +21,44 @@ struct dictList{
 };
 
 
+dictList * sortWord(char *input)
+{
+    char tempword[46];
+    char alphabet = 'a';
+    int a;
+    int tempholder;
+    tempholder = 0;
+
+    //for(i = 0; i < strlen(input); i++)
+    //{
+    //    input[i] = tolower(input[i]);
+    //}
+    strcpy(tempword, input);
+
+    for(a = 0; a < 26; a++)
+        {
+            for(i = 0; i < strlen(input); i++)
+            {
+
+                if(tempholder == (strlen(input)))
+                {
+                        tempword[tempholder] = '\0';
+                        goto out ;
+                }
+                input[i] = tolower(input[i]);
+                if(input[i] == alphabet)
+                {
+                    tempword[tempholder] = alphabet;
+                    tempholder++;
+                }
+            }
+            alphabet++;
+        }
+    out:
+    return tempword;
+}
+
+
 int main()
 {
     /* 

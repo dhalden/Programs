@@ -187,7 +187,7 @@ struct cmdin * parse(char *cmd)
             fprintf(stderr, "Memory Error: failed to Malloc\n");
             exit(1);
         }
-    } 
+    }
     strncpy(ped->args[ped->nargs], cmd, strlen(cmd)-1);
     if(!strcmp(ped->args[ped->nargs], "&"))
     {

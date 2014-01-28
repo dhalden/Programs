@@ -14,7 +14,7 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <fnctl.h>
+#include <fcntl.h>
 //include header file from parse for parsing cmds, and ioredirction
 #include "parse.h"
 
@@ -26,38 +26,26 @@
 #define STDOUT 1
 #define STDERR 2
 
-
-struct cmdin   //cmdinfo
-{
-char *cmd;     //the actual command
-char **args;   //the arguments associated with that command
-int amp;       //1 if ampersand, 0 otherwise
-int len;       //length of command
-int pipe;      //1 if pipe, 0 otherwise
-int iored[3];  //which io redirects are mentioned
-int iocount;   //how many io redirects are there
-};
-
 int main()
 {
     char input[MAX_CLEN];
     char cwd[MAX_CLEN];
     char hostname[KB];
-    if(gethostname(hostname, sizeof(hostname)) == NULL)
+    if(gethostname(hostname, sizeof(hostname)) == -1)
     {
-        fprintf(stderr, "ERROR: Could not gethostname");
+        fprintf(stderr, "ERROR: Could not 'gethostname'\n");
         exit(1);
     }
-    if(getcwd(cwd, sizeof(cwd)) == NULL);
+    if(getcwd(cwd, sizeof(cwd)) != NULL);
     {
-        fprintf(stderr, "ERROR: Could not getcwd");
-        exit(1);
+    //    fprintf(stderr, "ERROR: Could not 'getcwd'\n");
+    //    exit(1);
     }
     struct cmdin *cmd;
     while(!strcmp(input, EXITS))
     {
         printf("%s@dish:%s$ ", hostname, cwd);
-        cmd = parse_cmd(STDIN);
+        parse_cmd(STDIN, cmd);
     }
-
+    return 0;
 }

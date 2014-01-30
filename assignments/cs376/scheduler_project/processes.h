@@ -19,7 +19,7 @@ void proc_print(Processes * proc);
 // finish will be 1 if the job finishes
 // arrival will be 1 if a new arrival shows up and the proc_arrival
 // variable will be the proc_id of the new arrival
-int  run_proc(Processes * proc, int proc_id, int time_interval, int * block, 
+int  run_proc(Processes * proc, int proc_id, int time_interval, int * block,
              int * finish, int current_time, int *arrival, int *proc_arrival);
 
 // returns -1 if  invalid inputs

@@ -1,3 +1,4 @@
+;#1
 (define (absall1 lis)
   (if (null? lis)
       '()
@@ -8,6 +9,10 @@
 (define (absall2 lis)
   (map abs lis))
 
+
+
+
+;#2
 (define (multiinsertL l1 l2 lis)
   (cond
     ((null? lis) '() )
@@ -17,6 +22,10 @@
   )
 )
 
+
+
+
+;#3
 (define (removeAllDeep rem lis)
   (cond
     ((null? lis) '())
@@ -28,6 +37,10 @@
    )
  )
 
+
+
+
+;#4 (NOTE: I use this later on in the project)
 (define (inputlis)
   (let ((rv (read)))
       (if (eq? rv 'q)
@@ -37,16 +50,204 @@
    )
 )
 
+
+
+
+
+
+;#5
+(define (dottedlist lis)
+    (if (not (null? lis))
+        (cons (cons (car lis) (car (cdr lis))) (dottedlist (cdr (cdr lis))))
+        '()
+     )
+)
+(define (dottedinput)
+    (let ((lis (inputlis)))
+      (dottedlist lis)
+   )
+  )
+(define (searchpairs searchval lis)
+  (cdr (assoc searchval lis)))
+
+(define (enterAndSearch sval)
+  (searchpairs sval (dottedinput))
+)
+;End #5
+
+
+
+
+
+;#6
 (define (last lis . opt)
   (cond
-    ((null? opt)
-        (if (null? (cdr lis)) (car lis)))
-    ((null? lis) '())
-    ((= (length lis) (car opt)) lis)
-    (else (last (cdr lis) (+ 1 (car opt))))
+    ((null? opt) 
+           (if (null? (cdr lis))
+               (car lis)
+               (last (cdr lis))
+           )
+    )
+    (else (if (= (length lis) (car opt))
+               lis
+               (last (cdr lis) (car opt))))
   )
 )
 
 
 
 
+;#7
+(define (fun3 lis1 lis2)
+  (cond
+     ((null? lis1) 
+         (if (null? lis2)
+             '()
+             (cons (car lis2)  (fun3 lis1 (cdr lis2)))
+          )
+     )
+     ((null? lis2) 
+         (if (null? lis1)
+             '()
+             (cons (car lis1) (fun3 (cdr lis1) lis2))
+          )
+     )
+     (else (cons (+ (car lis1) (car lis2)) (fun3 (cdr lis1) (cdr lis2))))
+  )
+)
+
+
+
+
+
+
+;#8
+(define (func n m)
+  (cond
+    ((< n m) 0)
+    (else (+ 1 (func (- n m) m)))))
+;It does integer division (define (Divide n m)) would be a better name for it
+
+
+
+
+
+
+
+;#9
+(define (listspecific lis)
+  (car (cdr (car (cdr (car (cdr (cdr (cdr lis)))))))))
+  
+;((a b c (q r s)) (t t) (d e f) (g (h i) j) (y z))
+
+
+
+
+
+
+
+;#10
+(define (odd-list i)
+  (cond
+    ((negative? i) '()) 
+    ((zero? i) '())
+    ((= 1 i) '())
+    ((not (integer? i)) 
+            (if (odd? (floor i)) 
+                (cons (floor i) (odd-list (floor i)))
+                (odd-list (floor i))
+            )
+    )        
+    ((even? i) (cons (- i 1) (odd-list (- i 1))))
+    (else (cons (- i 2) (odd-list (- i 2))))
+  )
+ )
+;#11 Handed in separately
+
+
+
+
+
+
+
+
+
+;#12
+(define cardvalues '((ace . 1) (two . 2) (three . 3) (four . 4) (five . 5) (six . 6) (seven . 7) 
+                     (eight . 8) (nine . 9) (ten . 10) (jack . 10) (queen . 10) (king . 10))
+ )
+(define (numaces hand)
+  (if (null? hand) 
+    0
+    (if (eq? (car hand) 'ace)
+        (+ (numaces (cdr hand)) 1)
+        (numaces (cdr hand)))
+   )
+)
+(define (removeaces hand)
+  (cond
+    ((null? hand) '())
+    ((eq? 'ace (car hand)) (removeaces (cdr hand)))
+    (else (cons (car hand) (removeaces (cdr hand))))
+    )
+ )
+(define (bjhvnoaces hand)
+   (cond
+     ((null? hand) 0)
+     (else (+ (bjhvnoaces (cdr hand)) (cdr (assoc (car hand) cardvalues))))
+    )
+)
+;If you are checking #12 individually, the method below is the method you should check, NOT the above methods
+(define (bjhandval hand)
+  (cond
+    ((= (numaces hand) 0) (bjhvnoaces hand))
+    (else (if (> (+ (+ 10 (numaces hand)) (bjhvnoaces (removeaces hand))) 21)
+          (+ (bjhvnoaces (removeaces hand)) (numaces hand))
+          (+ 10 (+ (bjhvnoaces (removeaces hand)) (numaces hand)))
+          )
+    )
+  )
+)
+
+
+
+
+
+
+
+
+;THIS IS THE FUNCTION USED TO PLAY BLACKJACK
+;CALL (bjuser), and not something else
+;#13 & #14
+(define (bjuser)
+    (display "Enter a blackjack hand: ")
+    (let ((hand (inputlis)))
+    (display "\n")
+    (display (bjhandval hand))
+    (display "\n")
+    (display hand)
+    (display "\n")
+    (aacoq hand)
+)
+)
+;add-a-card to hand or quit)
+(define (aacoq hand)
+     (cond
+       ((> (bjhandval hand) 21) (display "\n") (display (bjhandval hand)) (display "\n") (display hand) (display "\n"))
+       (else
+       (if (< (bjhandval hand) 16) 
+            (display "It is suggested that you HIT\n")
+            (display "It is suggested that you STAY\n")) 
+       (display "\nEnter a card or stay to quit: ")
+       (let ((nc (read)))
+         (cond 
+           ((not (eq? nc 'stay)) (display "\n") (let ((nhand (cons nc hand))) (display (bjhandval nhand)) (display "\n") (display nhand) (display "\n") (aacoq nhand)))
+           (else (display "\n") (display (bjhandval hand)) (display "\n") (display hand) (display "\n"))
+         ) 
+       )
+     )
+  )
+)
+     
+     
+    

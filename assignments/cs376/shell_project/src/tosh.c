@@ -59,6 +59,8 @@ int conpipe(struct cmdin * cmd)
 //otherwise, return 0
 int coniored(struct cmdin * cmd)
 {
+    printf("cmd->iored[cmd->iocount +1] = %d cmd->args[cmd->nargs] = %s\n\n",
+            cmd->iored[cmd->iocount +1],       cmd->args[cmd->nargs]);
     if(cmd->iored[cmd->iocount + 1] == 0)
     {
         if(!strcmp(cmd->args[cmd->nargs], "<"))
@@ -67,6 +69,8 @@ int coniored(struct cmdin * cmd)
         }
         else if(!strcmp(cmd->args[cmd->nargs], "1>"))
         {
+            printf("\nThis is happening\n");
+            printf("\ncmd->nargs = %d\n\n", cmd->nargs);
             return cmd->nargs;
         }
         else if(!strcmp(cmd->args[cmd->nargs], "2>"))
@@ -94,16 +98,31 @@ int freeze(struct cmdin cmd)
     int i;
     for(i=0; i <= (cmd.nargs); i++)
     {
-        if(cmd.iocount >= 0)
+        if(i < 3)
         {
             cmd.iored[cmd.iocount] = 0;
             cmd.iocount--;
         }
         free(cmd.args[i]);
+        cmd.args[i] = NULL;
     }
     free(cmd.args);
     free(cmd.cmd);
     
+    return 0;
+}
+int printcmd(struct cmdin cmd)
+{
+    int i;
+    for(i=0; i<=cmd.nargs; i++)
+    {
+        if(i < 3)
+        {
+            printf("cmd.iored[%d]: %d\n", i, cmd.iored[i]);
+        }
+        printf("cmd.args[%d]: %s\n", i, cmd.args[i]);
+    }
+    printf("cmd.cmd: %s\n", cmd.cmd);
     return 0;
 }
 
@@ -122,6 +141,8 @@ struct cmdin * parse(char *cmd)
     ped->nargs = 0;
     ped->iocount = -1;
     ped->iored[0] = 0;
+    ped->iored[1] = 0;
+    ped->iored[2] = 0;
     ped->andflag = 0;
     //allocate space for the array of strings, and for the string cmd.
     if(!(ped->args =  malloc(sizeof(char*) * MAX_SIZE)))
@@ -166,7 +187,7 @@ struct cmdin * parse(char *cmd)
             fprintf(stderr, "Memory Error: failed to Malloc\n");
             exit(1);
         }
-    } 
+    }
     strncpy(ped->args[ped->nargs], cmd, strlen(cmd)-1);
     if(!strcmp(ped->args[ped->nargs], "&"))
     {
@@ -402,12 +423,15 @@ int main()
                   }
                 }
             }
-            //printf("%s\n", cmd->args[cmd->iored[0] - 1]);
+            //printf("%s\n", cmd->args[cmd->iored[0]]);
             for(i = cmd->iored[0]; i <= cmd->nargs; cmd->nargs--)
             {
                 free(cmd->args[cmd->nargs]);
                 cmd->args[cmd->nargs] = NULL;
             }
+            //printf("After: ");
+            //printcmd(*cmd);
+            fflush(NULL);
 
             child_pid = fork();
             if(child_pid < 0)
@@ -417,7 +441,7 @@ int main()
             }
             else if(child_pid == 0)
             {
-                if(io0 != -1)
+                if(io0 == 0)
                 {
                     int fid0 = open(file0, O_RDONLY, 0666);
                     if(fid0 < 0)
@@ -429,7 +453,7 @@ int main()
                     dup(fid0);
                     close(fid0);
                 }
-                if(io1 != -1)
+                if(io1 == 1)
                 {
                     int fid1 =  open(file1, O_WRONLY | O_CREAT, 0666);
                     if(fid1 < 0)
@@ -441,7 +465,7 @@ int main()
                     dup(fid1);
                     close(fid1);
                 }
-                if(io2 != -1)
+                if(io2 == 2)
                 {
                     int fid2 =  open(file2, O_WRONLY | O_CREAT, 0666);
                     if(fid2 < 0)
@@ -460,6 +484,8 @@ int main()
             freeze(*cmd);
             free(cmd);
             
+            //printcmd(*cmd);
+            //fflush(NULL);
 
         }
         if(cmd->andflag)

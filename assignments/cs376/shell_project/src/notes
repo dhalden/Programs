@@ -1,0 +1,18 @@
+Currently code segfaults when I try to print out cmd->args[cmd->iored[0] - 1]
+But only when I try to run the command a second time.
+The second time I run the $ cat makefile 1> make.out 2> make.err, it segfaults.
+The first time it runs like it is supposed to.
+
+However, when I run the code using valgrind, it doesn't segfault, and runs like
+it is supposed to run. The only problem is when I run the previous command, or
+try to run it, twice in a row, not in valgrind. This is weird.
+
+It does not matter whether or not the file exists ahead of time.
+
+Okay, the problem is becoming more clear. For whatever reason, when I run the
+program the second time, I don't pick up the same data that I did before.
+
+
+Now 1> isn't working... Period. It's hard to say if the other things are
+working, figure out why 1> isn't working, when you get back
+On second thoughts, this might not actually be a problem. Test further.

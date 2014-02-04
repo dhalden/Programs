@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements to &apos;SynchronizedMethods/src&apos;&#x0A;- Original project: &apos;SynchronizedMethods&apos;&#x0A;- Destination element: &apos;SynchronizedMethods/src&apos;&#x0A;- Original elements:&#x0A;     SynchClass.java&#x0A;     SayHi.java&#x0A;     SayBye.java&#x0A;- Update references to refactored element" description="Move files" destination="/src" element1="SynchClass.java" element2="SayHi.java" element3="SayBye.java" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1390925935772" units="0" version="1.0"/>
+</session>

@@ -37,6 +37,7 @@ def intersection(di, *arg):
     for i in range(len(arg)):
         temp = "".join(set(temp).intersection(set(di[arg[i]]))) 
     return temp    
+
 # Either I'm doing something wrong here, or we solved something wrong in class
 def usandns(di):
     u = []

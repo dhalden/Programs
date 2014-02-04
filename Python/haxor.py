@@ -16,7 +16,7 @@ def ssh():
 #if successful, return computer name, and password.
 
 def cause_mischief()
-#leave them a note on their desktop, that their password is to easy to gues
+#leave them a note on their desktop, that their password is too easy to guess
     subprocess.check_call(["cd", os.expand_user("~/Desktop")])
 
 

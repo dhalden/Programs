@@ -13,15 +13,16 @@
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="UserSeparator" itemType="typeSeparator"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1390869224404" focus="true" label="Workspace - Java">
 <editors>
@@ -31,17 +32,27 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IAm.java" partName="IAm.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden-c1/src/IAm.java" title="IAm.java" tooltip="dhalden-c1/src/IAm.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden-c1/src/IAm.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="249" selectionTopPixel="68"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden/src/Main.java" title="Main.java" tooltip="dhalden/src/Main.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden/src/Main.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="387" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden-c1/src/Main.java" title="Main.java" tooltip="dhalden-c1/src/Main.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden-c1/src/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JLabelThread.java" partName="JLabelThread.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden/src/JLabelThread.java" title="JLabelThread.java" tooltip="dhalden/src/JLabelThread.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden/src/JLabelThread.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="278"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CounterThread.java" partName="CounterThread.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden/src/CounterThread.java" title="CounterThread.java" tooltip="dhalden/src/CounterThread.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden/src/CounterThread.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="852" selectionTopPixel="472"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GlobalCounter.java" partName="GlobalCounter.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden/src/GlobalCounter.java" title="GlobalCounter.java" tooltip="dhalden/src/GlobalCounter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden/src/GlobalCounter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="501" selectionTopPixel="227"/>
 </editor>
 </editors>
 <views>
@@ -50,6 +61,9 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors (1 item)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -59,7 +73,7 @@
 </viewState>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="1" rootMode="1" workingSetName="">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
@@ -254,7 +268,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24972856" ratioLeft="230" ratioRight="691" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.19458129" ratioLeft="237" ratioRight="981" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.76785713" ratioLeft="473" ratioRight="143" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -272,7 +286,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.7496382" ratioLeft="518" ratioRight="173" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="right" ratio="0.78498983" ratioLeft="387" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
@@ -291,6 +305,13 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-c1/src/IAm.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-c1/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-c1/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MVPdemo/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MVPdemo/src/SLView.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden/src/JLabelThread.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden/src/CounterThread.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden/src/GlobalCounter.java"/>
 </editors>
 <item historyLabel="IAm.java" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -298,8 +319,56 @@
 <item historyLabel="Main.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="IAm.java" index="0">
+<item historyLabel="IAm.java" index="0">
+<position info="not_deleted" x="249" y="0"/>
+</item>
+<item historyLabel="Main.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Main.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SLView.java" index="4">
+<position info="not_deleted" x="3475" y="0"/>
+</item>
+<item historyLabel="Main.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SLView.java" index="4">
+<position info="not_deleted" x="3475" y="0"/>
+</item>
+<item historyLabel="Main.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Main.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="JLabelThread.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CounterThread.java" index="7">
+<position info="not_deleted" x="852" y="0"/>
+</item>
+<item historyLabel="Main.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GlobalCounter.java" index="8">
+<position info="not_deleted" x="529" y="0"/>
+</item>
+<item historyLabel="CounterThread.java" index="7">
+<position info="not_deleted" x="852" y="0"/>
+</item>
+<item historyLabel="Main.java" index="5">
+<position info="not_deleted" x="387" y="0"/>
+</item>
+<item historyLabel="JLabelThread.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CounterThread.java" index="7">
+<position info="not_deleted" x="852" y="0"/>
+</item>
+<item active="true" historyLabel="GlobalCounter.java" index="8">
+<position info="not_deleted" x="529" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -318,6 +387,24 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GlobalCounter.java" tooltip="dhalden/src/GlobalCounter.java">
+<persistable path="/dhalden/src/GlobalCounter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CounterThread.java" tooltip="dhalden/src/CounterThread.java">
+<persistable path="/dhalden/src/CounterThread.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JLabelThread.java" tooltip="dhalden/src/JLabelThread.java">
+<persistable path="/dhalden/src/JLabelThread.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="dhalden/src/Main.java">
+<persistable path="/dhalden/src/Main.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SLView.java" tooltip="MVPdemo/src/SLView.java">
+<persistable path="/MVPdemo/src/SLView.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="MVPdemo/src/Main.java">
+<persistable path="/MVPdemo/src/Main.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="dhalden-c1/src/Main.java">
 <persistable path="/dhalden-c1/src/Main.java"/>
 </file>
@@ -344,12 +431,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SayHi.java" tooltip="SynchronizedMethods/src/SayHi.java">
 <persistable path="/SynchronizedMethods/src/SayHi.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SayBye.java" tooltip="SynchronizedMethods/src/SayBye.java">
-<persistable path="/SynchronizedMethods/src/SayBye.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IAm.java" tooltip="dhalden-lab1/src/IAm.java">
-<persistable path="/dhalden-lab1/src/IAm.java"/>
 </file>
 </mruList>
 </workbench>

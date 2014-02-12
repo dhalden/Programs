@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="776" width="1231" x="49" y="24">
+<window height="776" width="709" x="47" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -33,26 +33,21 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden/src/Main.java" title="Main.java" tooltip="dhalden/src/Main.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden/src/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="387" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden-Lab2/src/Main.java" title="Main.java" tooltip="dhalden-Lab2/src/Main.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden-Lab2/src/Main.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="105" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JLabelThread.java" partName="JLabelThread.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden/src/JLabelThread.java" title="JLabelThread.java" tooltip="dhalden/src/JLabelThread.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden/src/JLabelThread.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="278"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Controller.java" partName="Controller.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden-Lab2/src/Controller.java" title="Controller.java" tooltip="dhalden-Lab2/src/Controller.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden-Lab2/src/Controller.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="952" selectionTopPixel="610"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CounterThread.java" partName="CounterThread.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden/src/CounterThread.java" title="CounterThread.java" tooltip="dhalden/src/CounterThread.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden/src/CounterThread.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="852" selectionTopPixel="472"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GlobalCounter.java" partName="GlobalCounter.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden/src/GlobalCounter.java" title="GlobalCounter.java" tooltip="dhalden/src/GlobalCounter.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden/src/GlobalCounter.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="501" selectionTopPixel="227"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Model.java" partName="Model.java" path="/home/jebediah/My_Stuff/Programs/assignments/cs324/dhalden-Lab2/src/Model.java" title="Model.java" tooltip="dhalden-Lab2/src/Model.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dhalden-Lab2/src/Model.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="409" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -62,7 +57,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (1 item)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -240,25 +235,36 @@
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.jdt.ui.JavadocView"/>
-<view id="org.eclipse.jdt.ui.SourceView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29845625"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="left" orientation="512" selectedTabId="org.eclipse.jdt.ui.PackageExplorer" style="0">
+<fastViews>
+<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.7491857" ratioLeft="690" ratioRight="231" relationship="2" relative="left">
@@ -268,32 +274,25 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.19458129" ratioLeft="237" ratioRight="981" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.76785713" ratioLeft="473" ratioRight="143" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
-<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info part="org.eclipse.ui.editorss" ratio="0.17607974" ratioLeft="106" ratioRight="496" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.933213" ratioLeft="517" ratioRight="37" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.78498983" ratioLeft="387" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="right" ratio="0.70718235" ratioLeft="256" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -303,72 +302,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-c1/src/IAm.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-c1/src/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-c1/src/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MVPdemo/src/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MVPdemo/src/SLView.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden/src/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden/src/JLabelThread.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden/src/CounterThread.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden/src/GlobalCounter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-Lab2/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-Lab2/src/SLView.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-Lab2/src/SLController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-Lab2/src/Controller.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-Lab2/src/Model.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-Lab2/src/Model.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dhalden-Lab2/src/Controller.java"/>
 </editors>
-<item historyLabel="IAm.java" index="0">
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="578" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="615" y="0"/>
+</item>
+<item historyLabel="Model.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Main.java" index="1">
+<item historyLabel="Model.java" index="4">
+<position info="not_deleted" x="258" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="615" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="700" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="722" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="1247" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="1139" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="70" y="0"/>
+</item>
+<item historyLabel="SLView.java" index="1">
+<position info="not_deleted" x="15606" y="17"/>
+</item>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="70" y="0"/>
+</item>
+<item historyLabel="SLController.java" index="2">
+<position info="not_deleted" x="1994" y="17"/>
+</item>
+<item historyLabel="Main.java" index="0">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="IAm.java" index="0">
-<position info="not_deleted" x="249" y="0"/>
+<item historyLabel="SLView.java" index="1">
+<position info="not_deleted" x="15606" y="17"/>
 </item>
-<item historyLabel="Main.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="961" y="0"/>
 </item>
-<item historyLabel="Main.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="1245" y="0"/>
 </item>
-<item historyLabel="SLView.java" index="4">
-<position info="not_deleted" x="3475" y="0"/>
+<item historyLabel="Model.java" index="4">
+<position info="not_deleted" x="422" y="0"/>
 </item>
-<item historyLabel="Main.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="578" y="0"/>
 </item>
-<item historyLabel="SLView.java" index="4">
-<position info="not_deleted" x="3475" y="0"/>
+<item historyLabel="Model.java" index="4">
+<position info="not_deleted" x="422" y="0"/>
 </item>
-<item historyLabel="Main.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Model.java" index="4">
+<position/>
 </item>
-<item historyLabel="Main.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Model.java" index="4">
+<position info="not_deleted" x="367" y="0"/>
 </item>
-<item historyLabel="JLabelThread.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="820" y="0"/>
 </item>
-<item historyLabel="CounterThread.java" index="7">
-<position info="not_deleted" x="852" y="0"/>
+<item historyLabel="Model.java" index="4">
+<position info="not_deleted" x="304" y="0"/>
 </item>
-<item historyLabel="Main.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="820" y="0"/>
 </item>
-<item historyLabel="GlobalCounter.java" index="8">
-<position info="not_deleted" x="529" y="0"/>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="577" y="0"/>
 </item>
-<item historyLabel="CounterThread.java" index="7">
-<position info="not_deleted" x="852" y="0"/>
+<item historyLabel="Model.java" index="4">
+<position info="not_deleted" x="474" y="0"/>
 </item>
-<item historyLabel="Main.java" index="5">
-<position info="not_deleted" x="387" y="0"/>
+<item historyLabel="Controller.java" index="3">
+<position info="not_deleted" x="577" y="0"/>
 </item>
-<item historyLabel="JLabelThread.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Model.java" index="4">
+<position info="not_deleted" x="474" y="0"/>
 </item>
-<item historyLabel="CounterThread.java" index="7">
-<position info="not_deleted" x="852" y="0"/>
+<item historyLabel="Main.java" index="0">
+<position info="not_deleted" x="961" y="0"/>
 </item>
-<item active="true" historyLabel="GlobalCounter.java" index="8">
-<position info="not_deleted" x="529" y="0"/>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="480" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="539" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="373" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="539" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="421" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="431" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="646" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="431" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="646" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="431" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="646" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="431" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="646" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="431" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="646" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="417" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="646" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="417" y="0"/>
+</item>
+<item historyLabel="Model.java" index="5">
+<position info="not_deleted" x="409" y="0"/>
+</item>
+<item active="true" historyLabel="Controller.java" index="6">
+<position info="not_deleted" x="646" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -376,6 +466,12 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -383,10 +479,26 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Model.java" tooltip="dhalden-Lab2/src/Model.java">
+<persistable path="/dhalden-Lab2/src/Model.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Controller.java" tooltip="dhalden-Lab2/src/Controller.java">
+<persistable path="/dhalden-Lab2/src/Controller.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SLController.java" tooltip="dhalden-Lab2/src/SLController.java">
+<persistable path="/dhalden-Lab2/src/SLController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SLView.java" tooltip="dhalden-Lab2/src/SLView.java">
+<persistable path="/dhalden-Lab2/src/SLView.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="dhalden-Lab2/src/Main.java">
+<persistable path="/dhalden-Lab2/src/Main.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GlobalCounter.java" tooltip="dhalden/src/GlobalCounter.java">
 <persistable path="/dhalden/src/GlobalCounter.java"/>
 </file>
@@ -416,21 +528,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="CountingThreads/src/Main.java">
 <persistable path="/CountingThreads/src/Main.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JLabelThread.java" tooltip="CountingThreads/src/JLabelThread.java">
-<persistable path="/CountingThreads/src/JLabelThread.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EWNSframe.java" tooltip="CountingThreads/src/EWNSframe.java">
-<persistable path="/CountingThreads/src/EWNSframe.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CounterThread.java" tooltip="CountingThreads/src/CounterThread.java">
-<persistable path="/CountingThreads/src/CounterThread.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SynchClass.java" tooltip="SynchronizedMethods/src/SynchClass.java">
-<persistable path="/SynchronizedMethods/src/SynchClass.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SayHi.java" tooltip="SynchronizedMethods/src/SayHi.java">
-<persistable path="/SynchronizedMethods/src/SayHi.java"/>
 </file>
 </mruList>
 </workbench>

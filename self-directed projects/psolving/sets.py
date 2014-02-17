@@ -1,6 +1,6 @@
+#Author: Derek Halden
 
-p = []
-s = ["abcdefghijk","abcdefghijkl","abcdefghijklm","abcdefghijklmn","abcdefghijklmno"]
+
 
 #Make the powerset p for a string st
 #The new version of powerset
@@ -54,6 +54,12 @@ def usandns(di):
     u.sort(lambda x,y: cmp(len(x),len(y)))
     n.sort(lambda x,y: cmp(len(x),len(y)))
     return u,n
+
+
+
+#Body of the code
+p = []
+s = ["abcdefghijk","abcdefghijkl","abcdefghijklm","abcdefghijklmn","abcdefghijklmno"]
 
 for j in range (len(s)):
     p.append(powerset(s[j]))

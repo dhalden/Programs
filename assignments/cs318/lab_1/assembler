@@ -1,0 +1,37 @@
+#! /usr/bin/perl
+
+#NOTE: Need to find out how to output to a file.
+
+open (INFILE, "<", $ARGV[0]) or die ("Couldn't find file to open.");
+{
+    local $/;
+    $input = <INFILE>;
+}
+
+sub lex
+{
+    #if it equals an opcode, we need to conver that into binary
+    if($input =~/^\s(tbd|hal|add|lui|lli|xor|rxor|beq|smw|j|sll|sdri|addi|and)/)
+    {
+        $nextToken = $1;
+        #not sure if I need this
+        $actToken = $1;
+        $input = $';
+    }
+    # if it equals a register we need to convert that number into binary
+    elsif($input =~/^\sr(0|1|2|3|4|5|6|7)/)
+    {
+        $nextToken = $1;
+        $actToken = $1;
+        $input =$'
+    }
+    #If it equals a number, we need to convert that number into binary
+    elsif($input =~ //)
+    {
+    }
+}
+
+sub readline
+{
+  
+}

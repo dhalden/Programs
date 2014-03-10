@@ -1,0 +1,9 @@
+Single-loop processor
+Fetch
+Decode
+Execute
+Memory
+Write Back
+
+
+Do the write-up

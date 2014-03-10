@@ -1,7 +1,6 @@
 INDEX VERSION 1.126+/home/jebediah/My_Stuff/Programs/assignments/cs324/.metadata/.plugins/org.eclipse.jdt.core
 3938652823.index
 989528713.index
-1593881373.index
 1513993030.index
 392775124.index
 460152253.index

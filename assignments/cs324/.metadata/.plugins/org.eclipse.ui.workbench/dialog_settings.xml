@@ -22,6 +22,7 @@
 	<section name="ZipFileImportWizard">
 		<item value="false" key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardZipFileResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/home/jebediah/Downloads/MVC-BounceThread.zip"/>
 			<item value="/home/jebediah/Downloads/checkoff2JavaFiles.zip"/>
 			<item value="/home/jebediah/Downloads/cs324Project1JavaFiles.zip"/>
 			<item value="/home/jebediah/Downloads/SkidmoreMVCLibrary_v2_2.zip"/>

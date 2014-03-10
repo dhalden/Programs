@@ -1,0 +1,25 @@
+instruction                        instruction #
+*tbd (to be determined)                 0000
+*hal (halt)                             0001
+*add                                    0010
+*addi (to the destination register)     0011
+?*xnor  (?Do I need this?)               0100
+*beq                                    0101
+(I will implement this as skip if equal, and put a jump after it)
+*lli (from smr)                         0110
+*wm (write to memory)                   0111
+*smr (set memory addr to read from)     1000
+?*sll (source is same as destination)    1001
+*rxor (ripple xor writes to register 1) 1010
+*sdri (set destination register immediate/also set memory addr to read from)
+                                        1011
+*luw (from smr)                         1100
+*llw (from smr)                         1101
+*band  (and the second specified register, with 2^16 and write to memory)
+                                        1110
+*j                                      1111
+     
+     
+     
+     
+     (carry out writes to smw's most recent target)

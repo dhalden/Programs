@@ -5,12 +5,25 @@ def main():
     assembler = newsteam()
     assembler.__init__()
     #search
-   assembler.sdri(1)
-   assembler.addi(0)
-   while(assembler.registers[6] < 182): 
-       assembler.llw(2)
-       assembler.luw(3)
-       assembler.xnor(2,3)
+    assembler.smr(6)
+    assembler.llw(1)
+    assembler.luw(2)
+    assembler.smr(60)
+    assembler.smr(26)
+    #make a shift up one command that does everything I need
+    assembler.lhw(3)
+    while(assembler.registers[6] < 182): 
+        assembler.luw(4)
+        assembler.xnor(3, 1)
+        if(assembler.registers[3] == 0)
+            break
+        assembler.lhw(4)
+        assembler.xnor(3, 1)
+        if(assembler.registers[3] == 0)
+            break
+        
+       
+
 
 
 if __name__ =='__main__':

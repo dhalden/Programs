@@ -64,12 +64,18 @@ class newsteam:
             self.registers[a] = (self.registers[a] + self.registers[b]) % pow(2,16)
             #maybe have a carryout to memory? maybe if the addition = 1
 
-#NOTE Do I still need this?
-    def bxnor(self,a,b):
-        if(a == 0b000):
-            self.registers[0b000] = 0
+    #is this okay?
+    def search(self,a,b):
+        self.registers[a] = ~(self.registers[a] ^ self.registers[b])
+        if(self.registers[a] == self.registers[0])
+            self.registers[a] = ~(self.registers[a+1] ^ self.registers[b+1])
+            if (self.registers[a] == self.registers[0])
+                self.registers[a] = 0
+            else:
+                self.registers[a] = self.registers[a+1]
         else:
-            self.registers[a] = self.registers[a] ^ self.registers[b]
+            self.registers[a] = self.registers[a+1]
+
 
     def sub(self,b):
         print("band: "+ str(self.registers[b]))
@@ -89,13 +95,16 @@ class newsteam:
         self.bistrings[self.registers[7]] += cout
 
     #load upper word
+    #denotes add 1 for search function
     def luw(self,a):
-        self.registers[a] = int(self.bistrings[hex(self.registers[6]+2)],10)
-
-    #load lower word
-    def llw(self,a):
-        #print(int( '0b' + self.bistrings[hex(self.registers[6])][16:]))
         self.registers[a] = int(self.bistrings[hex(self.registers[6])])
+        self.registers[6] += 2;
+        self.registers[7] += 1;
+
+    #load half word
+    def lhw(self,a):
+        self.registers[a] = int(self.bistrings[hex(self.registers[6])])
+        self.registers[6] += 2;
 
     def hal(self):
         return exit(0)
@@ -132,13 +141,11 @@ def main():
     #NOTE: Problem with getting 96 into register
     while (assembler.registers[6] < 96): 
         #NOTE: collapse smr & luw into one step
-        assembler.llw(2)
-        assembler.luw(3)
-        assembler.smr(4)
-        assembler.llw(4)
-        assembler.luw(5)
+        assembler.lhw(2)
+        assembler.lhw(3)
+        assembler.lhw(4)
+        assembler.lhw(5)
         assembler.rxor()
-        assembler.smr(4)
     assembler.sub(1)
     assembler.wm(1)
 

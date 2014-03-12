@@ -3,7 +3,7 @@ instruction                        instruction #
 *hal (halt)                             0001
 *add                                    0010
 *addi (to the destination register)     0011
-?*xnor  (?Do I need this?)               0100
+*search                                 0100
 *beq                                    0101
 (I will implement this as skip if equal, and put a jump after it)
 *lli (from smr)                         0110

@@ -1,0 +1,21 @@
+Author: Derek Halden
+Group: Derek Halden
+
+Lab 1 Write Up
+
+ IXI (Standing for "IXI is XOR Intensive") Is the name of this
+architecture. It was created with the goal of having a very low dynamic
+instruction count, and without much thought to anything else. In order to
+achieve this goal, IXI started out very broad. It had numerous instructions
+that were planned to be almost exactly like MIPS instructions, with only 2
+instructions that weren't like MIPS instructions. As we started to code the
+actual problems, it became clear that certain instructions could either be
+gotten rid of, or collapsed into other isntructions. And then it also became
+clear that there were new instructions needed.
+The decision for the way the 10 bit instructions are divided up, was made at
+the beginning of the project. Having at least 8 registers, was imperative, so
+it followed that anything involving more than 4 bits for opcodes, was out of
+the question. From there, the 3 bit registers was determined purely by the
+need for a branch if equal. 
+
+

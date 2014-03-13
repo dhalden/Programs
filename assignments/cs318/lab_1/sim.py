@@ -7,7 +7,7 @@ class ValError(Exception):
         return repr(self.value)
 
 class newsteam:
-    registers = [0,0,0,0,0,0,0,0]
+    registers = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     __immreg = 0
     __pcounter = 0
     bistrings = {}  
@@ -22,11 +22,7 @@ class newsteam:
         for i in range(192):
             if (i >= 30 and i < 64):
                 #bistring = bin(randint(0, pow(2,8)) + 32768)
-                bistring = bin(randint(0, pow(2,7)) + 127)
-                temp = (bin(randint(0,pow(2,7))+ 127))
-                bistring = bistring[2:]  + temp[2:]
-                for j in range(16 - len(bistring)):
-                    bistring = '0' + bistring
+                bistring = self.randomword()
                 badd += 0x2
             else:
                 if (i == 9):
@@ -35,22 +31,21 @@ class newsteam:
                     if (i == 90):
                         bistring = '1010011100010011'
                     else: 
-                        bistring = bin(randint(0, pow(2,7)) + 127)
-                        temp = (bin(randint(0,pow(2,7))+ 127))
-                        bistring = bistring[2:]  + temp[2:]
-                        for j in range(16 - len(bistring)):
-                            bistring = '0' + bistring
+                        bistring = self.randomword() 
                 else: 
-                    bistring = bin(randint(0, pow(2,7)) + 127)
-                    temp = (bin(randint(0,pow(2,7))+ 127))
-                    bistring = bistring[2:]  + temp[2:]
-                    for j in range(16 - len(bistring)):
-                        bistring = '0' + bistring
+                    bistring = self.randomword()
                 badd += 0x2
             self.bistrings[hex(badd)] = ((bistring))
         #print self.bistrings
         # 4 self.registers means that I have 2-bit
         #000 this register will always be zero, for a couple of reasons
+    def randomword(self):
+        bistring = bin(randint(0, pow(2,7)) + 127)
+        temp = (bin(randint(0,pow(2,7))+ 127))
+        bistring = bistring[2:]  + temp[2:]
+        for j in range(16 - len(bistring)):
+            bistring = '0' + bistring
+        return bistring
     
     #if specifying a register, 'a' should a number, and 'b' should be 0'
     #if specifying memory, 'a' should be 0, and 'b' should be a number
@@ -59,6 +54,7 @@ class newsteam:
             self.__immreg = bin(a)
         else:
             raise ValError('int provided is not in self.registers')
+
 
     #NOTE because of the change I made to how I'm dealing with wmemaddr, this 
     #might not be necessary.
@@ -97,9 +93,11 @@ class newsteam:
         #print("register 4, the first time: " + str( self.registers[4]))
         self.registers[3] = str(int(self.registers[3]) ^ int(self.registers[1]))
         if(int(self.registers[3]) == self.registers[0]):
+            print("this is happening")
             self.registers[3] = str(int(self.registers[4]) ^
                                       int(self.registers[2]))
-            if (int(self.registers[3] == self.registers[0])):
+            print(self.registers[3])
+            if (int(self.registers[3]) == self.registers[0]):
                 self.registers[3] = 0
             else:
                 #print("register 4: " + str( self.registers[4]))
@@ -122,10 +120,10 @@ class newsteam:
         self.__pcounter == label
 
     #NOTE: I MIGHT NOT NEED THIS
-    def sll(self,a):
-        a << 1 
-        cout = a / (pow(2,16))
-        self.bistrings[self.registers[7]] += cout
+   # def sll(self,a):
+    #    a << 1 
+     #   cout = a / (pow(2,16))
+      #  self.bistrings[self.registers[7]] += cout
 
     #load upper word
     #denotes add 1 for search function
@@ -135,7 +133,9 @@ class newsteam:
 
     #NOTE:THIS NEEDS TO BE IN A FORM SUCH THAT MEMORY IS
     # ONLY HALF-WORD ADDRESSABLE
-    #load half word
+    # This might be okay though, because it would mean that I can load 2 bytes 
+    # at the same time.
+    #load quarter word
     def lqw(self,a):
         if(self.registers[6] % 2 == 0):
             self.registers[a] = (self.bistrings[hex(self.registers[6])][:8])
@@ -157,12 +157,23 @@ class newsteam:
         t= str(self.registers[3])
         u= str(self.registers[4])
         v= str(self.registers[5])
+        w= str(self.registers[8])
+        x= str(self.registers[9])
+        y= str(self.registers[10])
+        z= str(self.registers[11])
          #s = str(bin(rnum))[2:]
+
+        #need to make sure this is okay, and if it's not, I would like to see
+        # if I can make it into a 7-bit register 
         self.registers[7] += ((self.rxorr(s[:8]) + self.rxorr(s[8:]))%2)
         self.registers[7] += ((self.rxorr(t[:8]) + self.rxorr(t[8:]))%2)
         self.registers[7] += ((self.rxorr(u[:8]) + self.rxorr(u[8:]))%2)
         self.registers[7] += ((self.rxorr(v[:8]) + self.rxorr(v[8:]))%2)
-        print self.registers[2:6], self.registers[7],"\n"
+        self.registers[7] += ((self.rxorr(w[:8]) + self.rxorr(w[8:]))%2)
+        self.registers[7] += ((self.rxorr(x[:8]) + self.rxorr(x[8:]))%2)
+        self.registers[7] += ((self.rxorr(y[:8]) + self.rxorr(y[8:]))%2)
+        self.registers[7] += ((self.rxorr(z[:8]) + self.rxorr(z[8:]))%2)
+        print str(self.registers[2:6] + self.registers[8:12]), self.registers[7],"\n"
 
     def rxorr(self, arr):
         #print(arr)
@@ -176,26 +187,46 @@ class newsteam:
 
 
 def main():
-    i = 10
+    i = 0
     assembler = newsteam()
     assembler.__init__()
 #evens or odds tenative (59)
     assembler.smr(32)
+    i += 1
     #NOTE: Problem with getting 96 into register
     while (assembler.registers[6] < 96): 
         #NOTE: collapse smr & luw into one step
         assembler.luw(2)
+        i += 1
         assembler.luw(3)
+        i += 1
         assembler.luw(4)
+        i += 1
         assembler.luw(5)
+        i += 1
+        assembler.luw(8)
+        i += 1
+        assembler.luw(9)
+        i += 1
+        assembler.luw(10)
+        i += 1
+        assembler.luw(11)
+        i += 1
         assembler.rxor()
+        i += 1
+        i += 1
     assembler.sub(7)
+    i += 1
     assembler.wm(12)
+    i += 1
 
     print(assembler.registers)
+    print(i)
     print(assembler.bistrings)
+    
 
 
 
 if __name__ =='__main__':
+
     main()

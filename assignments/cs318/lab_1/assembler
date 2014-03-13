@@ -8,10 +8,11 @@ open (INFILE, "<", $ARGV[0]) or die ("Couldn't find file to open.");
     $input = <INFILE>;
 }
 
+
 sub lex
 {
     #if it equals an opcode, we need to conver that into binary
-    if($input =~/^\s(tbd|hal|add|lui|lli|xor|rxor|beq|smw|j|sll|sdri|addi|and)/)
+    if($input =~/^\s(tbd|hal|sub|addi|search|beq|wm|smr|rxor|sdri|luw|lqw|j)/)
     {
         $nextToken = $1;
         #not sure if I need this
@@ -19,15 +20,19 @@ sub lex
         $input = $';
     }
     # if it equals a register we need to convert that number into binary
-    elsif($input =~/^\sr(0|1|2|3|4|5|6|7)/)
+    elsif($input =~/^\sr(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15})/)
     {
         $nextToken = $1;
         $actToken = $1;
         $input =$'
     }
     #If it equals a number, we need to convert that number into binary
-    elsif($input =~ //)
+    elsif($input =~ /(\d{1,2})/)
     {
+        $nextToken = $1;
+        $actToken = $1;
+        $input = $';
+
     }
 }
 
@@ -35,3 +40,8 @@ sub readline
 {
   
 }
+
+
+
+
+open (OUTFILE, '>assembly.bi')

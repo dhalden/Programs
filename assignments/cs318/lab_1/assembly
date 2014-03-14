@@ -1,0 +1,15 @@
+j 63
+tbd 24
+sub r1
+addi r8
+search r9
+sdri r12
+wm r15
+luw r3
+lqw r2
+beq 32
+wm r0
+sdri r9
+rxor r8
+hal 63
+

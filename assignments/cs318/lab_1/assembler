@@ -1,18 +1,14 @@
 #! /usr/bin/perl
 
+use feature "switch";
 #NOTE: Need to find out how to output to a file.
 
-open (INFILE, "<", $ARGV[0]) or die ("Couldn't find file to open.");
-{
-    local $/;
-    $input = <INFILE>;
-}
 
 
 sub lex
 {
     #if it equals an opcode, we need to conver that into binary
-    if($input =~/^\s(tbd|hal|sub|addi|search|beq|wm|smr|rxor|sdri|luw|lqw|j)/)
+    if($input =~/^\s*(tbd|hal|sub|addi|search|beq|wm|smr|rxor|sdri|luw|lqw|j)/)
     {
         $nextToken = $1;
         #not sure if I need this
@@ -20,28 +16,115 @@ sub lex
         $input = $';
     }
     # if it equals a register we need to convert that number into binary
-    elsif($input =~/^\sr(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15})/)
+    elsif($input =~/^\s*r(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15})/)
     {
         $nextToken = $1;
         $actToken = $1;
         $input =$'
     }
     #If it equals a number, we need to convert that number into binary
-    elsif($input =~ /(\d{1,2})/)
+    elsif($input =~ /^\s*(\d{1,2})/)
     {
         $nextToken = $1;
         $actToken = $1;
         $input = $';
 
     }
+    elsif($input =~ /^\s*$/)
+    {
+        $nextToken = "";
+    
+    }
+    else
+    {
+        print("ERROR with the following input: $input");
+        $nextToken = "";
+    }
+
+}
+
+
+sub checknum
+{
+    &lex();
+    printf(OUTFILE "%06b\n", $nextToken); 
+
 }
 
 sub readline
 {
-  
+   open (OUTFILE, '>assembly.bi');
+   while($nextToken ne "")
+   {
+       # print("this happens\n");
+       print("nextToken <$nextToken>\n");
+       given($nextToken)
+       {
+        when ( /^tbd$/)    {
+            print(OUTFILE "0000");
+            &checknum();
+            }
+        when ( /^hal$/)    {
+            print(OUTFILE "0001000000");
+        }
+        when ( /^sub$/)    {
+            print(OUTFILE "0010");
+            &checknum();
+        }
+        when ( /^addi$/)   {
+            print(OUTFILE "0011");
+            &checknum();
+        }
+        when ( /^search$/) {
+            print(OUTFILE "0100111111");
+        }
+        when ( /^beq$/)    {
+            print(OUTFILE "0101");
+            &checknum();
+        }
+        when ( /^wm$/)     {
+            print(OUTFILE "0110");
+            &checknum();
+        }
+        when ( /^smr$/)    {
+            print(OUTFILE "0111");
+            &checknum();
+        }
+        when ( /^rxor$/)   {
+            print(OUTFILE "1000111111");
+            &checknum();
+        }
+        when ( /^sdri$/)   {
+            print(OUTFILE "1001");
+            &checknum();
+        }
+        when ( /^luw$/)    {
+            print(OUTFILE "1010");
+            &checknum();
+        }
+        when ( /^lqw$/)    {
+            print(OUTFILE "1011");
+            &checknum();
+        }
+        when ( /^j$/)      {
+            print(OUTFILE "1100");
+            &checknum();
+        }
+       }
+       &lex();
+   }
+   close(OUTFILE);
 }
 
 
 
+open (INFILE, "<", "assembly") or die ("Couldn't find file to open.");
+{
+    local $/;
+    $input = <INFILE>;
+}
 
-open (OUTFILE, '>assembly.bi')
+#print($input);
+
+&lex();
+&readline();

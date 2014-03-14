@@ -22,12 +22,12 @@ def main():
         #runthrough
         assembler.lqw(4)
         print(assembler.registers)
-        assembler.search(3, 1)
+        assembler.search()
         print(assembler.registers)
         if(assembler.registers[3] == 0):
             break
         assembler.lqw(4)
-        assembler.search(3, 1)
+        assembler.search()
         if(assembler.registers[3] == 0):
             break
     if(assembler.registers[6] == 193):

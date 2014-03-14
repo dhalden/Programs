@@ -88,7 +88,7 @@ class newsteam:
             #maybe have a carryout to memory? maybe if the addition = 1
 
     #is this okay?
-    def search(self,a,b):
+    def search(self):
         #print(self.registers[b], self.registers[b+1])
         #print("register 4, the first time: " + str( self.registers[4]))
         self.registers[3] = str(int(self.registers[3]) ^ int(self.registers[1]))
@@ -112,8 +112,8 @@ class newsteam:
 
     #NOTE:If I can get rid of this, then there is no need for having 3-bit registers
     #Also, if I have 6-bit  registers, maybe there is no need for this?
-    def beq(self,a,b):
-        if(a == b):
+    def beq(self,a):
+        if(registers[6] == registers[a]):
             self.__pcounter += 10
 
     def jump(self,label):

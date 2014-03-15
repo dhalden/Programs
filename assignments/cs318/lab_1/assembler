@@ -65,7 +65,7 @@ sub readline
             &checknum();
             }
         when ( /^hal$/)    {
-            print(OUTFILE "0001000000");
+            print(OUTFILE "0001000000\n");
         }
         when ( /^sub$/)    {
             print(OUTFILE "0010");
@@ -76,7 +76,7 @@ sub readline
             &checknum();
         }
         when ( /^search$/) {
-            print(OUTFILE "0100111111");
+            print(OUTFILE "0100111111\n");
         }
         when ( /^beq$/)    {
             print(OUTFILE "0101");
@@ -91,8 +91,7 @@ sub readline
             &checknum();
         }
         when ( /^rxor$/)   {
-            print(OUTFILE "1000111111");
-            &checknum();
+            print(OUTFILE "1000111111\n");
         }
         when ( /^sdri$/)   {
             print(OUTFILE "1001");

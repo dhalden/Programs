@@ -9,7 +9,7 @@ class ValError(Exception):
 class newsteam:
     registers = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     __immreg = 0
-    __pcounter = 0
+    pcounter = 0
     bistrings = {}  
     def __init__ (self):
         #current memory address to write to: self.registers[7]
@@ -54,6 +54,7 @@ class newsteam:
             self.__immreg = bin(a)
         else:
             raise ValError('int provided is not in self.registers')
+        self.pcounter += 10
 
 
     #NOTE because of the change I made to how I'm dealing with wmemaddr, this 
@@ -63,10 +64,12 @@ class newsteam:
     #register
     def wm(self,a):
         self.bistrings[hex(a)] = self.registers[7]
+        self.pcounter += 10
     
     def smr(self,a):
         self.registers[6] = int(self.registers[6]) + a
-        print(self.registers[6])
+        self.pcounter += 10
+        #print(self.registers[6])
 
     # add the immediate, to the destination register specified 
     #in the first 3 bits 
@@ -78,6 +81,7 @@ class newsteam:
             else:
                 self.registers[self.__immreg] = (
                             self.registers[self.__immreg] + a) % pow(2,16)
+        self.pcounter += 10
 
     #def add(self, a,b):
      #   if(a == 0b000):
@@ -105,19 +109,22 @@ class newsteam:
         else:
             #print("register 4: " + str( self.registers[4]))
             self.registers[3] = self.registers[4]
+        self.pcounter += 10
 
 
     def sub(self,b):
         self.bistrings['0x08'] = 32 - self.registers[b]
+        self.pcounter += 10
 
     #NOTE:If I can get rid of this, then there is no need for having 3-bit registers
     #Also, if I have 6-bit  registers, maybe there is no need for this?
     def beq(self,a):
         if(registers[6] == registers[a]):
-            self.__pcounter += 10
+            self.pcounter += 10
+        self.pcounter += 10
 
     def jump(self,label):
-        self.__pcounter == label
+        self.pcounter -= 10*label
 
     #NOTE: I MIGHT NOT NEED THIS
    # def sll(self,a):
@@ -130,6 +137,7 @@ class newsteam:
     def luw(self,a):
         self.registers[a] = int(self.bistrings[hex(self.registers[6])])
         self.registers[6] += 2;
+        self.pcounter += 10
 
     #NOTE:THIS NEEDS TO BE IN A FORM SUCH THAT MEMORY IS
     # ONLY HALF-WORD ADDRESSABLE
@@ -145,6 +153,7 @@ class newsteam:
                          self.bistrings[hex(self.registers[6]-1)][8:])
             self.registers[7] += 1
         self.registers[6] += 1;
+        self.pcounter += 10
         #self.registers[7] += 1;
 
     def hal(self):
@@ -173,7 +182,8 @@ class newsteam:
         self.registers[7] += ((self.rxorr(x[:8]) + self.rxorr(x[8:]))%2)
         self.registers[7] += ((self.rxorr(y[:8]) + self.rxorr(y[8:]))%2)
         self.registers[7] += ((self.rxorr(z[:8]) + self.rxorr(z[8:]))%2)
-        print str(self.registers[2:6] + self.registers[8:12]), self.registers[7],"\n"
+        print str(self.registers[2:6] + self.registers[8:12]), self.registers[7],"\n")
+        self.pcounter += 10
 
     def rxorr(self, arr):
         #print(arr)
@@ -182,6 +192,7 @@ class newsteam:
                      + self.rxorr(arr[(len(arr)/2):]))%2)
         else:
             return int(arr)
+        self.pcounter += 10
 
 
 
@@ -190,7 +201,7 @@ def main():
     i = 0
     assembler = newsteam()
     assembler.__init__()
-#evens or odds tenative (59)
+#evens or odds tenative (43)
     assembler.smr(32)
     i += 1
     #NOTE: Problem with getting 96 into register

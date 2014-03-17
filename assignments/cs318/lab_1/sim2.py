@@ -1,7 +1,9 @@
 from sim import newsteam
 
+# CURRENT INSTRUCTION COUNT = 354
+# THIS COULD BE MUCH SMALLER, AND WILL DEFINITELY NEED TO BE MUCH SMALLER
 def main():
-    i = 10
+    i = 0
     assembler = newsteam()
     assembler.__init__()
     #search
@@ -12,6 +14,7 @@ def main():
     assembler.smr(14)
     #make a shift up one command that does everything I need
     assembler.lqw(3)
+    i += 1
     while(assembler.registers[6] < 192): 
         #NOTE: Tomorrow, check and see if you can combine
         #these instructions.
@@ -19,19 +22,22 @@ def main():
         #runthrough
         assembler.lqw(4)
         print(assembler.registers)
-        assembler.search(3, 1)
+        assembler.search()
         print(assembler.registers)
+        #NOTE: Maybe define a "Break" if registers[3] == 0 then pc = the last
+        #command
         if(assembler.registers[3] == 0):
             break
         assembler.lqw(4)
-        assembler.search(3, 1)
+        assembler.search()
         if(assembler.registers[3] == 0):
             break
-    if(assembler.registers[6] == 49)
+    if(assembler.registers[6] == 193):
         assembler.registers[7] = -1
-    assembler.wm()
+    assembler.wm(10)
 
     print (assembler.registers) 
+    print (i)
     print (assembler.bistrings)
 
 

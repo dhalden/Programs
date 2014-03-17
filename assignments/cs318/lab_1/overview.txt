@@ -18,6 +18,5 @@ instruction                        instruction #
      
      
      
-                        ?*sll (source is same as destination)    1001
      
      (carry out writes to smw's most recent target)

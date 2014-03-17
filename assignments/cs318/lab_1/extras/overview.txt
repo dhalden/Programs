@@ -16,7 +16,4 @@ instruction                        instruction #
  *lqw (from smr)                         1011
  *jump                                   1100
      
-     
-     
-     
      (carry out writes to smw's most recent target)

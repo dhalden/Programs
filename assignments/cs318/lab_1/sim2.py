@@ -1,6 +1,6 @@
 from sim import newsteam
 
-#CURRENT INSTRUCTION COUNT = 354
+# CURRENT INSTRUCTION COUNT = 354
 # THIS COULD BE MUCH SMALLER, AND WILL DEFINITELY NEED TO BE MUCH SMALLER
 def main():
     i = 0
@@ -24,6 +24,8 @@ def main():
         print(assembler.registers)
         assembler.search()
         print(assembler.registers)
+        #NOTE: Maybe define a "Break" if registers[3] == 0 then pc = the last
+        #command
         if(assembler.registers[3] == 0):
             break
         assembler.lqw(4)

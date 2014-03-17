@@ -1,8 +1,9 @@
 #! /usr/bin/perl
-
 use feature "switch";
+use Data::Dumper qw(Dumper);
 #NOTE: Need to find out how to output to a file.
 
+open (OUTFILE, "> @ARGV[0].bi");
 
 
 sub lex
@@ -53,7 +54,6 @@ sub checknum
 
 sub readline
 {
-   open (OUTFILE, '>assembly.bi');
    while($nextToken ne "")
    {
        # print("this happens\n");
@@ -117,10 +117,9 @@ sub readline
 
 
 
-open (INFILE, "<", "assembly") or die ("Couldn't find file to open.");
 {
     local $/;
-    $input = <INFILE>;
+    $input = <STDIN>;
 }
 
 #print($input);

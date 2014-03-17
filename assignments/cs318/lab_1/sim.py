@@ -47,6 +47,17 @@ class newsteam:
             bistring = '0' + bistring
         return bistring
     
+    def reportr(self):
+        print(self.registers)
+    
+    def reportpc(self):
+        print(self.pcounter)
+
+    def reportm(self):
+        sorted_pairs = sorted(self.bistrings, key=lambda k:int(k,16))
+        for k in sorted_pairs:
+            print(k, self.bistrings[k])
+    
     #if specifying a register, 'a' should a number, and 'b' should be 0'
     #if specifying memory, 'a' should be 0, and 'b' should be a number
     def sdri(self,a):
@@ -89,7 +100,7 @@ class newsteam:
        # else:
         #    self.registers[a] = (
                 #self.registers[a] + self.registers[b]) % pow(2,16)
-            #maybe have a carryout to memory? maybe if the addition = 1
+            #maybe i have a carryout to memory? maybe if the addition = 1
 
     #is this okay?
     def search(self):
@@ -119,12 +130,13 @@ class newsteam:
     #NOTE:If I can get rid of this, then there is no need for having 3-bit registers
     #Also, if I have 6-bit  registers, maybe there is no need for this?
     def beq(self,a):
-        if(registers[6] == registers[a]):
+        if(self.registers[6] == 4*a):
             self.pcounter += 10
         self.pcounter += 10
 
     def jump(self,label):
         self.pcounter -= 10*label
+
 
     #NOTE: I MIGHT NOT NEED THIS
    # def sll(self,a):
@@ -182,7 +194,7 @@ class newsteam:
         self.registers[7] += ((self.rxorr(x[:8]) + self.rxorr(x[8:]))%2)
         self.registers[7] += ((self.rxorr(y[:8]) + self.rxorr(y[8:]))%2)
         self.registers[7] += ((self.rxorr(z[:8]) + self.rxorr(z[8:]))%2)
-        print str(self.registers[2:6] + self.registers[8:12]), self.registers[7],"\n")
+        #print str(self.registers[2:6] + self.registers[8:12]), self.registers[7],"\n"
         self.pcounter += 10
 
     def rxorr(self, arr):
@@ -201,38 +213,24 @@ def main():
     i = 0
     assembler = newsteam()
     assembler.__init__()
-#evens or odds tenative (43)
+#evens or odds tenative (45)
     assembler.smr(32)
-    i += 1
     #NOTE: Problem with getting 96 into register
     while (assembler.registers[6] < 96): 
         #NOTE: collapse smr & luw into one step
         assembler.luw(2)
-        i += 1
         assembler.luw(3)
-        i += 1
         assembler.luw(4)
-        i += 1
         assembler.luw(5)
-        i += 1
         assembler.luw(8)
-        i += 1
         assembler.luw(9)
-        i += 1
         assembler.luw(10)
-        i += 1
         assembler.luw(11)
-        i += 1
         assembler.rxor()
-        i += 1
-        i += 1
     assembler.sub(7)
-    i += 1
     assembler.wm(12)
-    i += 1
 
     print(assembler.registers)
-    print(i)
     print(assembler.bistrings)
     
 

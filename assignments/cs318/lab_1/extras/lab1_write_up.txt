@@ -15,7 +15,10 @@ clear that there were new instructions needed.
 The decision for the way the 10 bit instructions are divided up, was made at
 the beginning of the project. Having at least 8 registers, was imperative, so
 it followed that anything involving more than 4 bits for opcodes, was out of
-the question. From there, the 3 bit registers was determined purely by the
-need for a branch if equal. 
+the question. From there, the 4 bit registers were determined by the effect
+having more registers had on the evens or odds question. It was discovered
+that it became very easy to have a low number of instructions, if one of the
+commands handled all of the instruction simultaneously.
+
 
 

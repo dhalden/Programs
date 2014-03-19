@@ -43,26 +43,23 @@ bconversions = {
 '0000':'tbd',
 '0001':'hal',
 '0010':'sub',
-'0011':'addi',
+'0011':'wr',
 '0100':'search',
 '0101':'beq',
 '0110':'wm',
 '0111':'smr',
 '1000':'rxor',
-'1001':'sdri',
-'1010':'luw',
-'1011':'lqw',
-'1100':'jump'
+'1001':'srl',
+'1010':'bsq',
 }
 
-
-script = open("evenorodd.bi", "r")
+script = open("lab1demo.bi", "r")
 
 i = 0
 cmds = []
 temp = ''
 for line in script:
-    if not(line[:4] in ['0100','0001','1000']):
+    if not(line[:4] in ['0100','0001','1000','1001']):
         temp = (bconversions[line[:4]] + "(" + str(int(line[4:10],2)) + ")\n")
     else:
         temp = (bconversions[line[:4]] + "(" + ")\n")
@@ -84,17 +81,20 @@ with redirect_stdout(line2):
 i = 0
 pc = int(str(line2.getvalue()))/10
 while(pc < len(cmds)): 
-    line2 = StringIO() 
     print("assembler." + cmds[pc])
+    print i
+    line2 = StringIO()
+#    with redirect_stdout(temp):
     console.push("assembler." + cmds[pc])
+#    print(temp.getvalue())
     with redirect_stdout(line2):
         console.push('assembler.reportpc()\n')
         pc = int(str(line2.getvalue()))/10
     i +=1
-    #with redirect_stdout(line):
-    #    console.push('assembler.reportr()\n')
-    #print(line.getvalue())
-    #line = StringIO() 
+#    with redirect_stdout(line):
+#        console.push('assembler.reportr()\n')
+#    print(line.getvalue())
+#    line = StringIO() 
 
 
 line2 = StringIO() 

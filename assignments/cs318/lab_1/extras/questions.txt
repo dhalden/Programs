@@ -1,0 +1,28 @@
+1. Can I do what I want to do for the search instruction?
+    i.e. add in a load 'quarter' word, increment 2 arbitrary values, and at
+    the end of the program make register 4 the new word. Also, instead of
+    setting r3 to zero, can I just make the program add a certain amount to
+    the program counter?
+2. What do you mean by question number 6? and is my emulator okay working the
+way it does?
+3. for the lab report, do you want more of an essay? or do you want me to
+explicitly answer all of the questions?
+4. Am I okay to do what I'm doing for my evens or odds code?
+4b. Would it be alright if I added something to check if a value is equal to a
+different value, and if it is, add a specific number to my program counter in
+parallel?
+5. How do you want us to store negative numbers?
+6. Where exactly does everything need to be stored in memory, and is it
+alright if I initialize all of the registers to zero?
+
+
+This is more as a reminder for me:
+Is it alright if I make a command that reads 1 half-word, and writes each
+byte to a specific register, while incrementing another register to a specific
+value?
+
+
+Instead of loop unrolling!!!! Just read from memory, and then run your
+instruction on the read from memory.
+
+Also: You do not get to start with all of your registers at zero!!!

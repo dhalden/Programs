@@ -9,7 +9,7 @@ open (OUTFILE, "> @ARGV[0].bi");
 sub lex
 {
     #if it equals an opcode, we need to conver that into binary
-    if($input =~/^\s*(tbd|hal|sub|addi|search|beq|wm|smr|rxor|sdri|luw|lqw|j)/)
+    if($input =~/^\s*(tbd|hal|sub|srl|search|beq|wm|smr|rxor|bsq|wr)/)
     {
         $nextToken = $1;
         #not sure if I need this
@@ -71,7 +71,7 @@ sub readline
             print(OUTFILE "0010");
             &checknum();
         }
-        when ( /^addi$/)   {
+        when ( /^wr$/)   {
             print(OUTFILE "0011");
             &checknum();
         }
@@ -93,20 +93,11 @@ sub readline
         when ( /^rxor$/)   {
             print(OUTFILE "1000111111\n");
         }
-        when ( /^sdri$/)   {
-            print(OUTFILE "1001");
-            &checknum();
+        when ( /^srl$/)   {
+            print(OUTFILE "1001000111\n");
         }
-        when ( /^luw$/)    {
+        when ( /^bsq$/)    {
             print(OUTFILE "1010");
-            &checknum();
-        }
-        when ( /^lqw$/)    {
-            print(OUTFILE "1011");
-            &checknum();
-        }
-        when ( /^j$/)      {
-            print(OUTFILE "1100");
             &checknum();
         }
        }

@@ -1,15 +1,5 @@
-smr 32
-luw 2
-luw 3
-luw 4
-luw 5
-luw 8
-luw 9
-luw 10
-luw 11
+smr 8
 rxor
 beq 24
-j 10 
 sub 7
 wm 12
-

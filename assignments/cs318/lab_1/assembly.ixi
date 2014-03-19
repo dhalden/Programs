@@ -1,0 +1,13 @@
+wr r1
+wr r2
+wr r3
+wr r7
+smr 8
+rxor
+beq 24
+sub r7
+wm 12
+search
+bsq 48
+srl
+wm 10

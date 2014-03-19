@@ -1,0 +1,941 @@
+assembler.wr(1)
+
+0
+assembler.wr(2)
+
+1
+assembler.wr(3)
+
+2
+assembler.wr(7)
+
+3
+assembler.smr(8)
+
+4
+assembler.rxor()
+
+5
+assembler.beq(24)
+
+6
+assembler.rxor()
+
+7
+assembler.beq(24)
+
+8
+assembler.rxor()
+
+9
+assembler.beq(24)
+
+10
+assembler.rxor()
+
+11
+assembler.beq(24)
+
+12
+assembler.rxor()
+
+13
+assembler.beq(24)
+
+14
+assembler.rxor()
+
+15
+assembler.beq(24)
+
+16
+assembler.rxor()
+
+17
+assembler.beq(24)
+
+18
+assembler.rxor()
+
+19
+assembler.beq(24)
+
+20
+assembler.rxor()
+
+21
+assembler.beq(24)
+
+22
+assembler.rxor()
+
+23
+assembler.beq(24)
+
+24
+assembler.rxor()
+
+25
+assembler.beq(24)
+
+26
+assembler.rxor()
+
+27
+assembler.beq(24)
+
+28
+assembler.rxor()
+
+29
+assembler.beq(24)
+
+30
+assembler.rxor()
+
+31
+assembler.beq(24)
+
+32
+assembler.rxor()
+
+33
+assembler.beq(24)
+
+34
+assembler.rxor()
+
+35
+assembler.beq(24)
+
+36
+assembler.rxor()
+
+37
+assembler.beq(24)
+
+38
+assembler.rxor()
+
+39
+assembler.beq(24)
+
+40
+assembler.rxor()
+
+41
+assembler.beq(24)
+
+42
+assembler.rxor()
+
+43
+assembler.beq(24)
+
+44
+assembler.rxor()
+
+45
+assembler.beq(24)
+
+46
+assembler.rxor()
+
+47
+assembler.beq(24)
+
+48
+assembler.rxor()
+
+49
+assembler.beq(24)
+
+50
+assembler.rxor()
+
+51
+assembler.beq(24)
+
+52
+assembler.rxor()
+
+53
+assembler.beq(24)
+
+54
+assembler.rxor()
+
+55
+assembler.beq(24)
+
+56
+assembler.rxor()
+
+57
+assembler.beq(24)
+
+58
+assembler.rxor()
+
+59
+assembler.beq(24)
+
+60
+assembler.rxor()
+
+61
+assembler.beq(24)
+
+62
+assembler.rxor()
+
+63
+assembler.beq(24)
+
+64
+assembler.rxor()
+
+65
+assembler.beq(24)
+
+66
+assembler.rxor()
+
+67
+assembler.beq(24)
+
+68
+assembler.sub(7)
+
+69
+assembler.wm(12)
+
+70
+assembler.search()
+
+71
+assembler.bsq(48)
+
+72
+assembler.search()
+
+73
+assembler.bsq(48)
+
+74
+assembler.search()
+
+75
+assembler.bsq(48)
+
+76
+assembler.search()
+
+77
+assembler.bsq(48)
+
+78
+assembler.search()
+
+79
+assembler.bsq(48)
+
+80
+assembler.search()
+
+81
+assembler.bsq(48)
+
+82
+assembler.search()
+
+83
+assembler.bsq(48)
+
+84
+assembler.search()
+
+85
+assembler.bsq(48)
+
+86
+assembler.search()
+
+87
+assembler.bsq(48)
+
+88
+assembler.search()
+
+89
+assembler.bsq(48)
+
+90
+assembler.search()
+
+91
+assembler.bsq(48)
+
+92
+assembler.search()
+
+93
+assembler.bsq(48)
+
+94
+assembler.search()
+
+95
+assembler.bsq(48)
+
+96
+assembler.search()
+
+97
+assembler.bsq(48)
+
+98
+assembler.search()
+
+99
+assembler.bsq(48)
+
+100
+assembler.search()
+
+101
+assembler.bsq(48)
+
+102
+assembler.search()
+
+103
+assembler.bsq(48)
+
+104
+assembler.search()
+
+105
+assembler.bsq(48)
+
+106
+assembler.search()
+
+107
+assembler.bsq(48)
+
+108
+assembler.search()
+
+109
+assembler.bsq(48)
+
+110
+assembler.search()
+
+111
+assembler.bsq(48)
+
+112
+assembler.search()
+
+113
+assembler.bsq(48)
+
+114
+assembler.search()
+
+115
+assembler.bsq(48)
+
+116
+assembler.search()
+
+117
+assembler.bsq(48)
+
+118
+assembler.search()
+
+119
+assembler.bsq(48)
+
+120
+assembler.search()
+
+121
+assembler.bsq(48)
+
+122
+assembler.search()
+
+123
+assembler.bsq(48)
+
+124
+assembler.search()
+
+125
+assembler.bsq(48)
+
+126
+assembler.search()
+
+127
+assembler.bsq(48)
+
+128
+assembler.search()
+
+129
+assembler.bsq(48)
+
+130
+assembler.search()
+
+131
+assembler.bsq(48)
+
+132
+assembler.search()
+
+133
+assembler.bsq(48)
+
+134
+assembler.search()
+
+135
+assembler.bsq(48)
+
+136
+assembler.search()
+
+137
+assembler.bsq(48)
+
+138
+assembler.search()
+
+139
+assembler.bsq(48)
+
+140
+assembler.search()
+
+141
+assembler.bsq(48)
+
+142
+assembler.search()
+
+143
+assembler.bsq(48)
+
+144
+assembler.search()
+
+145
+assembler.bsq(48)
+
+146
+assembler.search()
+
+147
+assembler.bsq(48)
+
+148
+assembler.search()
+
+149
+assembler.bsq(48)
+
+150
+assembler.search()
+
+151
+assembler.bsq(48)
+
+152
+assembler.search()
+
+153
+assembler.bsq(48)
+
+154
+assembler.search()
+
+155
+assembler.bsq(48)
+
+156
+assembler.search()
+
+157
+assembler.bsq(48)
+
+158
+assembler.search()
+
+159
+assembler.bsq(48)
+
+160
+assembler.search()
+
+161
+assembler.bsq(48)
+
+162
+assembler.search()
+
+163
+assembler.bsq(48)
+
+164
+assembler.search()
+
+165
+assembler.bsq(48)
+
+166
+assembler.search()
+
+167
+assembler.bsq(48)
+
+168
+assembler.search()
+
+169
+assembler.bsq(48)
+
+170
+assembler.search()
+
+171
+assembler.bsq(48)
+
+172
+assembler.search()
+
+173
+assembler.bsq(48)
+
+174
+assembler.search()
+
+175
+assembler.bsq(48)
+
+176
+assembler.search()
+
+177
+assembler.bsq(48)
+
+178
+assembler.search()
+
+179
+assembler.bsq(48)
+
+180
+assembler.search()
+
+181
+assembler.bsq(48)
+
+182
+assembler.search()
+
+183
+assembler.bsq(48)
+
+184
+assembler.search()
+
+185
+assembler.bsq(48)
+
+186
+assembler.search()
+
+187
+assembler.bsq(48)
+
+188
+assembler.search()
+
+189
+assembler.bsq(48)
+
+190
+assembler.search()
+
+191
+assembler.bsq(48)
+
+192
+assembler.search()
+
+193
+assembler.bsq(48)
+
+194
+assembler.search()
+
+195
+assembler.bsq(48)
+
+196
+assembler.search()
+
+197
+assembler.bsq(48)
+
+198
+assembler.search()
+
+199
+assembler.bsq(48)
+
+200
+assembler.search()
+
+201
+assembler.bsq(48)
+
+202
+assembler.search()
+
+203
+assembler.bsq(48)
+
+204
+assembler.search()
+
+205
+assembler.bsq(48)
+
+206
+assembler.search()
+
+207
+assembler.bsq(48)
+
+208
+assembler.search()
+
+209
+assembler.bsq(48)
+
+210
+assembler.search()
+
+211
+assembler.bsq(48)
+
+212
+assembler.search()
+
+213
+assembler.bsq(48)
+
+214
+assembler.search()
+
+215
+assembler.bsq(48)
+
+216
+assembler.search()
+
+217
+assembler.bsq(48)
+
+218
+assembler.search()
+
+219
+assembler.bsq(48)
+
+220
+assembler.search()
+
+221
+assembler.bsq(48)
+
+222
+assembler.search()
+
+223
+assembler.bsq(48)
+
+224
+assembler.search()
+
+225
+assembler.bsq(48)
+
+226
+assembler.search()
+
+227
+assembler.bsq(48)
+
+228
+assembler.search()
+
+229
+assembler.bsq(48)
+
+230
+assembler.search()
+
+231
+assembler.bsq(48)
+
+232
+assembler.search()
+
+233
+assembler.bsq(48)
+
+234
+assembler.search()
+
+235
+assembler.bsq(48)
+
+236
+assembler.search()
+
+237
+assembler.bsq(48)
+
+238
+assembler.search()
+
+239
+assembler.bsq(48)
+
+240
+assembler.search()
+
+241
+assembler.srl()
+
+242
+assembler.wm(10)
+
+243
+this is the result: 
+----------------------------------------------------------------------------------------------------
+|Registers:                                                                                        |
+ [0, '10100111', '00010011', 0, 0, 0, 181, 42]
+ 
+----------------------------------------------------------------------------------------------------
+|Program Counter:                                                                                  |
+ 130
+ 
+----------------------------------------------------------------------------------------------------
+|Memory:                                                                                           |
+ ('0x2', '1001000110001100')
+('0x4', '1111101110111001')
+('0x6', '1001110011110001')
+('0x08', 21)
+('0x8', '1000000111010111')
+('0xa', 42)
+('0xc', 11)
+('0xe', '1100001011111111')
+('0x10', '1011000110111011')
+('0x12', '1000010011100000')
+('0x14', '1010011100010011')
+('0x16', '1010100110100001')
+('0x18', '1000000111011111')
+('0x1a', '1110101110111010')
+('0x1c', '1011001110000011')
+('0x1e', '1001100010001100')
+('0x20', '1111111010000000')
+('0x22', '1010000111111000')
+('0x24', '1100001010101001')
+('0x26', '1001000110011110')
+('0x28', '1101111010010001')
+('0x2a', '1111010111001111')
+('0x2c', '1110001110001001')
+('0x2e', '1000101010101011')
+('0x30', '1011001011000111')
+('0x32', '1011011010011000')
+('0x34', '1000101111010101')
+('0x36', '1001111111011111')
+('0x38', '1111101011011011')
+('0x3a', '1100101111101110')
+('0x3c', '1011001011101000')
+('0x3e', '1001001111000110')
+('0x40', '1110111111000010')
+('0x42', '1000100110101000')
+('0x44', '1011011110010100')
+('0x46', '1000101011101000')
+('0x48', '1100011111001000')
+('0x4a', '1011101010010010')
+('0x4c', '1100110110000011')
+('0x4e', '1011000011010101')
+('0x50', '1001010111001110')
+('0x52', '1111010010110011')
+('0x54', '1010000110110001')
+('0x56', '1001011111010110')
+('0x58', '1011001110110000')
+('0x5a', '1010011010101100')
+('0x5c', '1101011010001000')
+('0x5e', '1001000111110010')
+('0x60', '1001100111010100')
+('0x62', '1001011010000101')
+('0x64', '1010101111001111')
+('0x66', '1110000110111111')
+('0x68', '1111101111001000')
+('0x6a', '1100111010000110')
+('0x6c', '1010010110101111')
+('0x6e', '1001010110101101')
+('0x70', '1110100011000101')
+('0x72', '1111011010010110')
+('0x74', '1101011111011000')
+('0x76', '1100100111000100')
+('0x78', '1100011110111100')
+('0x7a', '1011101110100000')
+('0x7c', '1000010111111100')
+('0x7e', '1001001010010110')
+('0x80', '1010111011111110')
+('0x82', '1010010110011111')
+('0x84', '1000011111100001')
+('0x86', '1010011111110100')
+('0x88', '1101101010101011')
+('0x8a', '1100100011100011')
+('0x8c', '1010110011111001')
+('0x8e', '1110100011011010')
+('0x90', '1010100010011101')
+('0x92', '1000010011011100')
+('0x94', '1010010110110100')
+('0x96', '1101000111111000')
+('0x98', '1001010110100111')
+('0x9a', '1011000011001001')
+('0x9c', '1011010110010000')
+('0x9e', '1100010110101001')
+('0xa0', '1001101011111111')
+('0xa2', '1110111111111110')
+('0xa4', '1111110010111110')
+('0xa6', '1000000011000001')
+('0xa8', '1110000111101010')
+('0xaa', '1001000011111101')
+('0xac', '1100000010010001')
+('0xae', '1011100110111101')
+('0xb0', '1100111011111001')
+('0xb2', '1111100011010001')
+('0xb4', '1010011100010011')
+('0xb6', '1101111111011100')
+('0xb8', '1101000111100000')
+('0xba', '1110110111111000')
+('0xbc', '1010101011011110')
+('0xbe', '1010001111111100')
+('0xc0', '1111110110100110')
+('0xc2', '1100111010000010')
+('0xc4', '1111101111000010')
+('0xc6', '1000100011100101')
+('0xc8', '1000000110000110')
+('0xca', '1000000111111101')
+('0xcc', '1001011111011100')
+('0xce', '1101000111010100')
+('0xd0', '1110111110101010')
+('0xd2', '1010111011000101')
+('0xd4', '1000101011101110')
+('0xd6', '1110101110100100')
+('0xd8', '1110010010000110')
+('0xda', '1000111011110111')
+('0xdc', '1100011111010101')
+('0xde', '1110010111101000')
+('0xe0', '1111010110100011')
+('0xe2', '1010101010101001')
+('0xe4', '1100001010111110')
+('0xe6', '1000010110000000')
+('0xe8', '1111001111110111')
+('0xea', '1001101010110001')
+('0xec', '1101110111010101')
+('0xee', '1000010010011110')
+('0xf0', '1000101011100011')
+('0xf2', '1000111110101111')
+('0xf4', '1011000111100111')
+('0xf6', '1111010011101000')
+('0xf8', '1100001010010010')
+('0xfa', '1001111110011001')
+('0xfc', '1101111010110101')
+('0xfe', '1101111110010100')
+('0x100', '1101100111101001')
+('0x102', '1101001011110111')
+('0x104', '1111100111110010')
+('0x106', '1101100011111111')
+('0x108', '1110111011000010')
+('0x10a', '1011011110011011')
+('0x10c', '1110001011011011')
+('0x10e', '1101100011110010')
+('0x110', '0111111111000111')
+('0x112', '1111110111000001')
+('0x114', '1000011011010101')
+('0x116', '1111100110101001')
+('0x118', '1010111011010000')
+('0x11a', '1100000110101111')
+('0x11c', '1110011011001110')
+('0x11e', '1000100110111001')
+('0x120', '1101001110101010')
+('0x122', '1000111010100111')
+('0x124', '1011010010000001')
+('0x126', '1100010111001001')
+('0x128', '1010001110010110')
+('0x12a', '1100000110101010')
+('0x12c', '1001011011101101')
+('0x12e', '1001010110001000')
+('0x130', '1010011011001111')
+('0x132', '1010100011011100')
+('0x134', '1111101111101001')
+('0x136', '1000101010000010')
+('0x138', '1011010110011010')
+('0x13a', '1100110011000011')
+('0x13c', '1010100011010011')
+('0x13e', '1101011010111100')
+('0x140', '1010001011100000')
+('0x142', '0111010001111111')
+('0x144', '1101000111110111')
+('0x146', '1110011111000101')
+('0x148', '1101000111100111')
+('0x14a', '1011000011110000')
+('0x14c', '1111100011000001')
+('0x14e', '1010001110101110')
+('0x150', '1100000011110100')
+('0x152', '1000101110101100')
+('0x154', '1011100111110011')
+('0x156', '1001111111110101')
+('0x158', '1101110010101100')
+('0x15a', '1011011010110110')
+('0x15c', '1111011011101000')
+('0x15e', '1101100010011100')
+('0x160', '1111101111101100')
+('0x162', '1011110010100101')
+('0x164', '1110010110100111')
+('0x166', '1010001011101001')
+('0x168', '1000011011101100')
+('0x16a', '1100000011110101')
+('0x16c', '1111001010101000')
+('0x16e', '1110011011110110')
+('0x170', '1010101110000100')
+('0x172', '1110010010101001')
+('0x174', '1000001011001010')
+('0x176', '1110101111001001')
+('0x178', '1001111110110011')
+('0x17a', '1111111011000010')
+('0x17c', '1010101111100110')
+('0x17e', '1101110110010010')
+('0x180', '1111101010011011')
+ 
+|                                                                                                  |
+----------------------------------------------------------------------------------------------------
+ 
+Dynamic instruction count: 244

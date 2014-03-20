@@ -81,16 +81,14 @@ with redirect_stdout(line2):
 i = 0
 pc = int(str(line2.getvalue()))/10
 while(pc < len(cmds)): 
-    print("assembler." + cmds[pc])
+    i +=1
     print i
+    print("assembler." + cmds[pc])
     line2 = StringIO()
-#    with redirect_stdout(temp):
     console.push("assembler." + cmds[pc])
-#    print(temp.getvalue())
     with redirect_stdout(line2):
         console.push('assembler.reportpc()\n')
         pc = int(str(line2.getvalue()))/10
-    i +=1
 #    with redirect_stdout(line):
 #        console.push('assembler.reportr()\n')
 #    print(line.getvalue())

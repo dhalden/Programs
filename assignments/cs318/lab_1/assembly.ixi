@@ -6,7 +6,7 @@ smr 8
 rxor
 beq 24
 sub r7
-wm 12
+wm 3
 search
 bsq 48
 srl

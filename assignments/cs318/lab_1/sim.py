@@ -23,18 +23,18 @@ class newsteam:
             if (i >= 30 and i < 64):
                 #bistring = bin(randint(0, pow(2,8)) + 32768)
                 bistring = self.randomword()
-                badd += 0x2
+                badd += 0x1
             else:
-                if (i == 9):
+                if (i == 8):
                     bistring = '1010011100010011'
                 elif (i >= 65):
-                    if (i == 89):
+                    if (i == 137):
                         bistring = '1010011100010011'
                     else: 
                         bistring = self.randomword() 
                 else: 
                     bistring = self.randomword()
-                badd += 0x2
+                badd += 0x1
             self.bistrings[hex(badd)] = ((bistring))
         #print self.bistrings
         # 4 self.registers means that I have 2-bit
@@ -70,9 +70,9 @@ class newsteam:
 
     def wr(self, a):
         if(a == 1):
-            self.registers[a] = self.bistrings[hex(20)][:8]
+            self.registers[a] = self.bistrings[hex(9)][:8]
         elif(a == 2):
-            self.registers[a] = self.bistrings[hex(20)][8:]
+            self.registers[a] = self.bistrings[hex(9)][8:]
         elif(a == 3):
             self.registers[a] = self.bistrings[hex(96)][8:]
         elif(a == 7):
@@ -86,9 +86,10 @@ class newsteam:
     def search(self):
         temp = ''
         if(self.registers[6] % 2 == 0):
-            temp = self.bistrings[hex(self.registers[6])][:8] 
+            #print(self.registers[6]/2)
+            temp = self.bistrings[hex(((self.registers[6])/2) + 48)][:8] 
         else:
-            temp = self.bistrings[hex(self.registers[6]-1)][8:] 
+            temp = self.bistrings[hex(((self.registers[6])/2) + 48)][8:] 
         r1 = self.registers[1]
         r2 = self.registers[2]
         r3 = self.registers[3]
@@ -104,11 +105,11 @@ class newsteam:
 
 
     def sub(self,b):
-        self.bistrings['0x08'] = 32 - self.registers[b]
+        self.bistrings['0x02'] = 64 - self.registers[b]
         self.pcounter += 10
 
     def beq(self,a):
-        self.registers[6] += 2
+        self.registers[6] += 1
         if(self.registers[6] == 4*a):
             self.pcounter += 10
         else:
@@ -123,7 +124,7 @@ class newsteam:
 
     def bsq(self,a):
         self.registers[6] +=1
-        if(self.registers[6] == (4*a + 1)):
+        if(self.registers[6] == (8*a + 1)):
             self.pcounter += 10
         else:
             self.pcounter -= 10

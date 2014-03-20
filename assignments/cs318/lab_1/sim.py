@@ -7,7 +7,7 @@ class ValError(Exception):
         return repr(self.value)
 
 class newsteam:
-    registers = [0,0,0,0,0,0,0,0]
+    registers = [0,8,72,861,59,245,73,89]
     __immreg = 0
     pcounter = 0
     bistrings = {}  
@@ -105,7 +105,7 @@ class newsteam:
 
 
     def sub(self,b):
-        self.bistrings['0x02'] = 64 - self.registers[b]
+        self.bistrings['0x2'] = 64 - self.registers[b]
         self.pcounter += 10
 
     def beq(self,a):
@@ -124,15 +124,10 @@ class newsteam:
 
     def bsq(self,a):
         self.registers[6] +=1
-        if(self.registers[6] == (8*a + 1)):
+        if(self.registers[6] == (4*a + 1)):
             self.pcounter += 10
         else:
             self.pcounter -= 10
-
-
-
-    def jump(self,label):
-        self.pcounter -= 10*label
 
     def hal(self):
         return exit(0)

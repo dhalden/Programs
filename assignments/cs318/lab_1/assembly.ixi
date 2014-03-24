@@ -1,13 +1,17 @@
-wr r1
-wr r2
-wr r3
 wr r7
 smr 8
 rxor
 beq 24
-sub r7
 wm 3
+sub r7
+wm 2
+hal
+smr 24
+wr r1
+wr r2
+wr r3
 search
 bsq 48
 srl
 wm 10
+hal

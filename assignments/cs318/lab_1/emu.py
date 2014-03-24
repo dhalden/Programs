@@ -83,7 +83,7 @@ with redirect_stdout(line2):
 with redirect_stdout(line3):
     console.push('assembler.reportm()\n')
 
-print("this is the result: %s %s %s %s %s %s %s "
+print("this is what's in memory, and registers at the start: %s %s %s %s %s %s %s "
       % (mess[0],str(line.getvalue()), mess[1], str(line2.getvalue()), mess[3], str(line3.getvalue())
          , mess[4]))
 

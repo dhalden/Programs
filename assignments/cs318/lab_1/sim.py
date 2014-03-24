@@ -105,7 +105,7 @@ class newsteam:
 
 
     def sub(self,b):
-        self.bistrings['0x2'] = 64 - self.registers[b]
+        self.registers[b] = 64 - self.registers[b]
         self.pcounter += 10
 
     def beq(self,a):
@@ -124,13 +124,14 @@ class newsteam:
 
     def bsq(self,a):
         self.registers[6] +=1
-        if(self.registers[6] == (4*a + 1)):
+        if(self.registers[6] == (193)):
             self.pcounter += 10
         else:
             self.pcounter -= 10
 
     def hal(self):
-        return exit(0)
+        self.pcounter += 10
+        return 0 #exit(0)
     
     #this is a recursive method to add all of the bits in
     #a 16 bit integer together.

@@ -1,0 +1,5 @@
+smr 8
+rxor
+beq 24
+sub 7
+wm 12

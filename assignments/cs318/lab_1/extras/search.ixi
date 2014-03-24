@@ -1,0 +1,8 @@
+wr r1
+wr r2
+wr r3
+smr 24
+search
+bsq 48
+srl
+wm 10

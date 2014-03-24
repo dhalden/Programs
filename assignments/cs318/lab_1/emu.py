@@ -99,23 +99,23 @@ i = 0
 pc = int(str(line2.getvalue()))/10
 while(pc < len(cmds)): 
     i +=1
-#    print i
+    print i
     line2 = StringIO()
-    if (pc == 7 or pc == 8 or pc >= 11):
-        with redirect_stdout(line3):
-            console.push('assembler.reportm()')
-        print(mess[3] + line3.getvalue())
-        line3 = StringIO()
+#    if (pc == 7 or pc == 8 or pc >= 11):
+ #       with redirect_stdout(line3):
+ #           console.push('assembler.reportm()')
+ #       print(mess[3] + line3.getvalue())
+ #       line3 = StringIO()
 
-        with redirect_stdout(line):
-            console.push('assembler.reportr()\n')
-        print(line.getvalue())
-        line = StringIO() 
+ #       with redirect_stdout(line):
+ #           console.push('assembler.reportr()\n')
+ #       print(line.getvalue())
+ #       line = StringIO() 
 
     print("%s %s %s" % (mess[2], cmds[pc], binaries[pc]))
     console.push("assembler." + cmds[pc])
 
-    if(pc >= 11 or pc == 7 or pc == 8):
+    if(pc >= 15):
         with redirect_stdout(line3):
             console.push('assembler.reportm()')
         print(mess[3] + line3.getvalue())

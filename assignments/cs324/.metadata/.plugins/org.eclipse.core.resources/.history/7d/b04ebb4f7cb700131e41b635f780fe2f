@@ -1,0 +1,26 @@
+
+public class Arrivals extends Thread {
+	private int totalCars;
+	private CarQSemaphore q;
+	
+	public Arrivals(CarQSemaphore queue)
+	{
+		totalCars = 0;
+		q = queue;
+	}
+	public dealWithArrival()
+	{
+		while(true)
+		{
+			int r = (int)(Math.random()*1000);
+			this.sleep(r);
+			while(!q.arrival())
+			{
+				this.wait();
+			}
+			totalCars = (totalCars + 1)%10;
+			q.notifyAll();
+		}
+	}
+
+}

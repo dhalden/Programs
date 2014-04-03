@@ -1,0 +1,32 @@
+
+public class CarQSemaphore {
+	private int q;
+	private int maxcarqueue;
+	
+	
+	public CarQSemaphore(int initq, int maxcars)
+	{
+		q = initq;
+		maxcarqueue=maxcars;
+		
+	}
+	
+	public boolean synchronized arrival()
+	{
+		if(q < maxcarqueue)
+		{
+			q++;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public boolean synchronized departure()
+	{
+		
+	}
+
+}

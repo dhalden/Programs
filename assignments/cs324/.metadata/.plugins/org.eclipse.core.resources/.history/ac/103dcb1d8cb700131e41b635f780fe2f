@@ -1,0 +1,15 @@
+
+/**
+ * This is a class that has
+ * * @author Derek Halden
+ * 
+ */
+public class Model extends SLModel {
+	public void setCol(int col, String str) {
+		((Controller)controller).set(col,str);
+	}
+	public void mtw(String str)
+	{
+		((Controller)controller).mentionWaiting(str);
+	}
+}

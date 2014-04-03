@@ -1,0 +1,87 @@
+
+/**
+ * This is an example of a subclass of SLController.  Controller uses just a few buttons
+ * in the view (and does not use the button grid).  The user can ...
+ * 1) enter text in the abPanel and press the aButton to move text to the text area.
+ * 2) press the up button to copy the string in the model to the text area.
+ * 3) press the down button to copy the string in the text area to the model.
+ * 4) press button1 to tell the model to copy its text to the text area. (Similar to 2, but it is
+ *    the model that manages the copy, whereas in (2), the controller manages the copy.)
+ *    
+ * @author Pierre von Kaenel
+ *
+ */
+public class Controller extends SLController {
+
+
+	@Override
+	//start button
+	public void button1Action() {
+		CarQSemaphore q = new CarQSemaphore(1,10);
+		Arrivals arrs = new Arrivals((Model)model, q);
+		Departures deps = new Departures((Model)model, q);
+		deps.start();
+		arrs.start();
+	
+	}
+	public synchronized void set(int col, String id)
+	{
+		view.setGridButtonText(id, 0, col);
+	}
+
+	@Override
+	public void gridButtonAction(int r, int c) {
+		System.out.print(r + " " + c);
+	}
+	@Override
+	public void inputTextAction(String input) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void aButtonAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void bButtonAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void upButtonAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void downButtonAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void rightButtonAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void leftButtonAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void button2Action() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void button3Action() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void button4Action() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

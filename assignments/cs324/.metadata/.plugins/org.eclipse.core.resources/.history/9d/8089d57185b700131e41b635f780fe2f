@@ -1,0 +1,45 @@
+//Note to self: Increment first thing before you add
+//				or remove a car
+public class CarQSemaphore {
+	private int q;
+	private int maxcarqueue;
+	
+	
+	public CarQSemaphore(int initq, int maxcars)
+	{
+		q = initq;
+		maxcarqueue=maxcars;
+		
+	}
+	public synchronized int getq()
+	{
+		return q;
+	}
+	
+	public synchronized boolean arrival()
+	{
+		if(q < maxcarqueue)
+		{
+			q++;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public synchronized boolean departure()
+	{
+		if(q != 0)
+		{
+			q--;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+}

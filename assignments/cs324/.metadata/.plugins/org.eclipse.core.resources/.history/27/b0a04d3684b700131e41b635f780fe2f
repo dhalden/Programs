@@ -1,0 +1,49 @@
+
+public class Arrivals extends Thread {
+	private int totalCars;
+	private Model model;
+	private CarQSemaphore q;
+	
+	public Arrivals(Model m, CarQSemaphore queue)
+	{
+		model = m;
+		totalCars = 0;
+		q = queue;
+	}
+	public void dealWithArrival()
+	{
+		while(true)
+		{
+		int r = (int)(Math.random()*1000);
+		try {
+			Thread.sleep(r);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		//check for available space in gas station
+		
+		while(!q.arrival())
+		{
+			synchronized(q)
+			{
+			try {
+				q.wait();
+				q.notifyAll();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+
+			}	
+            }
+		}
+		//when space is available, increment total cars
+		model.setCol(totalCars,"C");
+		totalCars = (totalCars + 1)%10;
+		synchronized(q)
+		{
+		q.notifyAll();
+		}
+		System.out.print("this happens\n");
+	}
+	}
+
+}

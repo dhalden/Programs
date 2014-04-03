@@ -1,0 +1,21 @@
+Steps
+1. Draw Processor
+2. Spreadsheet for control
+    for each instruction, decide what every control signal should be.
+(in parallel) 
+3. get infrastructure/read/understand/modify 
+    Put in debug stuff
+    Make all of the modules separately, and test them all individually
+        Maybe start with fetch logic, and register file logic
+
+
+
+
+By next Wednesday-
+Processor Drawn
+Table for control signals
+tested and finished: 
+                ALU
+                Fetch(PC + Inst Memory)
+                Register File
+                Data Memory 

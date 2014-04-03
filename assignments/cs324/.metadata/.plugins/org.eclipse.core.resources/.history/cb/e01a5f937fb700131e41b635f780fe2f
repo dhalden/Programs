@@ -1,0 +1,36 @@
+
+public class Departures extends Thread {
+	private int totalCars;
+	private CarQSemaphore q;
+	
+	public Departures(CarQSemaphore queue)
+	{
+		totalCars = 0;
+		q = queue;
+	}
+	public void dealWithDeparture()
+	{
+		while(true)
+		{
+			int r = (int)(Math.random()*1000);
+			try {
+				Thread.sleep(r);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			//check for available space in gas station
+			while(!q.departure())
+			{
+				try {
+					this.wait();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+			//when space is available, remove a car, and move on to the next car
+			model.setCol(totalCars,"C");
+			totalCars = (totalCars + 1)%10;
+			q.notifyAll();
+		}
+	}
+}

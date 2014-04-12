@@ -1,0 +1,3 @@
+verilog isim_temp "../DataRAM.v"
+verilog isim_temp "DataRAM_tb.v"
+verilog isim_temp "/home/jebediah/Desktop/14.7/ISE_DS/ISE//verilog/src/glbl.v"

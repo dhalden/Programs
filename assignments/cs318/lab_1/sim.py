@@ -30,6 +30,7 @@ class newsteam:
                 elif (i >= 65):
                     if (i == 137):
                         bistring = '1010011100010011'
+                        #bistring = self.randomword() 
                     else: 
                         bistring = self.randomword() 
                 else: 
@@ -75,8 +76,8 @@ class newsteam:
             self.registers[a] = self.bistrings[hex(9)][8:]
         elif(a == 3):
             self.registers[a] = self.bistrings[hex(96)][8:]
-        elif(a == 7):
-            self.registers[a] = self.registers[0]
+       # elif(a == 7):
+       #     self.registers[a] = self.registers[0]
         self.pcounter += 10
 
     def smr(self,a):
@@ -85,11 +86,14 @@ class newsteam:
 
     def search(self):
         temp = ''
-        if(self.registers[6] % 2 == 0):
+        if(self.registers[6] % 2 == 1):
+            #Start at 182, and go to 182+ 96
             #print(self.registers[6]/2)
-            temp = self.bistrings[hex(((self.registers[6])/2) + 48)][:8] 
+                                      #((self.registers[6] + 96)/2)
+            temp = self.bistrings[hex(((self.registers[6])/2))][8:] 
         else:
-            temp = self.bistrings[hex(((self.registers[6])/2) + 48)][8:] 
+            temp = self.bistrings[hex(((self.registers[6])/2))][:8] 
+
         r1 = self.registers[1]
         r2 = self.registers[2]
         r3 = self.registers[3]
@@ -116,15 +120,15 @@ class newsteam:
             self.pcounter -= 10
 
     def srl(self):
-        if (self.registers[6] == 193):
+        if (self.registers[6] == 289):
             self.registers[7] = -1
         else:
-            self.registers[7] = int((self.registers[6] - 96)/2)
+            self.registers[7] = int((self.registers[6])/2 - 96)
         self.pcounter += 10
 
     def bsq(self,a):
         self.registers[6] +=1
-        if(self.registers[6] == (193)):
+        if(self.registers[6] == (289)):
             self.pcounter += 10
         else:
             self.pcounter -= 10
@@ -146,6 +150,9 @@ class newsteam:
                      + self.rxorr(arr[(len(arr)/2):]))%2)
         else:
             return int(arr)
+        self.pcounter += 10
+    def tbd(self,a):
+        self.registers[a] = 0
         self.pcounter += 10
 
 

@@ -1,0 +1,29 @@
+Command line:
+   DataRAM_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  47654
+
+Thu Apr 10 16:03:23 2014
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 195.785 Meg
+
+ Total Signals          : 19
+ Total Nets             : 64
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 17
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 4291
+Total Line Count : 52
+
+ Total Simulation Time: 0.11 sec
+
+ Current Memory Usage: 271.286 Meg
+
+Thu Apr 10 17:21:28 2014
+

@@ -1,0 +1,3 @@
+verilog work "../DataRAM.v"
+verilog work "DataRAM_tb.v"
+verilog work "/home/jebediah/Desktop/14.7/ISE_DS/ISE//verilog/src/glbl.v"

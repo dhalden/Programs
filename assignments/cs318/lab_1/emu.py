@@ -62,8 +62,11 @@ temp = ''
 for line in script:
     if not(line[:4] in ['0100','0001','1000','1001']):
         temp = (bconversions[line[:4]] + "(" + str(int(line[4:10],2)) + ")\n")
+        print(temp)
     else:
         temp = (bconversions[line[:4]] + "(" + ")\n")
+        print(temp)
+        print(line[:4])
     cmds.append(temp)
     binaries.append(line)
     i += 1

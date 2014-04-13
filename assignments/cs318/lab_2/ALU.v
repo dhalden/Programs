@@ -22,6 +22,7 @@ module ALU(
     input CLK,
     input [3:0] OP,
     input [15:0] INPUTA,
+	 //INPUTB can either be a register, or an immediate
     input [15:0] INPUTB,
 	 input [15:0] INPUTC,
 	 input [15:0] MEMIN,
@@ -30,9 +31,9 @@ module ALU(
 	 output wire EQUAL
     );
 	 
-	assign EQUAL = (INPUTA == INPUTB) ? 1 : 0;
+    //    assign EQUAL = (INPUTA == INPUTB) ? 1 : 0;
 	
-	always @(INPUTA, INPUTB, INPUTC, OP)
+	always @(INPUTA, INPUTB, INPUTC, MEMIN, OP)
 	begin
 	
 	//where there are zeros, you need to make the zero output to the reg ZERO

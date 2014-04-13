@@ -29,7 +29,7 @@ module DataRAM_tb;
 	reg ReadMem;
 	reg WriteMem;
 	reg [15:0] DataIn;
-	//reg Search;
+	reg Search;
 	reg CLK;
 
 	// Outputs
@@ -37,12 +37,12 @@ module DataRAM_tb;
 
 	// Instantiate the Unit Under Test (UUT)
 	DataRAM uut (
+	   .Search(Search),
 		.DataAddress(DataAddress), 
 		.ReadMem(ReadMem), 
 		.WriteMem(WriteMem), 
 		.DataIn(DataIn), 
 		.DataOut(DataOut), 
-		//.Search(Search), 
 		.CLK(CLK)
 	);
 
@@ -52,34 +52,46 @@ module DataRAM_tb;
 		ReadMem = 0;
 		WriteMem = 0;
 		DataIn = 0;
-		//Search = 0;
+		Search = 0;
 		CLK = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
+		DataAddress = 55;
+		ReadMem = 1;
+		Search = 0;
+		#100;
 		DataAddress = 110;
 		ReadMem = 1;
-		//Search = 1;
+		Search = 1;
+		#100;
+		DataAddress = 55;
+		ReadMem = 1;
+		Search = 0;
 		#100;
 		DataAddress = 111;
 		ReadMem = 1;
-		//Search = 1;
+		Search = 1;
 		#100;
-		DataAddress = 112;
+		DataAddress = 241;
+		Search = 1;
 		ReadMem = 1;
-		//Search = 1;
 		#100;
-		DataAddress = 113;
+		DataAddress = 116;
+		Search = 1;
 		ReadMem = 1;
-		//Search = 1;
 		#100;
-		DataAddress = 114;
+		DataAddress = 117;
+		Search = 1;
 		ReadMem = 1;
-		//Search = 1;
 		#100;
-		DataAddress = 115;
+		DataAddress = 240;
+		Search = 1;
 		ReadMem = 1;
-		//Search = 1;
+		#100;
+		DataAddress = 180;
+		ReadMem = 1;
+		Search = 1;
         
 		// Add stimulus here
 

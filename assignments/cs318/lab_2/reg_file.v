@@ -22,8 +22,6 @@ module reg_file(
 	 input wire CLK,
 	 input wire RegWrite,
     input wire [2:0] srcA,
-    input wire [2:0] srcB,
-	 input wire [2:0] srcC,
     input wire [2:0] writeReg,
     input wire [15:0] writeValue,
 	 
@@ -36,8 +34,12 @@ reg [15:0] registers[15:0];
 
 //I like this because I do have a zero register. I'm keeping it
 assign ReadA = (srcA == 3'b000) ? 16'b0 : registers[srcA];
-assign ReadB = (srcB == 3'b000) ? 16'b0 : registers[srcB];
-assign ReadC = (srcC == 3'b000) ? 16'b0 : registers[srcC];
+//These are only ever used for Search, so I can hard code them to be registers
+//2 and 3.
+//That way I can decide later whether or not to use them, and just always leave a value on them
+//Register 2 will also be attached with a mux to the immediate.
+assign ReadB = registers[2];
+assign ReadC = registers[3];
 
 always @ (posedge CLK)
 begin

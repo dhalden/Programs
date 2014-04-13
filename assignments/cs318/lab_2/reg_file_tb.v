@@ -28,8 +28,6 @@ module reg_file_tb;
 	reg CLK;
 	reg RegWrite;
 	reg [2:0] srcA;
-	reg [2:0] srcB;
-	reg [2:0] srcC;
 	reg [2:0] writeReg;
 	reg [15:0] writeValue;
 
@@ -42,9 +40,7 @@ module reg_file_tb;
 	reg_file uut (
 		.CLK(CLK), 
 		.RegWrite(RegWrite), 
-		.srcA(srcA), 
-		.srcB(srcB),
-		.srcC(srcC),		
+		.srcA(srcA), 		
 		.writeReg(writeReg), 
 		.writeValue(writeValue), 
 		.ReadA(ReadA),
@@ -57,13 +53,21 @@ module reg_file_tb;
 		CLK = 0;
 		RegWrite = 0;
 		srcA = 0;
-		srcB = 0;
 		writeReg = 0;
 		writeValue = 0;
 
+		#10
+		RegWrite = 1;
+		writeReg = 3'b010;
+		writeValue = 16'h00A7;
+		#10
+		RegWrite = 1;
+		writeReg = 3'b011;
+		writeValue = 16'h0013;
+		
 		// Wait 100 ns for global reset to finish
 		#100;
-        
+		
 		// Add stimulus here
 		// check if writing works
 		srcA = 3'b001;
@@ -90,7 +94,7 @@ module reg_file_tb;
 		RegWrite = 1;
 		
 		#20;
-		srcC = 3'b100;
+		srcA = 3'b101;
 		RegWrite = 0;
 		
 		

@@ -1,15 +1,15 @@
 Command line:
    DataRAM_isim_beh.exe
      -simmode  gui
-     -simrunnum  1
-     -socket  45704
+     -simrunnum  0
+     -socket  37230
 
-Thu Apr 10 16:03:12 2014
+Sun Apr 13 00:43:32 2014
 
 
  Elaboration Time: 0.02 sec
 
- Current Memory Usage: 195.781 Meg
+ Current Memory Usage: 195.777 Meg
 
  Total Signals          : 18
  Total Nets             : 64
@@ -19,11 +19,11 @@ Thu Apr 10 16:03:12 2014
  Total Processes        : 10
  Total Traceable Variables  : 20
  Total Scalar Nets and Variables : 4256
-Total Line Count : 26
+Total Line Count : 28
 
- Total Simulation Time: 0.02 sec
+ Total Simulation Time: 0.49 sec
 
- Current Memory Usage: 271.282 Meg
+ Current Memory Usage: 271.278 Meg
 
-Thu Apr 10 16:03:14 2014
+Sun Apr 13 00:48:07 2014
 

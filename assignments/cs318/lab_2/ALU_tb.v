@@ -26,9 +26,11 @@ module ALU_tb;
 
 	// Inputs
 	reg CLK;
-	reg [1:0] OP;
+	reg [3:0] OP;
 	reg [15:0] INPUTA;
 	reg [15:0] INPUTB;
+	reg [15:0] INPUTC;
+	reg [15:0] MEMIN;
 
 	// Outputs
 	wire [15:0] OUT;
@@ -43,7 +45,9 @@ module ALU_tb;
 		.INPUTB(INPUTB), 
 		.OUT(OUT), 
 		.ZERO(ZERO), 
-		.EQUAL(EQUAL)
+		.EQUAL(EQUAL),
+		.INPUTC(INPUTC),
+		.MEMIN(MEMIN)
 	);
 
 	initial begin
@@ -52,6 +56,8 @@ module ALU_tb;
 		OP = 0;
 		INPUTA = 0;
 		INPUTB = 0;
+		INPUTC = 0;
+		MEMIN = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
@@ -59,14 +65,53 @@ module ALU_tb;
 		// Add stimulus here
 		INPUTA = 16'h0004;
 		INPUTB = 16'h0004;
-		#15;
+		INPUTC = 16'h0004;
+		MEMIN  = 16'h0004;
 		
+		#15;
+		//halt
 		OP = 1;
 		#15
-		OP=2;
+		//sub
+		OP = 2;
 		#15
+		//wr
+		OP = 3;
+		#15
+		//search
+		OP = 4;
+		#15
+		//search
+		OP = 4;
 		INPUTB = 16'h0003;
-		OP=3;
+		
+		#15
+		//beq
+		OP = 5;
+		#15
+		//wm
+		OP = 6;
+		#15;
+		//smr
+		OP = 7;
+		#15
+		//rxor
+		OP = 8;
+		#15
+		//rxor
+		OP = 8;
+		MEMIN  = 16'h0003;
+		#15
+		//srl
+		OP = 9;
+		#15
+		//bsq
+		OP = 10;
+		#15
+		OP = 11;
+		#15
+		OP = 12;
+		
 
 	end
 

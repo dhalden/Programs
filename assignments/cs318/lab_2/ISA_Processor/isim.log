@@ -1,6 +1,5 @@
 ISim log file
-Running: /home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/DataRAM_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/DataRAM_tb_isim_beh.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+Running: /home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/reg_file_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/reg_file_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -12,10 +11,12 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Memory read M[  110] =    34
-Memory read M[  111] =    16
-Memory read M[  112] =    17
-Memory read M[  113] =    18
-Memory read M[  114] =    19
-Memory read M[  115] =    20
+Register write 2 =   167
+Register write 3 =    19
+Register write 3 =    19
+Register write 3 =    19
+Register write 3 =    19
+Register write 3 =    19
+Register write 1 = 43981
+Register write 4 = 41421
 # exit 0

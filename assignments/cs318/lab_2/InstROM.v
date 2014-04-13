@@ -23,29 +23,65 @@ module InstROM(InstAddress, InstOut);
     input [7:0] InstAddress;
     output [9:0] InstOut;
 	 
-	 // Instructions have [4bit opcode][3bit rs or rt][3bit rt, immediate, or branch target]
+	 // Instructions have [4bit opcode][6bit immediate or 3bit(useless) + 3bit rt]
 	 
 	 reg[9:0] InstOut;
 	 always @ (InstAddress)
 		begin
 		case (InstAddress)
-			// opcode = 0 lhw, rs = 0, rt = 1
-		0 : InstOut = 10'b0000000001;  // load from address at reg 0 to reg 1  
-			// opcode = 1 addi, rs/rt = 1, immediate = 1
-      
-		1 : InstOut = 10'b0001001001;  // addi reg 1 and 1
-		// replace instruction 1 with the following to produce an infinite loop (shows branch working)
-		//1 : InstOut = 10'b0001001000;  // addi reg 1 and 0
+			// opcode = 0 tbd, rt = 7
+		0 : InstOut = 10'b0000000111;  // load from address at reg 0 to reg 1  
 		
-		// opcode = 2 shw, rs = 0, rt = 1
-		2 : InstOut = 10'b0010000001;  // sw reg 1 to address in reg 0
+		// opcode = 7 smr, immediate = 8
+		1 : InstOut = 10'b0111001000; 
 		
-		// opcode = 3 beqz, rs = 1, target = 1
-      3 : InstOut = 10'b0011001001;  // beqz reg1 to absolute address 1
+		// opcode = 8 rxor,  imm = XXXXXX
+		2 : InstOut = 10'b1000111111;  // sw reg 1 to address in reg 0
 		
-		// opcode = 15 halt
-		4 : InstOut = 10'b1111111111;  // halt
-		default : InstOut = 10'b0000000000;
+		// opcode = 5 beq, imm = 24
+      3 : InstOut = 10'b0101011000;  // beqz reg1 to absolute address 1
+		
+		// opcode = 6 wm, imm = 3
+		4 : InstOut = 10'b0110000011; 
+		
+		// opcode = 2 sub, rt = 7
+		5 : InstOut = 10'b0010000111;
+		
+		// opcode = 6 wm, imm = 2
+		6 : InstOut = 10'b0110000010;
+		
+		// opcode = 1 halt, XXX
+		7 : InstOut = 10'b0001000000;
+		
+		// opcode = 7 smr, imm = 48
+		8 : InstOut = 10'b0111110000;
+		
+		// opcode = 3 wr, rt = 1
+		9 : InstOut = 10'b0011000001;
+		
+		// opcode = 3 wr, rt = 2
+		10 : InstOut = 10'b0011000010;
+		
+		// opcode = 3 wr, rt = 3
+		11 : InstOut = 10'b0011000011;
+		
+		// opcode = search, XXX
+		12 : InstOut = 10'b0100111111;
+		
+		// opcode = 10 bsq, imm = XXX(48)
+		13 : InstOut = 10'b1010110000;
+		
+		// opcode = 9 srl, rt = XXX
+		14 : InstOut = 10'b1001000111;
+		
+		// opcode = 6 wm, imm = 10
+		15 : InstOut = 10'b0110001010;
+		
+		// opcode = 1 halt, imm = XXX
+		16 : InstOut = 10'b0001000000;
+
+		//halt for default
+		default : InstOut = 10'b0001000000;
     endcase
   end
 

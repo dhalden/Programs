@@ -26,7 +26,6 @@ module IF_tb;
 
 	// Inputs
 	reg [1:0] Branch;
-	reg [7:0] Target;
 	reg Init;
 	reg Halt;
 	reg CLK;
@@ -38,7 +37,6 @@ module IF_tb;
 	IF uut (
 		.Branch(Branch), 
 		//Note: I do not care about this anymore, I will get rid of it at some point
-		.Target(Target), 
 		.Init(Init), 
 		.Halt(Halt), 
 		.CLK(CLK), 
@@ -48,7 +46,6 @@ module IF_tb;
 	initial begin
 		// Initialize Inputs
 		Branch = 0;
-		Target = 0;
 		Init = 0;
 		Halt = 0;
 		CLK = 0;
@@ -60,8 +57,8 @@ module IF_tb;
 		Init = 1;
 		#20;
 		Init = 0;
-		#20;
-		Target = 2;
+		#10;
+		Branch = 0;
 		#10;
 		Branch = 1;
 		#20;

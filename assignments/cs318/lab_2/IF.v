@@ -20,8 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 module IF(
     input [1:0] Branch,
-	 //Note: I do not care about this any more. I will get rid of it at some point
-    input [7:0] Target,
     input Init,
     input Halt,
 	 input CLK,
@@ -41,7 +39,7 @@ module IF(
 		else if(Branch==2)
 			PC = PC + 2;
 		else
-			PC = PC+1;
+			PC = PC + 1;
 	 end
 
 

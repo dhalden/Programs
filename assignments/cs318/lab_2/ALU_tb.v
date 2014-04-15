@@ -36,7 +36,7 @@ module ALU_tb;
 	wire [15:0] OUT;
 	wire ZERO;
 	wire EQUAL;
-
+	wire [1:0] BRANCH;
 	// Instantiate the Unit Under Test (UUT)
 	ALU uut (
 		.CLK(CLK), 
@@ -47,6 +47,7 @@ module ALU_tb;
 		.ZERO(ZERO), 
 		.EQUAL(EQUAL),
 		.INPUTC(INPUTC),
+		.BRANCH(BRANCH),
 		.MEMIN(MEMIN)
 	);
 
@@ -101,6 +102,14 @@ module ALU_tb;
 		//rxor
 		OP = 8;
 		MEMIN  = 16'h0003;
+		#15
+		//rxor
+		OP = 8;
+		MEMIN  = 16'hABCF;
+		#15
+		//rxor
+		OP = 8;
+		MEMIN  = 16'hFFFF;
 		#15
 		//srl
 		OP = 9;

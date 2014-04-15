@@ -17,10 +17,11 @@
 // Additional Comments:
 //
 //////////////////////////////////////////////////////////////////////////////////
-module DataRAM(DataAddress, ReadMem, WriteMem, Search, DataIn, DataOut, CLK);
+module DataRAM(DataAddress, DataWrite, ReadMem, WriteMem, Search, DataIn, DataOut, CLK);
     input CLK;
 
     input [15:0] DataAddress;
+	 input [15:0] DataWrite;
     input ReadMem;
     input WriteMem;
     input [15:0] DataIn;
@@ -33,38 +34,34 @@ module DataRAM(DataAddress, ReadMem, WriteMem, Search, DataIn, DataOut, CLK);
 
     initial begin
         $readmemh("dataram_init.list", my_memory);
-    end
+	 end
 	 wire D = DataAddress[0:0];
 	 reg [15:0] temp;
-    always @ (ReadMem or DataAddress or Search)
+    always @ (/*ReadMem or*/ DataAddress or Search)
 		  if (Search && ReadMem) begin
-		  	   $display("my_memory[DataAddress == %d] = %d",DataAddress,my_memory[DataAddress]);
-				$display("Search %d, ReadMem %d", Search, ReadMem);
 				temp = (DataAddress[15:0] >> 1);
 		  //Double check and make sure this is okay...
 				if(D) begin
-					DataOut = {8'b0, my_memory[temp][15:8]};
-				end else begin
 					DataOut = {8'b0, my_memory[temp][7:0]};
+				end else begin
+					DataOut = {8'b0, my_memory[temp][15:8]};
 				end
-				$display("Memory read M[%d] = %d",DataAddress,DataOut);
+				$display("Memory read M[%d] = %d",temp,DataOut);
         end
 		  else begin
 			   if(ReadMem) begin
 					DataOut = my_memory[DataAddress[15:0]];
-					$display("This happens");
-					$display("Search %d, ReadMem %d", Search, ReadMem);
-					
+					$display("Memory read M[%d] = %d",DataAddress,DataOut);
 				end
 				else begin
 					DataOut = 16'bZ;
 				end
         end
 
-    always @ (posedge CLK)
+    always @ (CLK)
         if(WriteMem) begin
-            my_memory[DataAddress] = DataIn;
-				$display("Memory write M[%d] = %d",DataAddress,DataIn);
+            my_memory[DataWrite] = DataIn;
+				$display("Memory write M[%d] = %d",DataWrite,DataIn);
         end
 
 endmodule

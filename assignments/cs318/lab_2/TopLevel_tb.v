@@ -30,15 +30,17 @@ module TopLevel_tb;
 
 	// Outputs
 	wire halt;
-	wire [3:0] write_register;
+	wire [2:0] write_register;
 	wire [15:0] regWriteValue;
 	wire REG_WRITE;
 	wire [15:0] memWriteValue;
 	wire MEM_WRITE;
 	wire [7:0] PC;
-	wire BRANCH;
+	wire [1:0]Branch;
 	wire [15:0] InstCounter;
 	wire [9:0] Instruction;
+	wire SEARCH;
+	wire [15:0] MemOut;
 
 	// Instantiate the Unit Under Test (UUT)
 	TopLevel uut (
@@ -51,9 +53,11 @@ module TopLevel_tb;
 		.memWriteValue(memWriteValue), 
 		.MEM_WRITE(MEM_WRITE), 
 		.PC(PC), 
-		.BRANCH(BRANCH), 
+		.Branch(Branch), 
 		.InstCounter(InstCounter),
-		.Instruction(Instruction)
+		.Instruction(Instruction),
+		.SEARCH(SEARCH),
+		.MemOut(MemOut)
 
 
 	);
@@ -68,6 +72,7 @@ module TopLevel_tb;
       start = 1; 
 		#10;
 		start = 0;
+
 		// Add stimulus here
 
 	end

@@ -29,7 +29,8 @@ module InstROM(InstAddress, InstOut);
 	 always @ (InstAddress)
 		begin
 		case (InstAddress)
-			// opcode = 0 tbd, rt = 7
+		
+		// opcode = 0 tbd, rt = 7
 		0 : InstOut = 10'b0000000111;  // load from address at reg 0 to reg 1  
 		
 		// opcode = 7 smr, immediate = 8
@@ -52,34 +53,38 @@ module InstROM(InstAddress, InstOut);
 		
 		// opcode = 1 halt, XXX
 		7 : InstOut = 10'b0001000000;
-		
+		/**/
+		/*
 		// opcode = 7 smr, imm = 48
-		8 : InstOut = 10'b0111110000;
+		0 : InstOut = 10'b0111110000;
+		
+		//opcode = tbd, rt = 6
+		1 : InstOut = 10'b0000000110;
 		
 		// opcode = 3 wr, rt = 1
-		9 : InstOut = 10'b0011000001;
+		2 : InstOut = 10'b0011000001;
 		
 		// opcode = 3 wr, rt = 2
-		10 : InstOut = 10'b0011000010;
+		3 : InstOut = 10'b0011000010;
 		
 		// opcode = 3 wr, rt = 3
-		11 : InstOut = 10'b0011000011;
+		4 : InstOut = 10'b0011000011;
 		
 		// opcode = search, XXX
-		12 : InstOut = 10'b0100111111;
+		5 : InstOut = 10'b0100111111;
 		
 		// opcode = 10 bsq, imm = XXX(48)
-		13 : InstOut = 10'b1010110000;
+		6 : InstOut = 10'b1010110000;
 		
 		// opcode = 9 srl, rt = XXX
-		14 : InstOut = 10'b1001000111;
+		7 : InstOut = 10'b1001000111;
 		
 		// opcode = 6 wm, imm = 10
-		15 : InstOut = 10'b0110001010;
+		8 : InstOut = 10'b0110001010;
 		
 		// opcode = 1 halt, imm = XXX
-		16 : InstOut = 10'b0001000000;
-
+		9 : InstOut = 10'b0001000000;
+		/**/
 		//halt for default
 		default : InstOut = 10'b0001000000;
     endcase

@@ -19,6 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module reg_file(
+	 input wire Start,
 	 input wire CLK,
 	 input wire RegWrite,
     input wire [2:0] srcA,
@@ -27,10 +28,11 @@ module reg_file(
 	 
     output [15:0] ReadA,
     output [15:0] ReadB,
-	 output [15:0] ReadC
+	 output [15:0] ReadC,
+	 output [15:0] ReadMem
     );
 	 
-reg [15:0] registers[15:0];
+reg [15:0] registers[7:0];
 
 //I like this because I do have a zero register. I'm keeping it
 assign ReadA = (srcA == 3'b000) ? 16'b0 : registers[srcA];
@@ -40,11 +42,13 @@ assign ReadA = (srcA == 3'b000) ? 16'b0 : registers[srcA];
 //Register 2 will also be attached with a mux to the immediate.
 assign ReadB = registers[2];
 assign ReadC = registers[3];
+assign ReadMem = registers[6];
 
-always @ (posedge CLK)
+always @ (CLK)
 begin
-  if (RegWrite && (writeReg != 4'b0000))
+  if (RegWrite && (writeReg != 3'b000))
   begin
+	 $display("RegWrite %d", RegWrite);
     registers[writeReg] <= writeValue;
 	 $display("Register write %d = %d",writeReg,writeValue);
   end

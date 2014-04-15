@@ -1,3 +1,0 @@
-verilog work "../reg_file.v"
-verilog work "../reg_file_tb.v"
-verilog work "/home/jebediah/Desktop/14.7/ISE_DS/ISE//verilog/src/glbl.v"

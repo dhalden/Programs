@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_isim_beh.exe" -prj "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_beh.prj" "work.TopLevel_tb" "work.glbl" 

@@ -1,4 +1,4 @@
-wr r7
+tbd r7
 smr 8
 rxor
 beq 24
@@ -6,7 +6,7 @@ wm 3
 sub r7
 wm 2
 hal
-smr 24
+smr 48 
 wr r1
 wr r2
 wr r3

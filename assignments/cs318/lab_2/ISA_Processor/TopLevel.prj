@@ -1,0 +1,7 @@
+verilog work "../reg_file.v"
+verilog work "../InstROM.v"
+verilog work "../IF.v"
+verilog work "../DataRAM.v"
+verilog work "../Control.v"
+verilog work "../ALU.v"
+verilog work "../TopLevel.v"

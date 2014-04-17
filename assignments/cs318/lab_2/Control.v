@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Derek Halden
 // 
 // Create Date:    18:08:46 02/16/2012 
 // Design Name: 
@@ -22,12 +22,12 @@ module Control(
     input [3:0] OPCODE,
 	 input [2:0] WR_REG,
     output reg [3:0]ALU_OP,
-    output reg [1:0]ALU_SRC_B,
+    //output reg [1:0]//ALU _SRC_B,
     output reg REG_WRITE,
     output reg MEM_WRITE,
     output reg MEM_READ,
     output reg REG_DST,
-    output reg MEM_TO_REG,
+    //output reg MEM_TO_REG,
 	 output reg HALT,
 	 output reg [8:0] MEM_TO_READ_FROM,
 	 output reg IMMEDIATE, 
@@ -44,9 +44,9 @@ module Control(
 			0 : 
 			begin
 				 REG_DST = 0;
-				 ALU_SRC_B = 0; 	// 2 is 0 don't care
+				 //ALU _SRC_B = 0; 	// 2 is 0 don't care
 				 ALU_OP = 0; 	 	// 0 add, 1 sub don't care
-				 MEM_TO_REG = 0;	// use mem read
+				 //MEM_TO_REG = 0;	// use mem read
 				 MEM_READ = 0;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -63,9 +63,9 @@ module Control(
 				 //Maybe use REG_DST to decide what to choose for
 				 //the register destination?
 				 REG_DST = 0;
-				 ALU_SRC_B = 0; 	// 1 is SE 3 bit immediate
+				 //ALU _SRC_B = 0; 	// 1 is SE 3 bit immediate
 				 ALU_OP = 0; 	 	// 0 add, 1 sub 
-				 MEM_TO_REG = 0;	// use alu result
+				 //MEM_TO_REG = 0;	// use alu result
 				 MEM_READ = 0;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -84,9 +84,9 @@ module Control(
 			2 : 
 			begin
 				REG_DST = 0;		// don't care
-				 ALU_SRC_B = 0; 	// 2 is 0, don't care
+				 //ALU _SRC_B = 0; 	// 2 is 0, don't care
 				 ALU_OP = 2; 	 	// 0 add, 1 sub, don't care
-				 MEM_TO_REG = 0;	// use alu, don't care
+				 //MEM_TO_REG = 0;	// use alu, don't care
 				 MEM_READ = 0;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -95,16 +95,15 @@ module Control(
 				 IMMEDIATE = 0;
 				 WRITE_REG = 0;
 				 WRFLAG = 0;
-				  
 				 SRCA = 0;
 			end
 			//write register
 			3 : 
 			begin
 				 REG_DST = 1;		// don't care
-				 ALU_SRC_B = 2; 	// 2 is zero
+				 //ALU _SRC_B = 2; 	// 2 is zero
 				 ALU_OP = 3; 	 	// 0 add, 1 sub
-				 MEM_TO_REG = 1;	// use alu, don't care
+				 //MEM_TO_REG = 1;	// use alu, don't care
 				 MEM_READ = 1;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -144,9 +143,9 @@ module Control(
 			4 : 
 			begin
 				REG_DST = 0;		// don't care
-				 ALU_SRC_B = 0; 	// 2 is 0, don't care
+				 //ALU _SRC_B = 0; 	// 2 is 0, don't care
 				 ALU_OP = 4; 	 	// 0 add, 1 sub, don't care
-				 MEM_TO_REG = 0;				 // use alu, don't care
+				 //MEM_TO_REG = 0;				 // use alu, don't care
 				 MEM_READ = 1;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -162,9 +161,9 @@ module Control(
 			5 : 
 			begin
 				 REG_DST = 0;		// don't care
-				 ALU_SRC_B = 2; 	// 2 is 0, don't care
+				 //ALU _SRC_B = 2; 	// 2 is 0, don't care
 				 ALU_OP = 5; 	 	// 0 add, 1 sub, don't care
-				 MEM_TO_REG = 0;	// use alu, don't care
+				 //MEM_TO_REG = 0;	// use alu, don't care
 				 MEM_READ = 0;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -180,9 +179,9 @@ module Control(
 			6 : 
 			begin
 			    REG_DST = 0;		// don't care
-				 ALU_SRC_B = 0; 	// 2 is 0, don't care
+				 //ALU _SRC_B = 0; 	// 2 is 0, don't care
 				 ALU_OP = 6; 	 	// 0 add, 1 sub, don't care
-				 MEM_TO_REG = 0;	// use alu, don't care
+				 //MEM_TO_REG = 0;	// use alu, don't care
 				 MEM_READ = 0;
 				 MEM_WRITE = 1;
 				 REG_WRITE = 0;
@@ -199,9 +198,9 @@ module Control(
 			begin
              REG_DST = 0;		// don't care
 
-				 ALU_SRC_B = 0; 	// 2 is 0, don't care
+				 //ALU _SRC_B = 0; 	// 2 is 0, don't care
 				 ALU_OP = 7; 	 	// 0 add, 1 sub, don't care
-				 MEM_TO_REG = 0;	// use alu, don't care
+				 //MEM_TO_REG = 0;	// use alu, don't care
 				 MEM_READ = 0;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -217,9 +216,9 @@ module Control(
 			8 : 
 			begin
              REG_DST = 0;		// don't care
-				 ALU_SRC_B = 0; 	// 2 is 0, don't care
+				 //ALU _SRC_B = 0; 	// 2 is 0, don't care
 				 ALU_OP = 8;
-				 MEM_TO_REG = 1;	// use alu, don't care
+				 //MEM_TO_REG = 1;	// use alu, don't care
 				 MEM_READ = 1;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -235,9 +234,9 @@ module Control(
 			9 : 
 			begin
              REG_DST = 0;		// don't care
-				 ALU_SRC_B = 0; 	// 2 is 0, don't care
+				 //ALU _SRC_B = 0; 	// 2 is 0, don't care
 				 ALU_OP = 9; 	 	// 0 add, 1 sub, don't care
-				 MEM_TO_REG = 0;	// use alu, don't care
+				 //MEM_TO_REG = 0;	// use alu, don't care
 				 MEM_READ = 0;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -253,9 +252,9 @@ module Control(
 			10 : 
 			begin
              REG_DST = 0;		// don't care
-				 ALU_SRC_B = 0; 	// 2 is 0, don't care
+				 //ALU _SRC_B = 0; 	// 2 is 0, don't care
 				 ALU_OP = 10; 	 	// 0 add, 1 sub, don't care
-				 MEM_TO_REG = 0;	// use alu, don't care
+				 //MEM_TO_REG = 0;	// use alu, don't care
 				 MEM_READ = 0;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 1;
@@ -270,9 +269,9 @@ module Control(
 			15 : 
 			begin
 				 REG_DST = 0;		// don't care
-				 ALU_SRC_B = 0; 	// 2 is zero
+				 //ALU _SRC_B = 0; 	// 2 is zero
 				 ALU_OP = 0; 	 	// 0 add, 1 sub
-				 MEM_TO_REG = 0;	// use alu, don't care
+				 //MEM_TO_REG = 0;	// use alu, don't care
 				 MEM_READ = 0;
 				 MEM_WRITE = 0;
 				 REG_WRITE = 0;

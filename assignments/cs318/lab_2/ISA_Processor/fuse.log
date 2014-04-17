@@ -13,11 +13,11 @@ Analyzing Verilog file "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2
 Analyzing Verilog file "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel_tb.v" into library work
 Analyzing Verilog file "/home/jebediah/Desktop/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel.v" Line 116: Port WR_REG is not connected to this instance
-WARNING:HDLCompiler:189 - "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel.v" Line 143: Size mismatch in connection of port <CLK>. Formal port size is 1-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:1016 - "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel.v" Line 118: Port WR_REG is not connected to this instance
+WARNING:HDLCompiler:189 - "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel.v" Line 145: Size mismatch in connection of port <CLK>. Formal port size is 1-bit while actual signal size is 16-bit.
 Completed static elaboration
-Fuse Memory Usage: 94780 KB
-Fuse CPU Usage: 1190 ms
+Fuse Memory Usage: 94784 KB
+Fuse CPU Usage: 1170 ms
 Compiling module IF
 Compiling module InstROM
 Compiling module Control
@@ -31,6 +31,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 2 sub-compilation(s) to finish...
 Compiled 9 Verilog Units
 Built simulation executable /home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_isim_beh.exe
-Fuse Memory Usage: 655172 KB
-Fuse CPU Usage: 1250 ms
-GCC CPU Usage: 1150 ms
+Fuse Memory Usage: 655164 KB
+Fuse CPU Usage: 1230 ms
+GCC CPU Usage: 1090 ms

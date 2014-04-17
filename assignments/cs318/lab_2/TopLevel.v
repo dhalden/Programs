@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Derek Halden
 // 
 // Create Date:    18:37:58 02/16/2012 
 // Design Name: 
@@ -32,13 +32,15 @@ module TopLevel(
     output reg [15:0] InstCounter,
 	 output wire [9:0] Instruction,
 	 output wire SEARCH,
-	 output wire [15:0] MemOut
+	 output wire [15:0] MemOut,
+	 output wire [15:0] DataRead,
+	 output wire [15:0] DataWrite
     );
 
 	// control signals not defined as outputs
-	 wire MEM_READ,REG_DST,MEM_TO_REG,HALT;
+	 wire MEM_READ,REG_DST,/*MEM_TO_REG,*/HALT;
 	 wire [3:0] ALU_OP;
-	 wire [1:0] ALU_SRC_B;
+	 //wire [1:0] ALU_SRC_B;
 	 // ALU outputs
 	 wire ZERO, EQUAL;
 	 wire [15:0] ALUOut;
@@ -57,8 +59,8 @@ module TopLevel(
 	 wire [15:0] ReadB;
 	 wire [15:0] ReadC; //added
 	 wire [15:0] DataCounter;
-	 wire [15:0] DataRead;
-	 wire [15:0] DataAddress;
+	 //wire [15:0] DataRead;
+	 //wire [15:0] DataWrite;
 	 wire [2:0] SrcA;
 	 wire [2:0] regSrcAddress;
 	 	 
@@ -80,8 +82,8 @@ module TopLevel(
 	 assign regWriteValue = ALUOut;
 	 
 	 // manage ALU SRC MUX
-	 assign SE_Immediate = {{13{Instruction[2]}}, Instruction[2:0]};
-	 assign IntermediateMux = (ALU_SRC_B==2'b01)?SE_Immediate:ReadB;
+	 //assign SE_Immediate = {{13{Instruction[2]}}, Instruction[2:0]};
+	 //assign IntermediateMux = (ALU_SRC_B==2'b01)?SE_Immediate:ReadB;
 	 
 	 // manage the write register and write data muxesassign ALUInputB = (In==2'b10)?0  : IntermediateMux;
 	 assign write_register = (WRFLAG) ? WRITE_REG : Instruction[2:0];
@@ -90,7 +92,7 @@ module TopLevel(
 	 assign memReadValue = ReadA;
 	 assign ReadB_Immediate = (IMMEDIATE) ? {10'b0, Instruction[5:0]}: ReadB;
 	 assign regSrcAddress = (SrcA != 0) ? SrcA : Instruction[2:0];
-	 assign DataAddress = (MEM_WRITE) ? {10'b0, Instruction[5:0]} : DataCounter;
+	 assign DataWrite = (MEM_WRITE) ? {10'b0, Instruction[5:0]} : DataCounter;
 	 assign DataRead =(REG_DST) ? MEM_TO_READ_FROM : DataCounter;
 	 
 
@@ -116,12 +118,12 @@ module TopLevel(
 	Control control_module (
 		.OPCODE(Instruction[9:6]), 
 		.ALU_OP(ALU_OP), 
-		.ALU_SRC_B(ALU_SRC_B), 
+		//.ALU_SRC_B(ALU_SRC_B), 
 		.REG_WRITE(REG_WRITE), 
 		.MEM_WRITE(MEM_WRITE), 
 		.MEM_READ(MEM_READ), 
 		.REG_DST(REG_DST), 
-		.MEM_TO_REG(MEM_TO_REG), 
+		//.MEM_TO_REG(MEM_TO_REG), 
 		.HALT(halt),
 		.MEM_TO_READ_FROM(MEM_TO_READ_FROM),
 		.IMMEDIATE(IMMEDIATE),
@@ -151,6 +153,7 @@ module TopLevel(
 		.ReadMem(DataCounter)
 	);
 	
+	/*
 	 always@(negedge CLK)
     begin
 		$display("writeReg : %d", REG_WRITE);
@@ -165,10 +168,10 @@ module TopLevel(
 		$display("MemOut %d",MemOut);
 		$display("SEARCH %d\n",SEARCH);
 	   // $display("DataCounter : %d", DataCounter); 
-    end
+    end*/
 	 DataRAM Data_Module(
 		.DataAddress(DataRead),
-		.DataWrite(DataAddress),
+		.DataWrite(DataWrite),
 		.ReadMem(MEM_READ), 
 		.WriteMem(MEM_WRITE), 
 		.DataIn(memWriteValue), 

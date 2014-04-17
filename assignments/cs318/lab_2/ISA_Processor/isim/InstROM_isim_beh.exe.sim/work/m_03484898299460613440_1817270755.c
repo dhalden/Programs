@@ -38,6 +38,7 @@ static int ng13[] = {6, 0};
 static unsigned int ng14[] = {386U, 0U};
 static int ng15[] = {7, 0};
 static unsigned int ng16[] = {64U, 0U};
+static const char *ng17 = "Instruction: %b";
 
 
 
@@ -120,7 +121,12 @@ LAB23:    xsi_set_current_line(89, ng0);
     t3 = (t0 + 1448);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 10);
 
-LAB25:    goto LAB2;
+LAB25:    xsi_set_current_line(91, ng0);
+    t2 = (t0 + 1448);
+    t3 = (t2 + 56U);
+    t4 = *((char **)t3);
+    xsi_vlogfile_write(1, 0, 0, ng17, 2, t0, (char)118, t4, 10);
+    goto LAB2;
 
 LAB7:    xsi_set_current_line(34, ng0);
     t7 = ((char*)((ng2)));

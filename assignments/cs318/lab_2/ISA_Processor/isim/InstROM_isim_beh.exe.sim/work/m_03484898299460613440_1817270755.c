@@ -21,23 +21,27 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/InstROM.v";
+static const char *ng0 = "/students/home/dhalden/Programs/assignments/cs318/lab_2/InstROM.v";
 static int ng1[] = {0, 0};
-static unsigned int ng2[] = {7U, 0U};
+static unsigned int ng2[] = {496U, 0U};
 static int ng3[] = {1, 0};
-static unsigned int ng4[] = {456U, 0U};
+static unsigned int ng4[] = {6U, 0U};
 static int ng5[] = {2, 0};
-static unsigned int ng6[] = {575U, 0U};
+static unsigned int ng6[] = {193U, 0U};
 static int ng7[] = {3, 0};
-static unsigned int ng8[] = {344U, 0U};
+static unsigned int ng8[] = {194U, 0U};
 static int ng9[] = {4, 0};
-static unsigned int ng10[] = {387U, 0U};
+static unsigned int ng10[] = {195U, 0U};
 static int ng11[] = {5, 0};
-static unsigned int ng12[] = {135U, 0U};
+static unsigned int ng12[] = {319U, 0U};
 static int ng13[] = {6, 0};
-static unsigned int ng14[] = {386U, 0U};
+static unsigned int ng14[] = {688U, 0U};
 static int ng15[] = {7, 0};
-static unsigned int ng16[] = {64U, 0U};
+static unsigned int ng16[] = {583U, 0U};
+static int ng17[] = {8, 0};
+static unsigned int ng18[] = {394U, 0U};
+static int ng19[] = {9, 0};
+static unsigned int ng20[] = {64U, 0U};
 
 
 
@@ -113,62 +117,84 @@ LAB20:    t2 = ((char*)((ng15)));
     if (t6 == 1)
         goto LAB21;
 
-LAB22:
-LAB24:
-LAB23:    xsi_set_current_line(89, ng0);
-    t2 = ((char*)((ng16)));
+LAB22:    t2 = ((char*)((ng17)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 8, t2, 32);
+    if (t6 == 1)
+        goto LAB23;
+
+LAB24:    t2 = ((char*)((ng19)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 8, t2, 32);
+    if (t6 == 1)
+        goto LAB25;
+
+LAB26:
+LAB28:
+LAB27:    xsi_set_current_line(89, ng0);
+    t2 = ((char*)((ng20)));
     t3 = (t0 + 1448);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 10);
 
-LAB25:    goto LAB2;
+LAB29:    goto LAB2;
 
-LAB7:    xsi_set_current_line(34, ng0);
+LAB7:    xsi_set_current_line(59, ng0);
     t7 = ((char*)((ng2)));
     t8 = (t0 + 1448);
     xsi_vlogvar_assign_value(t8, t7, 0, 0, 10);
-    goto LAB25;
+    goto LAB29;
 
-LAB9:    xsi_set_current_line(37, ng0);
+LAB9:    xsi_set_current_line(62, ng0);
     t3 = ((char*)((ng4)));
     t4 = (t0 + 1448);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
-    goto LAB25;
+    goto LAB29;
 
-LAB11:    xsi_set_current_line(40, ng0);
+LAB11:    xsi_set_current_line(65, ng0);
     t3 = ((char*)((ng6)));
     t4 = (t0 + 1448);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
-    goto LAB25;
+    goto LAB29;
 
-LAB13:    xsi_set_current_line(43, ng0);
+LAB13:    xsi_set_current_line(68, ng0);
     t3 = ((char*)((ng8)));
     t4 = (t0 + 1448);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
-    goto LAB25;
+    goto LAB29;
 
-LAB15:    xsi_set_current_line(46, ng0);
+LAB15:    xsi_set_current_line(71, ng0);
     t3 = ((char*)((ng10)));
     t4 = (t0 + 1448);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
-    goto LAB25;
+    goto LAB29;
 
-LAB17:    xsi_set_current_line(49, ng0);
+LAB17:    xsi_set_current_line(74, ng0);
     t3 = ((char*)((ng12)));
     t4 = (t0 + 1448);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
-    goto LAB25;
+    goto LAB29;
 
-LAB19:    xsi_set_current_line(52, ng0);
+LAB19:    xsi_set_current_line(77, ng0);
     t3 = ((char*)((ng14)));
     t4 = (t0 + 1448);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
-    goto LAB25;
+    goto LAB29;
 
-LAB21:    xsi_set_current_line(55, ng0);
+LAB21:    xsi_set_current_line(80, ng0);
     t3 = ((char*)((ng16)));
     t4 = (t0 + 1448);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
-    goto LAB25;
+    goto LAB29;
+
+LAB23:    xsi_set_current_line(83, ng0);
+    t3 = ((char*)((ng18)));
+    t4 = (t0 + 1448);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
+    goto LAB29;
+
+LAB25:    xsi_set_current_line(86, ng0);
+    t3 = ((char*)((ng20)));
+    t4 = (t0 + 1448);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 10);
+    goto LAB29;
 
 }
 

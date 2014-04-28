@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 	Leo Porter
+// Engineer: 	
 // 
 // Create Date:    15:50:22 11/02/2007 
 // Design Name: 
@@ -40,7 +40,7 @@ module InstROM(InstAddress, InstOut);
 		2 : InstOut = 10'b1000111111;  // sw reg 1 to address in reg 0
 		
 		// opcode = 5 beq, imm = 24
-      3 : InstOut = 10'b0101011000;  // beqz reg1 to absolute address 1
+        3 : InstOut = 10'b0101011000;  // beqz reg1 to absolute address 1
 		
 		// opcode = 6 wm, imm = 3
 		4 : InstOut = 10'b0110000011; 

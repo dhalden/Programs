@@ -15,7 +15,7 @@
 
   <!--                                                          -->
 
-  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
 
   <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
 
@@ -60,7 +60,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1397530561" xil_pn:in_ck="-6584898442746767990" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1397530561">
+    <transform xil_pn:end_ts="1397660362" xil_pn:in_ck="-6584898442746767990" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1397660362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../ALU.v"/>
@@ -77,11 +77,11 @@
       <outfile xil_pn:name="../reg_file_tb.v"/>
       <outfile xil_pn:name="DataRAM_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1397529687" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7734246722794254953" xil_pn:start_ts="1397529687">
+    <transform xil_pn:end_ts="1397660373" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7734246722794254953" xil_pn:start_ts="1397660373">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1397529687" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1336694286491608241" xil_pn:start_ts="1397529687">
+    <transform xil_pn:end_ts="1397660373" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1336694286491608241" xil_pn:start_ts="1397660373">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -89,13 +89,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1397530476" xil_pn:in_ck="-6584898442746767990" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1397530476">
+    <transform xil_pn:end_ts="1397660373" xil_pn:in_ck="-6584898442746767990" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1397660373">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../ALU.v"/>
       <outfile xil_pn:name="../ALU_tb.v"/>
       <outfile xil_pn:name="../Control.v"/>
@@ -110,13 +106,10 @@
       <outfile xil_pn:name="../reg_file_tb.v"/>
       <outfile xil_pn:name="DataRAM_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1397530478" xil_pn:in_ck="-6584898442746767990" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7845489488404252694" xil_pn:start_ts="1397530476">
+    <transform xil_pn:end_ts="1397660376" xil_pn:in_ck="-6584898442746767990" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7845489488404252694" xil_pn:start_ts="1397660373">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TopLevel_tb_beh.prj"/>
       <outfile xil_pn:name="TopLevel_tb_isim_beh.exe"/>
@@ -125,10 +118,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1397530478" xil_pn:in_ck="-8580376937688888116" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6436726202639396749" xil_pn:start_ts="1397530478">
+    <transform xil_pn:end_ts="1397660376" xil_pn:in_ck="-8580376937688888116" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6436726202639396749" xil_pn:start_ts="1397660376">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TopLevel_tb_isim_beh.wdb"/>

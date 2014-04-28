@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ALU.v";
+static const char *ng0 = "/students/home/dhalden/Programs/assignments/cs318/lab_2/ALU.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {6, 0};
 static int ng3[] = {193, 0};
@@ -833,7 +833,7 @@ LAB82:    xsi_set_current_line(54, ng0);
     xsi_set_current_line(55, ng0);
     t2 = (t0 + 3048);
     xsi_set_assignedflag(t2);
-    t3 = (t0 + 6420);
+    t3 = (t0 + 6412);
     *((int *)t3) = 1;
     NetReassign_55_2(t0);
 
@@ -1946,7 +1946,7 @@ LAB81:    xsi_set_current_line(51, ng0);
     xsi_set_current_line(52, ng0);
     t2 = (t0 + 3048);
     xsi_set_assignedflag(t2);
-    t3 = (t0 + 6416);
+    t3 = (t0 + 6408);
     *((int *)t3) = 1;
     NetReassign_52_1(t0);
     goto LAB80;
@@ -2786,7 +2786,7 @@ LAB3:    goto *t2;
 LAB2:    xsi_set_current_line(52, ng0);
     t3 = 0;
     t2 = ((char*)((ng1)));
-    t4 = (t0 + 6416);
+    t4 = (t0 + 6408);
     if (*((int *)t4) > 0)
         goto LAB4;
 
@@ -2817,7 +2817,7 @@ LAB3:    goto *t2;
 LAB2:    xsi_set_current_line(55, ng0);
     t3 = 0;
     t2 = ((char*)((ng4)));
-    t4 = (t0 + 6420);
+    t4 = (t0 + 6412);
     if (*((int *)t4) > 0)
         goto LAB4;
 

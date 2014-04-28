@@ -1,11 +1,26 @@
 ISim log file
-Running: /home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_isim_beh.wdb 
-ISim P.20131013 (signature 0xfbc00daa)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+Running: /students/home/dhalden/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /students/home/dhalden/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_isim_beh.wdb 
+ISim P.58f (signature 0xfbc00daa)
+----------------------------------------------------------------------
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is dhalden, on host csr01.cs.skidmore.edu.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+No such feature exists.
+Feature:       ISIM
+License path:  /students/home/dhalden/.Xilinx/Xilinx.lic:/usr/local/Xilinx/14.5/ISE_DS/ISE//data/*.lic:/usr/local/Xilinx/14.5/ISE_DS/ISE//coregen/core_licenses/Xilinx.lic:/usr/local/Xilinx/14.5/ISE_DS/ISE//coregen/core_licenses/XilinxFree.lic:/usr/local/Xilinx/14.5/ISE_DS/EDK/data/core_licenses/Xilinx.lic:
+FLEXnet Licensing error:-5,357
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.flexerasoftware.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
-WARNING: File "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/TopLevel.v" Line 32.  For instance uut/register_module/, width 1 of formal port CLK is not equal to width 16 of actual variable InstCounter. 
+WARNING: File "/students/home/dhalden/Programs/assignments/cs318/lab_2/TopLevel.v" Line 32.  For instance uut/register_module/, width 1 of formal port CLK is not equal to width 16 of actual variable InstCounter. 
 Time resolution is 1 ps
 # onerror resume
 # wave add /
@@ -1446,7 +1461,7 @@ MEM_READ 0
 MemOut  4405
 SEARCH x
 
-# run 500ns
+# run 430ns
 RegWrite 1
 Register write 6 =    76
 Memory read M[   76] = 62282
@@ -2070,79 +2085,8 @@ MEM_READ 0
 MemOut     z
 SEARCH x
 
+# run 10ns
 Memory write M[    2] =    32
-writeReg : 1
-Instruction : 0001000000
-ReadA :     0
-regSrcAddress : 0
-write_register: 0
-ALUOut :     0
-
-DataCounter:     0
-MEM_READ 0
-MemOut     z
-SEARCH x
-
-writeReg : 1
-Instruction : 0001000000
-ReadA :     0
-regSrcAddress : 0
-write_register: 0
-ALUOut :     0
-
-DataCounter:     0
-MEM_READ 0
-MemOut     z
-SEARCH x
-
-writeReg : 1
-Instruction : 0001000000
-ReadA :     0
-regSrcAddress : 0
-write_register: 0
-ALUOut :     0
-
-DataCounter:     0
-MEM_READ 0
-MemOut     z
-SEARCH x
-
-writeReg : 1
-Instruction : 0001000000
-ReadA :     0
-regSrcAddress : 0
-write_register: 0
-ALUOut :     0
-
-DataCounter:     0
-MEM_READ 0
-MemOut     z
-SEARCH x
-
-writeReg : 1
-Instruction : 0001000000
-ReadA :     0
-regSrcAddress : 0
-write_register: 0
-ALUOut :     0
-
-DataCounter:     0
-MEM_READ 0
-MemOut     z
-SEARCH x
-
-writeReg : 1
-Instruction : 0001000000
-ReadA :     0
-regSrcAddress : 0
-write_register: 0
-ALUOut :     0
-
-DataCounter:     0
-MEM_READ 0
-MemOut     z
-SEARCH x
-
 writeReg : 1
 Instruction : 0001000000
 ReadA :     0

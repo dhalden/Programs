@@ -2,14 +2,14 @@ Command line:
    InstROM_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  41077
+     -socket  57169
 
-Mon Apr 14 22:41:20 2014
+Tue Apr 15 23:48:09 2014
 
 
- Elaboration Time: 0.01 sec
+ Elaboration Time: 0.02 sec
 
- Current Memory Usage: 195.777 Meg
+ Current Memory Usage: 181.15 Meg
 
  Total Signals          : 14
  Total Nets             : 31
@@ -19,11 +19,11 @@ Mon Apr 14 22:41:20 2014
  Total Processes        : 8
  Total Traceable Variables  : 19
  Total Scalar Nets and Variables : 121
-Total Line Count : 26
+Total Line Count : 28
 
  Total Simulation Time: 0.03 sec
 
- Current Memory Usage: 271.278 Meg
+ Current Memory Usage: 258.687 Meg
 
-Mon Apr 14 22:41:24 2014
+Tue Apr 15 23:48:15 2014
 

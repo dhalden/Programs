@@ -1,2 +1,2 @@
 verilog isim_temp "../InstROM.v"
-verilog isim_temp "/home/jebediah/Desktop/14.7/ISE_DS/ISE//verilog/src/glbl.v"
+verilog isim_temp "/usr/local/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v"

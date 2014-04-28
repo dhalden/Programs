@@ -1,0 +1,37 @@
+1) Get a copy of cache.c and the traces from the class website
+
+2) Build the cache simulator.
+ % cc -lm -o cachesim cache.c
+
+3) Test the cache simulator.
+ % gunzip -c traces/art.trace.gz | ./cachesim
+	# 0 3019b6c8 2
+        # 0 300e20d8 2
+        # 0 3026e398 5
+        # 0 30192830 1
+        # 1 30192830 3
+        # 0 300049d0 1
+        # 0 30004960 3
+        # 0 30004a30 2
+        # 0 30004a38 1
+        # 0 3019b6d0 3
+
+4) Modify the cache simulator.  Remove the print statement that prints
+out the first 10 samples.  Add code that implements the cache (see the
+website/lab description for details).  Make sure it compiles and runs.
+If there are any special build instructions be sure to include them 
+in a README file.  Your simulator will be passed input as shown above
+and in the lab description.  It should produce the output specfied by
+the lab description and in the cache.c code. The command line options
+that your  simulator should take are defined in the lab description
+as well.
+
+5) Turn in a paper copy of your report and email me 
+(leo.porter@skidmore.edu) your code.  Use the subject line "cs376B lab 4".
+You will be graded on your report as well as the accuracy of your 
+cache implementation (per lab description).  I will check
+the accuracy of your cache implementation by compiling your code and
+running it with different parameters (specified on the command line)
+over the same set of traces you have been given access to.  If the
+numbers your simulator reports are the same as the numbers reported by
+a correct cache simulator, your simulator will be considered accurate.

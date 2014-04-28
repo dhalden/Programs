@@ -152,7 +152,10 @@ class newsteam:
             return int(arr)
         self.pcounter += 10
     def tbd(self,a):
-        self.registers[a] = 0
+        if (self.registers[a] == 192):
+            self.registers[a] = 193
+        else:
+            self.registers[a] = 0
         self.pcounter += 10
 
 

@@ -1,7 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
+<<<<<<< HEAD
 // Engineer: 	
+=======
+// Engineer: 	Derek Halden
+>>>>>>> 1c345190586a4179a688d53399b200471a444ddd
 // 
 // Create Date:    15:50:22 11/02/2007 
 // Design Name: 
@@ -54,6 +58,7 @@ module InstROM(InstAddress, InstOut);
 		// opcode = 1 halt, XXX
 		7 : InstOut = 10'b0001000000;
 		/**/
+		
 		/*
 		// opcode = 7 smr, imm = 48
 		0 : InstOut = 10'b0111110000;
@@ -88,6 +93,7 @@ module InstROM(InstAddress, InstOut);
 		//halt for default
 		default : InstOut = 10'b0001000000;
     endcase
+	 $display("Instruction: %b", InstOut);
   end
 
 endmodule

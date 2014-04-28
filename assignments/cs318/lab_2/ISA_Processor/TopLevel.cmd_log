@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel.xst" -ofn "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel.syr" 

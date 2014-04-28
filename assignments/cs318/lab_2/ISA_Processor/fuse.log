@@ -13,11 +13,19 @@ Analyzing Verilog file "/students/home/dhalden/Programs/assignments/cs318/lab_2/
 Analyzing Verilog file "/students/home/dhalden/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel_tb.v" into library work
 Analyzing Verilog file "/usr/local/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+<<<<<<< HEAD
 WARNING:HDLCompiler:1016 - "/students/home/dhalden/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel.v" Line 116: Port WR_REG is not connected to this instance
 WARNING:HDLCompiler:189 - "/students/home/dhalden/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel.v" Line 143: Size mismatch in connection of port <CLK>. Formal port size is 1-bit while actual signal size is 16-bit.
 Completed static elaboration
 Fuse Memory Usage: 94032 KB
 Fuse CPU Usage: 910 ms
+=======
+WARNING:HDLCompiler:1016 - "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel.v" Line 118: Port WR_REG is not connected to this instance
+WARNING:HDLCompiler:189 - "/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/../TopLevel.v" Line 145: Size mismatch in connection of port <CLK>. Formal port size is 1-bit while actual signal size is 16-bit.
+Completed static elaboration
+Fuse Memory Usage: 94784 KB
+Fuse CPU Usage: 1170 ms
+>>>>>>> 1c345190586a4179a688d53399b200471a444ddd
 Compiling module IF
 Compiling module InstROM
 Compiling module Control
@@ -30,7 +38,14 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 9 Verilog Units
+<<<<<<< HEAD
 Built simulation executable /students/home/dhalden/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_isim_beh.exe
 Fuse Memory Usage: 652372 KB
 Fuse CPU Usage: 950 ms
 GCC CPU Usage: 610 ms
+=======
+Built simulation executable /home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ISA_Processor/TopLevel_tb_isim_beh.exe
+Fuse Memory Usage: 655164 KB
+Fuse CPU Usage: 1230 ms
+GCC CPU Usage: 1090 ms
+>>>>>>> 1c345190586a4179a688d53399b200471a444ddd

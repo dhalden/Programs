@@ -1,7 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2014-04-16T10:54:38</DateModified>
+=======
+  <DateModified>2014-04-17T00:37:54</DateModified>
+>>>>>>> 1c345190586a4179a688d53399b200471a444ddd
   <ModuleName>TopLevel</ModuleName>
   <SummaryTimeStamp>2014-04-06T15:17:49</SummaryTimeStamp>
   <SavedFilePath>/students/home/dhalden/Programs/assignments/cs318/lab_2/ISA_Processor/iseconfig/TopLevel.xreport</SavedFilePath>

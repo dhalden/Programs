@@ -37,11 +37,16 @@ static unsigned int ng12[] = {319U, 0U};
 static int ng13[] = {6, 0};
 static unsigned int ng14[] = {688U, 0U};
 static int ng15[] = {7, 0};
+<<<<<<< HEAD
 static unsigned int ng16[] = {583U, 0U};
 static int ng17[] = {8, 0};
 static unsigned int ng18[] = {394U, 0U};
 static int ng19[] = {9, 0};
 static unsigned int ng20[] = {64U, 0U};
+=======
+static unsigned int ng16[] = {64U, 0U};
+static const char *ng17 = "Instruction: %b";
+>>>>>>> 1c345190586a4179a688d53399b200471a444ddd
 
 
 
@@ -134,7 +139,16 @@ LAB27:    xsi_set_current_line(89, ng0);
     t3 = (t0 + 1448);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 10);
 
+<<<<<<< HEAD
 LAB29:    goto LAB2;
+=======
+LAB25:    xsi_set_current_line(91, ng0);
+    t2 = (t0 + 1448);
+    t3 = (t2 + 56U);
+    t4 = *((char **)t3);
+    xsi_vlogfile_write(1, 0, 0, ng17, 2, t0, (char)118, t4, 10);
+    goto LAB2;
+>>>>>>> 1c345190586a4179a688d53399b200471a444ddd
 
 LAB7:    xsi_set_current_line(59, ng0);
     t7 = ((char*)((ng2)));

@@ -26,1428 +26,362 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
 Finished circuit initialization process.
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : x
-Instruction : xxxxxxxxxx
-ReadA :     x
-regSrcAddress : x
-write_register: x
-ALUOut :     x
-
-DataCounter:     x
-MEM_READ x
-MemOut     x
-SEARCH x
-
-writeReg : 1
-Instruction : 0000000111
-ReadA :     x
-regSrcAddress : 7
-write_register: 7
-ALUOut :     0
-
-DataCounter:     x
-MEM_READ 0
-MemOut     x
-SEARCH x
-
+Instruction: 0000000111
 RegWrite 1
 Register write 7 =     0
-writeReg : 1
-Instruction : 0111001000
-ReadA :     0
-regSrcAddress : 0
-write_register: 6
-ALUOut :    32
-
-DataCounter:     x
-MEM_READ 0
-MemOut     x
-SEARCH x
-
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx]
+Instruction: 0111001000
 RegWrite 1
 Register write 6 =    32
-Memory read M[   32] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     0
-regSrcAddress : 7
-write_register: 7
-ALUOut :     1
-
-DataCounter:    32
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
+Instruction: 1000111111
+Memory read M[   32] = 62285
 RegWrite 1
-Register write 7 =     1
-writeReg : 1
-Instruction : 0101011000
-ReadA :    32
-regSrcAddress : 6
-write_register: 6
-ALUOut :    33
-
-DataCounter:    32
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     0
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000100000,0000000000000000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    33
+Instruction: 1000111111
 Memory read M[   33] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     1
-regSrcAddress : 7
-write_register: 7
-ALUOut :     1
-
-DataCounter:    33
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     1
-writeReg : 1
-Instruction : 0101011000
-ReadA :    33
-regSrcAddress : 6
-write_register: 6
-ALUOut :    34
-
-DataCounter:    33
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     0
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000100001,0000000000000000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    34
+Instruction: 1000111111
 Memory read M[   34] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     1
-regSrcAddress : 7
-write_register: 7
-ALUOut :     2
-
-DataCounter:    34
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =     2
-writeReg : 1
-Instruction : 0101011000
-ReadA :    34
-regSrcAddress : 6
-write_register: 6
-ALUOut :    35
-
-DataCounter:    34
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     1
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000100010,0000000000000000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    35
+Instruction: 1000111111
 Memory read M[   35] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     2
-regSrcAddress : 7
-write_register: 7
-ALUOut :     2
-
-DataCounter:    35
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     2
-writeReg : 1
-Instruction : 0101011000
-ReadA :    35
-regSrcAddress : 6
-write_register: 6
-ALUOut :    36
-
-DataCounter:    35
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     1
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000100011,0000000000000001]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    36
+Instruction: 1000111111
 Memory read M[   36] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     2
-regSrcAddress : 7
-write_register: 7
-ALUOut :     3
-
-DataCounter:    36
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =     3
-writeReg : 1
-Instruction : 0101011000
-ReadA :    36
-regSrcAddress : 6
-write_register: 6
-ALUOut :    37
-
-DataCounter:    36
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     2
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000100100,0000000000000001]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    37
+Instruction: 1000111111
 Memory read M[   37] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     3
-regSrcAddress : 7
-write_register: 7
-ALUOut :     3
-
-DataCounter:    37
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     3
-writeReg : 1
-Instruction : 0101011000
-ReadA :    37
-regSrcAddress : 6
-write_register: 6
-ALUOut :    38
-
-DataCounter:    37
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     2
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000100101,0000000000000010]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    38
+Instruction: 1000111111
 Memory read M[   38] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     3
-regSrcAddress : 7
-write_register: 7
-ALUOut :     4
-
-DataCounter:    38
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =     4
-writeReg : 1
-Instruction : 0101011000
-ReadA :    38
-regSrcAddress : 6
-write_register: 6
-ALUOut :    39
-
-DataCounter:    38
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     3
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000100110,0000000000000010]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    39
+Instruction: 1000111111
 Memory read M[   39] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     4
-regSrcAddress : 7
-write_register: 7
-ALUOut :     4
-
-DataCounter:    39
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     4
-writeReg : 1
-Instruction : 0101011000
-ReadA :    39
-regSrcAddress : 6
-write_register: 6
-ALUOut :    40
-
-DataCounter:    39
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     3
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000100111,0000000000000011]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    40
+Instruction: 1000111111
 Memory read M[   40] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     4
-regSrcAddress : 7
-write_register: 7
-ALUOut :     5
-
-DataCounter:    40
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =     5
-writeReg : 1
-Instruction : 0101011000
-ReadA :    40
-regSrcAddress : 6
-write_register: 6
-ALUOut :    41
-
-DataCounter:    40
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     4
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000101000,0000000000000011]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    41
+Instruction: 1000111111
 Memory read M[   41] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     5
-regSrcAddress : 7
-write_register: 7
-ALUOut :     5
-
-DataCounter:    41
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     5
-writeReg : 1
-Instruction : 0101011000
-ReadA :    41
-regSrcAddress : 6
-write_register: 6
-ALUOut :    42
-
-DataCounter:    41
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     4
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000101001,0000000000000100]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    42
+Instruction: 1000111111
 Memory read M[   42] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     5
-regSrcAddress : 7
-write_register: 7
-ALUOut :     6
-
-DataCounter:    42
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =     6
-writeReg : 1
-Instruction : 0101011000
-ReadA :    42
-regSrcAddress : 6
-write_register: 6
-ALUOut :    43
-
-DataCounter:    42
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     5
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000101010,0000000000000100]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    43
+Instruction: 1000111111
 Memory read M[   43] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     6
-regSrcAddress : 7
-write_register: 7
-ALUOut :     6
-
-DataCounter:    43
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     6
-writeReg : 1
-Instruction : 0101011000
-ReadA :    43
-regSrcAddress : 6
-write_register: 6
-ALUOut :    44
-
-DataCounter:    43
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     5
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000101011,0000000000000101]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    44
+Instruction: 1000111111
 Memory read M[   44] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     6
-regSrcAddress : 7
-write_register: 7
-ALUOut :     7
-
-DataCounter:    44
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =     7
-writeReg : 1
-Instruction : 0101011000
-ReadA :    44
-regSrcAddress : 6
-write_register: 6
-ALUOut :    45
-
-DataCounter:    44
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     6
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000101100,0000000000000101]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    45
+Instruction: 1000111111
 Memory read M[   45] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     7
-regSrcAddress : 7
-write_register: 7
-ALUOut :     7
-
-DataCounter:    45
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     7
-writeReg : 1
-Instruction : 0101011000
-ReadA :    45
-regSrcAddress : 6
-write_register: 6
-ALUOut :    46
-
-DataCounter:    45
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     6
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000101101,0000000000000110]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    46
+Instruction: 1000111111
 Memory read M[   46] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     7
-regSrcAddress : 7
-write_register: 7
-ALUOut :     8
-
-DataCounter:    46
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =     8
-writeReg : 1
-Instruction : 0101011000
-ReadA :    46
-regSrcAddress : 6
-write_register: 6
-ALUOut :    47
-
-DataCounter:    46
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     7
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000101110,0000000000000110]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    47
+Instruction: 1000111111
 Memory read M[   47] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     8
-regSrcAddress : 7
-write_register: 7
-ALUOut :     8
-
-DataCounter:    47
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     8
-writeReg : 1
-Instruction : 0101011000
-ReadA :    47
-regSrcAddress : 6
-write_register: 6
-ALUOut :    48
-
-DataCounter:    47
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     7
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000101111,0000000000000111]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    48
+Instruction: 1000111111
 Memory read M[   48] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     8
-regSrcAddress : 7
-write_register: 7
-ALUOut :     9
-
-DataCounter:    48
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =     9
-writeReg : 1
-Instruction : 0101011000
-ReadA :    48
-regSrcAddress : 6
-write_register: 6
-ALUOut :    49
-
-DataCounter:    48
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     8
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000110000,0000000000000111]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    49
+Instruction: 1000111111
 Memory read M[   49] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :     9
-regSrcAddress : 7
-write_register: 7
-ALUOut :     9
-
-DataCounter:    49
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =     9
-writeReg : 1
-Instruction : 0101011000
-ReadA :    49
-regSrcAddress : 6
-write_register: 6
-ALUOut :    50
-
-DataCounter:    49
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     8
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000110001,0000000000001000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    50
+Instruction: 1000111111
 Memory read M[   50] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :     9
-regSrcAddress : 7
-write_register: 7
-ALUOut :    10
-
-DataCounter:    50
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    10
-writeReg : 1
-Instruction : 0101011000
-ReadA :    50
-regSrcAddress : 6
-write_register: 6
-ALUOut :    51
-
-DataCounter:    50
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =     9
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000110010,0000000000001000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    51
+Instruction: 1000111111
 Memory read M[   51] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    10
-regSrcAddress : 7
-write_register: 7
-ALUOut :    10
-
-DataCounter:    51
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    10
-writeReg : 1
-Instruction : 0101011000
-ReadA :    51
-regSrcAddress : 6
-write_register: 6
-ALUOut :    52
-
-DataCounter:    51
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =     9
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000110011,0000000000001001]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    52
+Instruction: 1000111111
 Memory read M[   52] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    10
-regSrcAddress : 7
-write_register: 7
-ALUOut :    11
-
-DataCounter:    52
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    11
-writeReg : 1
-Instruction : 0101011000
-ReadA :    52
-regSrcAddress : 6
-write_register: 6
-ALUOut :    53
-
-DataCounter:    52
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    10
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000110100,0000000000001001]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    53
+Instruction: 1000111111
 Memory read M[   53] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    11
-regSrcAddress : 7
-write_register: 7
-ALUOut :    11
-
-DataCounter:    53
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    11
-writeReg : 1
-Instruction : 0101011000
-ReadA :    53
-regSrcAddress : 6
-write_register: 6
-ALUOut :    54
-
-DataCounter:    53
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    10
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000110101,0000000000001010]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    54
+Instruction: 1000111111
 Memory read M[   54] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    11
-regSrcAddress : 7
-write_register: 7
-ALUOut :    12
-
-DataCounter:    54
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    12
-writeReg : 1
-Instruction : 0101011000
-ReadA :    54
-regSrcAddress : 6
-write_register: 6
-ALUOut :    55
-
-DataCounter:    54
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    11
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000110110,0000000000001010]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    55
+Instruction: 1000111111
 Memory read M[   55] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    12
-regSrcAddress : 7
-write_register: 7
-ALUOut :    12
-
-DataCounter:    55
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    12
-writeReg : 1
-Instruction : 0101011000
-ReadA :    55
-regSrcAddress : 6
-write_register: 6
-ALUOut :    56
-
-DataCounter:    55
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    11
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000110111,0000000000001011]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    56
+Instruction: 1000111111
 Memory read M[   56] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    12
-regSrcAddress : 7
-write_register: 7
-ALUOut :    13
-
-DataCounter:    56
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    13
-writeReg : 1
-Instruction : 0101011000
-ReadA :    56
-regSrcAddress : 6
-write_register: 6
-ALUOut :    57
-
-DataCounter:    56
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    12
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000111000,0000000000001011]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    57
+Instruction: 1000111111
 Memory read M[   57] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    13
-regSrcAddress : 7
-write_register: 7
-ALUOut :    13
-
-DataCounter:    57
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    13
-writeReg : 1
-Instruction : 0101011000
-ReadA :    57
-regSrcAddress : 6
-write_register: 6
-ALUOut :    58
-
-DataCounter:    57
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    12
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000111001,0000000000001100]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    58
+Instruction: 1000111111
 Memory read M[   58] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    13
-regSrcAddress : 7
-write_register: 7
-ALUOut :    14
-
-DataCounter:    58
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    14
-writeReg : 1
-Instruction : 0101011000
-ReadA :    58
-regSrcAddress : 6
-write_register: 6
-ALUOut :    59
-
-DataCounter:    58
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    13
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000111010,0000000000001100]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    59
+Instruction: 1000111111
 Memory read M[   59] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    14
-regSrcAddress : 7
-write_register: 7
-ALUOut :    14
-
-DataCounter:    59
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    14
-writeReg : 1
-Instruction : 0101011000
-ReadA :    59
-regSrcAddress : 6
-write_register: 6
-ALUOut :    60
-
-DataCounter:    59
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    13
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000111011,0000000000001101]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    60
+Instruction: 1000111111
 Memory read M[   60] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    14
-regSrcAddress : 7
-write_register: 7
-ALUOut :    15
-
-DataCounter:    60
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    15
-writeReg : 1
-Instruction : 0101011000
-ReadA :    60
-regSrcAddress : 6
-write_register: 6
-ALUOut :    61
-
-DataCounter:    60
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    14
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000111100,0000000000001101]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    61
+Instruction: 1000111111
 Memory read M[   61] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    15
-regSrcAddress : 7
-write_register: 7
-ALUOut :    15
-
-DataCounter:    61
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    15
-writeReg : 1
-Instruction : 0101011000
-ReadA :    61
-regSrcAddress : 6
-write_register: 6
-ALUOut :    62
-
-DataCounter:    61
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    14
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000111101,0000000000001110]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    62
+Instruction: 1000111111
 Memory read M[   62] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    15
-regSrcAddress : 7
-write_register: 7
-ALUOut :    16
-
-DataCounter:    62
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    16
-writeReg : 1
-Instruction : 0101011000
-ReadA :    62
-regSrcAddress : 6
-write_register: 6
-ALUOut :    63
-
-DataCounter:    62
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    15
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000111110,0000000000001110]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    63
+Instruction: 1000111111
 Memory read M[   63] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    16
-regSrcAddress : 7
-write_register: 7
-ALUOut :    16
-
-DataCounter:    63
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    16
-writeReg : 1
-Instruction : 0101011000
-ReadA :    63
-regSrcAddress : 6
-write_register: 6
-ALUOut :    64
-
-DataCounter:    63
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    15
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000111111,0000000000001111]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    64
+Instruction: 1000111111
 Memory read M[   64] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    16
-regSrcAddress : 7
-write_register: 7
-ALUOut :    17
-
-DataCounter:    64
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    17
-writeReg : 1
-Instruction : 0101011000
-ReadA :    64
-regSrcAddress : 6
-write_register: 6
-ALUOut :    65
-
-DataCounter:    64
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    16
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001000000,0000000000001111]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    65
+Instruction: 1000111111
 Memory read M[   65] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    17
-regSrcAddress : 7
-write_register: 7
-ALUOut :    17
-
-DataCounter:    65
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    17
-writeReg : 1
-Instruction : 0101011000
-ReadA :    65
-regSrcAddress : 6
-write_register: 6
-ALUOut :    66
-
-DataCounter:    65
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    16
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001000001,0000000000010000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    66
+Instruction: 1000111111
 Memory read M[   66] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    17
-regSrcAddress : 7
-write_register: 7
-ALUOut :    18
-
-DataCounter:    66
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    18
-writeReg : 1
-Instruction : 0101011000
-ReadA :    66
-regSrcAddress : 6
-write_register: 6
-ALUOut :    67
-
-DataCounter:    66
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    17
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001000010,0000000000010000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    67
+Instruction: 1000111111
 Memory read M[   67] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    18
-regSrcAddress : 7
-write_register: 7
-ALUOut :    18
-
-DataCounter:    67
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    18
-writeReg : 1
-Instruction : 0101011000
-ReadA :    67
-regSrcAddress : 6
-write_register: 6
-ALUOut :    68
-
-DataCounter:    67
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    17
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001000011,0000000000010001]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    68
+Instruction: 1000111111
 Memory read M[   68] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    18
-regSrcAddress : 7
-write_register: 7
-ALUOut :    19
-
-DataCounter:    68
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    19
-writeReg : 1
-Instruction : 0101011000
-ReadA :    68
-regSrcAddress : 6
-write_register: 6
-ALUOut :    69
-
-DataCounter:    68
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    18
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001000100,0000000000010001]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    69
+Instruction: 1000111111
 Memory read M[   69] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    19
-regSrcAddress : 7
-write_register: 7
-ALUOut :    19
-
-DataCounter:    69
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    19
-writeReg : 1
-Instruction : 0101011000
-ReadA :    69
-regSrcAddress : 6
-write_register: 6
-ALUOut :    70
-
-DataCounter:    69
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    18
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001000101,0000000000010010]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    70
+Instruction: 1000111111
 Memory read M[   70] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    19
-regSrcAddress : 7
-write_register: 7
-ALUOut :    20
-
-DataCounter:    70
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    20
-writeReg : 1
-Instruction : 0101011000
-ReadA :    70
-regSrcAddress : 6
-write_register: 6
-ALUOut :    71
-
-DataCounter:    70
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    19
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001000110,0000000000010010]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    71
+Instruction: 1000111111
 Memory read M[   71] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    20
-regSrcAddress : 7
-write_register: 7
-ALUOut :    20
-
-DataCounter:    71
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    20
-writeReg : 1
-Instruction : 0101011000
-ReadA :    71
-regSrcAddress : 6
-write_register: 6
-ALUOut :    72
-
-DataCounter:    71
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    19
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001000111,0000000000010011]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    72
+Instruction: 1000111111
 Memory read M[   72] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    20
-regSrcAddress : 7
-write_register: 7
-ALUOut :    21
-
-DataCounter:    72
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    21
-writeReg : 1
-Instruction : 0101011000
-ReadA :    72
-regSrcAddress : 6
-write_register: 6
-ALUOut :    73
-
-DataCounter:    72
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    20
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001001000,0000000000010011]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    73
+Instruction: 1000111111
 Memory read M[   73] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    21
-regSrcAddress : 7
-write_register: 7
-ALUOut :    21
-
-DataCounter:    73
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    21
-writeReg : 1
-Instruction : 0101011000
-ReadA :    73
-regSrcAddress : 6
-write_register: 6
-ALUOut :    74
-
-DataCounter:    73
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    20
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001001001,0000000000010100]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    74
+Instruction: 1000111111
 Memory read M[   74] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    21
-regSrcAddress : 7
-write_register: 7
-ALUOut :    22
-
-DataCounter:    74
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    22
-writeReg : 1
-Instruction : 0101011000
-ReadA :    74
-regSrcAddress : 6
-write_register: 6
-ALUOut :    75
-
-DataCounter:    74
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    21
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001001010,0000000000010100]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    75
+Instruction: 1000111111
 Memory read M[   75] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    22
-regSrcAddress : 7
-write_register: 7
-ALUOut :    22
-
-DataCounter:    75
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
+<<<<<<< HEAD
 Register write 7 =    22
 writeReg : 1
 Instruction : 0101011000
@@ -1462,588 +396,175 @@ MemOut  4405
 SEARCH x
 
 # run 430ns
+=======
+Register write 7 =    21
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001001011,0000000000010101]
+Instruction: 0101011000
+# run 440ns
+>>>>>>> 1c345190586a4179a688d53399b200471a444ddd
 RegWrite 1
 Register write 6 =    76
+Instruction: 1000111111
 Memory read M[   76] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    22
-regSrcAddress : 7
-write_register: 7
-ALUOut :    23
-
-DataCounter:    76
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    23
-writeReg : 1
-Instruction : 0101011000
-ReadA :    76
-regSrcAddress : 6
-write_register: 6
-ALUOut :    77
-
-DataCounter:    76
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    22
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001001100,0000000000010101]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    77
+Instruction: 1000111111
 Memory read M[   77] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    23
-regSrcAddress : 7
-write_register: 7
-ALUOut :    23
-
-DataCounter:    77
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    23
-writeReg : 1
-Instruction : 0101011000
-ReadA :    77
-regSrcAddress : 6
-write_register: 6
-ALUOut :    78
-
-DataCounter:    77
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    22
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001001101,0000000000010110]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    78
+Instruction: 1000111111
 Memory read M[   78] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    23
-regSrcAddress : 7
-write_register: 7
-ALUOut :    24
-
-DataCounter:    78
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    24
-writeReg : 1
-Instruction : 0101011000
-ReadA :    78
-regSrcAddress : 6
-write_register: 6
-ALUOut :    79
-
-DataCounter:    78
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    23
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001001110,0000000000010110]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    79
+Instruction: 1000111111
 Memory read M[   79] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    24
-regSrcAddress : 7
-write_register: 7
-ALUOut :    24
-
-DataCounter:    79
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    24
-writeReg : 1
-Instruction : 0101011000
-ReadA :    79
-regSrcAddress : 6
-write_register: 6
-ALUOut :    80
-
-DataCounter:    79
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    23
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001001111,0000000000010111]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    80
+Instruction: 1000111111
 Memory read M[   80] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    24
-regSrcAddress : 7
-write_register: 7
-ALUOut :    25
-
-DataCounter:    80
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    25
-writeReg : 1
-Instruction : 0101011000
-ReadA :    80
-regSrcAddress : 6
-write_register: 6
-ALUOut :    81
-
-DataCounter:    80
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    24
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001010000,0000000000010111]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    81
+Instruction: 1000111111
 Memory read M[   81] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    25
-regSrcAddress : 7
-write_register: 7
-ALUOut :    25
-
-DataCounter:    81
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    25
-writeReg : 1
-Instruction : 0101011000
-ReadA :    81
-regSrcAddress : 6
-write_register: 6
-ALUOut :    82
-
-DataCounter:    81
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    24
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001010001,0000000000011000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    82
+Instruction: 1000111111
 Memory read M[   82] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    25
-regSrcAddress : 7
-write_register: 7
-ALUOut :    26
-
-DataCounter:    82
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    26
-writeReg : 1
-Instruction : 0101011000
-ReadA :    82
-regSrcAddress : 6
-write_register: 6
-ALUOut :    83
-
-DataCounter:    82
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    25
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001010010,0000000000011000]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    83
+Instruction: 1000111111
 Memory read M[   83] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    26
-regSrcAddress : 7
-write_register: 7
-ALUOut :    26
-
-DataCounter:    83
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    26
-writeReg : 1
-Instruction : 0101011000
-ReadA :    83
-regSrcAddress : 6
-write_register: 6
-ALUOut :    84
-
-DataCounter:    83
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    25
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001010011,0000000000011001]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    84
+Instruction: 1000111111
 Memory read M[   84] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    26
-regSrcAddress : 7
-write_register: 7
-ALUOut :    27
-
-DataCounter:    84
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    27
-writeReg : 1
-Instruction : 0101011000
-ReadA :    84
-regSrcAddress : 6
-write_register: 6
-ALUOut :    85
-
-DataCounter:    84
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    26
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001010100,0000000000011001]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    85
+Instruction: 1000111111
 Memory read M[   85] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    27
-regSrcAddress : 7
-write_register: 7
-ALUOut :    27
-
-DataCounter:    85
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    27
-writeReg : 1
-Instruction : 0101011000
-ReadA :    85
-regSrcAddress : 6
-write_register: 6
-ALUOut :    86
-
-DataCounter:    85
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    26
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001010101,0000000000011010]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    86
+Instruction: 1000111111
 Memory read M[   86] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    27
-regSrcAddress : 7
-write_register: 7
-ALUOut :    28
-
-DataCounter:    86
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    28
-writeReg : 1
-Instruction : 0101011000
-ReadA :    86
-regSrcAddress : 6
-write_register: 6
-ALUOut :    87
-
-DataCounter:    86
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    27
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001010110,0000000000011010]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    87
+Instruction: 1000111111
 Memory read M[   87] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    28
-regSrcAddress : 7
-write_register: 7
-ALUOut :    28
-
-DataCounter:    87
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    28
-writeReg : 1
-Instruction : 0101011000
-ReadA :    87
-regSrcAddress : 6
-write_register: 6
-ALUOut :    88
-
-DataCounter:    87
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    27
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001010111,0000000000011011]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    88
+Instruction: 1000111111
 Memory read M[   88] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    28
-regSrcAddress : 7
-write_register: 7
-ALUOut :    29
-
-DataCounter:    88
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    29
-writeReg : 1
-Instruction : 0101011000
-ReadA :    88
-regSrcAddress : 6
-write_register: 6
-ALUOut :    89
-
-DataCounter:    88
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    28
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001011000,0000000000011011]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    89
+Instruction: 1000111111
 Memory read M[   89] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    29
-regSrcAddress : 7
-write_register: 7
-ALUOut :    29
-
-DataCounter:    89
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    29
-writeReg : 1
-Instruction : 0101011000
-ReadA :    89
-regSrcAddress : 6
-write_register: 6
-ALUOut :    90
-
-DataCounter:    89
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    28
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001011001,0000000000011100]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    90
+Instruction: 1000111111
 Memory read M[   90] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    29
-regSrcAddress : 7
-write_register: 7
-ALUOut :    30
-
-DataCounter:    90
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    30
-writeReg : 1
-Instruction : 0101011000
-ReadA :    90
-regSrcAddress : 6
-write_register: 6
-ALUOut :    91
-
-DataCounter:    90
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    29
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001011010,0000000000011100]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    91
+Instruction: 1000111111
 Memory read M[   91] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    30
-regSrcAddress : 7
-write_register: 7
-ALUOut :    30
-
-DataCounter:    91
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    30
-writeReg : 1
-Instruction : 0101011000
-ReadA :    91
-regSrcAddress : 6
-write_register: 6
-ALUOut :    92
-
-DataCounter:    91
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    29
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001011011,0000000000011101]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    92
+Instruction: 1000111111
 Memory read M[   92] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    30
-regSrcAddress : 7
-write_register: 7
-ALUOut :    31
-
-DataCounter:    92
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    31
-writeReg : 1
-Instruction : 0101011000
-ReadA :    92
-regSrcAddress : 6
-write_register: 6
-ALUOut :    93
-
-DataCounter:    92
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    30
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001011100,0000000000011101]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    93
+Instruction: 1000111111
 Memory read M[   93] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    31
-regSrcAddress : 7
-write_register: 7
-ALUOut :    31
-
-DataCounter:    93
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    31
-writeReg : 1
-Instruction : 0101011000
-ReadA :    93
-regSrcAddress : 6
-write_register: 6
-ALUOut :    94
-
-DataCounter:    93
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    30
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001011101,0000000000011110]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    94
+Instruction: 1000111111
 Memory read M[   94] = 62282
-writeReg : 1
-Instruction : 1000111111
-ReadA :    31
-regSrcAddress : 7
-write_register: 7
-ALUOut :    32
-
-DataCounter:    94
-MEM_READ 1
-MemOut 62282
-SEARCH x
-
 RegWrite 1
-Register write 7 =    32
-writeReg : 1
-Instruction : 0101011000
-ReadA :    94
-regSrcAddress : 6
-write_register: 6
-ALUOut :    95
-
-DataCounter:    94
-MEM_READ 0
-MemOut 62282
-SEARCH x
-
+Register write 7 =    31
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001011110,0000000000011110]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =    95
+Instruction: 1000111111
 Memory read M[   95] =  4405
-writeReg : 1
-Instruction : 1000111111
-ReadA :    32
-regSrcAddress : 7
-write_register: 7
-ALUOut :    32
-
-DataCounter:    95
-MEM_READ 1
-MemOut  4405
-SEARCH x
-
 RegWrite 1
-Register write 7 =    32
-writeReg : 1
-Instruction : 0101011000
-ReadA :    95
-regSrcAddress : 6
-write_register: 6
-ALUOut :     0
-
-DataCounter:    95
-MEM_READ 0
-MemOut  4405
-SEARCH x
-
+Register write 7 =    31
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000001011111,0000000000011111]
+Instruction: 0101011000
 RegWrite 1
 Register write 6 =     0
+<<<<<<< HEAD
 Memory write M[    3] =    32
 writeReg : 0
 Instruction : 0110000011
@@ -2099,4 +620,18 @@ MEM_READ 0
 MemOut     z
 SEARCH x
 
+=======
+Instruction: 0110000011
+Memory write M[    3] =    31
+Memory write M[    3] =    31
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000000000,0000000000011111]
+Instruction: 0010000111
+RegWrite 1
+Register write 7 =    33
+Instruction: 0110000010
+Memory write M[    2] =    33
+Memory write M[    2] =    33
+[xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxx,0000000000000000,0000000000100001]
+Instruction: 0001000000
+>>>>>>> 1c345190586a4179a688d53399b200471a444ddd
 # exit 0

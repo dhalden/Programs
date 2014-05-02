@@ -9,6 +9,9 @@ int blocksize_bytes = 32;       // Cache Block size in bytes
 int cachesize_kb = 64;          // Cache size in KB
 int miss_penalty = 30;
 
+
+
+
 void
 print_usage ()
 {
@@ -69,18 +72,182 @@ int main(int argc, char * argv []) {
   printf ("Miss penalty (cyc)\t\t%d\n",miss_penalty);
   printf ("\n");
 
+
+
+    int bs_bits;
+    int tag_bits;
+    int index_bits;
+
+  
+    bs_bits = log(blocksize_bytes)/log(2);
+    tag_bits = 32 - (log(cachesize_kb*1024/associativity)/log(2));
+    index_bits = log(cachesize_kb*1024/(associativity*blocksize_bytes))/log(2);
+
+    printf("bs_bits: %d\ntag_bits: %d\nindex_bits: %d\n\n", bs_bits, tag_bits, index_bits);
+
+    int bo_mask;
+    int tag_mask;
+    int index_mask;
+    index_mask = ((1 << index_bits) - 1) << bs_bits;
+    tag_mask = ((1 << tag_bits) - 1) << (bs_bits + index_bits);
+    
+    printf("tagmask: %x\nindexmask: %x\n", tag_mask, index_mask);
+
+    int cash = (cachesize_kb * 1024/blocksize_bytes)/associativity; 
+
+    printf("cash = \t%d\n\n", cash);
+
+    int tdArray[cash][associativity];
+    int lru[cash][associativity];
+    int dirty[cash][associativity];
+    int valid[cash][associativity];
+    int s;
+    for (s = 0; s < cash; s++)
+    {
+        int t;
+        for(t = 0; t < associativity; t++)
+        {
+            lru[s][t] = 0;
+            tdArray[s][t] = 0;
+            dirty[s][t] = 0;
+            valid[s][t] = 0;
+        }
+    }
+
+
+    //usage variables
+    //int etime;
+    //int inst;
+    //int tot_mr;
+    //int read_mr;
+    //int mem_cpi;
+    //int tot_cpi;
+    //int avg_mat;
+    //int dirty_evicts;
+    int load_miss = 0;
+    //int store_miss = 0;
+    int load_hit = 0;
+    //int store_hit;
+
   while (scanf("%c %d %lx %d\n",&marker,&loadstore,&address,&icount) != EOF) {
     // Code to print out just the first 10 addresses.  You'll want to delete
     // this part once you get things going.
-    if(i<10){
-	printf("\t%c %d %lx %d\n",marker, loadstore, address, icount);
-	i++;
-    }
-    else{
-	return 1;
-   }
 
     //here is where you will want to process your memory accesses
+    //printf("loadstore: %d\n", loadstore);
+    if(loadstore == 0) //load
+    {
+        //printf("load: %x, marker: %x\n", icount, marker);
+        unsigned int temp_ib;
+        unsigned int temp_tb;
+        temp_ib = index_mask & address;
+        temp_tb = tag_mask & address;
+
+        //Works for direct mapped
+        int a;
+        int hit; 
+        hit = 0;
+        //first check if it's in the array
+        for(a = 0; a < associativity; a++)
+        {
+            if(tdArray[(temp_ib >> bs_bits)][a] == temp_tb
+                        && (valid[(temp_ib >> bs_bits)][a]))
+            {
+                lru[(temp_ib >> bs_bits)][a] = i;
+                load_hit++;
+                hit = 1;
+                //printf("\nhit\n");
+                //printf("tag: %d", (temp_tb >> (bs_bits + index_bits)));
+                //printf("\ntemp_ib >> bs_bits: %d\n", (temp_ib >> bs_bits));
+                //printf("\nhit\n");
+                break;
+            }
+
+        }
+        if(!hit){
+            load_miss++;
+            //if it's not in the array, find the lru and evict it.
+            int la = 0;
+            for(a = 0; a < associativity; a++)
+            {
+                   if(lru[(temp_ib >> bs_bits)][a] < lru[(temp_ib >> bs_bits)][la])
+                   {
+                        la = a;
+                   }
+            }
+            if(dirty[(temp_ib >> bs_bits)][a])
+            {
+                //dirty
+                //write-back to memory
+                //miss_cycles = miss_cycles + miss_penalty + 2
+                dirty[(temp_ib >> bs_bits)][a] = 0;
+            }
+            else
+            {
+                //clean
+                //miss_cycles = miss_cycles + miss_penalty
+            }
+            tdArray[(temp_ib >> bs_bits)][la] = temp_tb;
+            lru[(temp_ib >> bs_bits)][la] = i;
+            valid[(temp_ib >> bs_bits)][la] = 1;
+            //printf("masked index: %x\ntag index: %x\n", temp_ib, temp_tb);
+        }
+    }
+    else if(loadstore == 1) //store
+    {
+        //printf("store: %x, marker: %x\n", icount, marker);
+        unsigned int temp_ib;
+        unsigned int temp_tb;
+        temp_ib = index_mask & address;
+        temp_tb = tag_mask & address;
+        int a;
+        int hit; 
+        hit = 0;
+        for(a = 0; a < associativity; a++)
+        {
+            if(tdArray[(temp_ib >> bs_bits)][a] == temp_tb 
+                    && (valid[(temp_ib >> bs_bits)][a] = 1)) //hit
+            {
+                lru[(temp_ib >> bs_bits)][a] = i;
+                dirty[(temp_ib >> bs_bits)][a] = 1;
+                hit = 1;
+                break;
+            }
+        }
+        if(!hit)
+        {
+            //if it's not in the array, find the lru and evict it.
+            int la = 0;
+            for(a = 0; a < associativity; a++)
+            {
+                   if(lru[(temp_ib >> bs_bits)][a] < lru[(temp_ib >> bs_bits)][la])
+                   {
+                        la = a;
+                   }
+            }
+            if(dirty[(temp_ib >> bs_bits)][a])
+            {
+                //dirty
+                //write-back to memory
+                //miss_cycles = miss_cycles + miss_penalty + 2
+            }
+            else
+            {
+                //clean
+                //miss_cycles = miss_cycles + miss_penalty
+            }
+            lru[(temp_ib >> bs_bits)][la] = i;
+            tdArray[(temp_ib >> bs_bits)][la] = temp_tb;
+            dirty[(temp_ib >> bs_bits)][la] = 1;
+            valid[(temp_ib >> bs_bits)][la] = 1;
+        }
+    }
+
+	printf("\t%c %d %lx %d\n",marker, loadstore, address, icount);
+	i++;
+
+
+
 
   }
   // Here is where you want to print out stats
@@ -90,20 +257,20 @@ int main(int argc, char * argv []) {
   //  print statements are provided, just replace the question marks with
   //  your calcuations.
   
-  /*
-  printf("\texecution time %ld cycles\n", ?);
-  printf("\tinstructions %ld\n", ?);
-  printf("\tmemory accesses %ld\n", ?);
-  printf("\toverall miss rate %.2f\n", ? );
-  printf("\tread miss rate %.2f\n", ? );
-  printf("\tmemory CPI %.2f\n", ?);
-  printf("\ttotal CPI %.2f\n", ?);
-  printf("\taverage memory access time %.2f cycles\n",  ?);
-  printf("dirty evictions %d\n", ?);
-  printf("load_misses %d\n", ?);
-  printf("store_misses %d\n", ?);
-  printf("load_hits %d\n", ?);
-  printf("store_hits %d\n", ?);
-  */
+  
+  //printf("\texecution time %ld cycles\n", ?);
+  //printf("\tinstructions %ld\n", ?);
+  //printf("\tmemory accesses %ld\n", ?);
+  //printf("\toverall miss rate %.2f\n", ? );
+  //printf("\tread miss rate %.2f\n", ? );
+  //printf("\tmemory CPI %.2f\n", ?);
+  //printf("\ttotal CPI %.2f\n", ?);
+  //printf("\taverage memory access time %.2f cycles\n",  ?);
+  //printf("dirty evictions %d\n", ?);
+  printf("load_misses %d\n", load_miss);
+  //printf("store_misses %d\n", ?);
+  printf("load_hits %d\n", load_hit);
+  //printf("store_hits %d\n", ?);
+  
 
 }

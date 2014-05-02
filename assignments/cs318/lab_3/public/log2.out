@@ -1,0 +1,24 @@
+Cache parameters:
+Cache Size (KB)			64
+Cache Associativity		8
+Cache Block Size (bytes)	32
+Miss penalty (cyc)		42
+
+bs_bits: 5
+tag_bits: 19
+index_bits: 8
+
+tagmask: ffffe000
+indexmask: 1fe0
+cash = 	256
+
+Lines found = 6943857 
+Simulation results:
+	execution time 143963250 cycles
+	instructions 19999998
+	memory accesses 6943857
+dirty evictions 995694
+load_misses 2036666
+store_misses 867426
+load_hits 3552806
+store_hits 486959

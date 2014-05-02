@@ -117,17 +117,19 @@ int main(int argc, char * argv []) {
 
     //usage variables
     //int etime;
-    //int inst;
+    long inst = 0;
+    long mem_axe = 0;
     //int tot_mr;
     //int read_mr;
     //int mem_cpi;
     //int tot_cpi;
     //int avg_mat;
-    //int dirty_evicts;
+    int dirty_evicts = 0;
     int load_miss = 0;
-    //int store_miss = 0;
+    int store_miss = 0;
     int load_hit = 0;
-    //int store_hit;
+    int store_hit = 0;
+    int miss_cycles = 0;
 
   while (scanf("%c %d %lx %d\n",&marker,&loadstore,&address,&icount) != EOF) {
     // Code to print out just the first 10 addresses.  You'll want to delete
@@ -135,8 +137,10 @@ int main(int argc, char * argv []) {
 
     //here is where you will want to process your memory accesses
     //printf("loadstore: %d\n", loadstore);
+    inst += icount;
     if(loadstore == 0) //load
     {
+        mem_axe++;
         //printf("load: %x, marker: %x\n", icount, marker);
         unsigned int temp_ib;
         unsigned int temp_tb;
@@ -156,10 +160,6 @@ int main(int argc, char * argv []) {
                 lru[(temp_ib >> bs_bits)][a] = i;
                 load_hit++;
                 hit = 1;
-                //printf("\nhit\n");
-                //printf("tag: %d", (temp_tb >> (bs_bits + index_bits)));
-                //printf("\ntemp_ib >> bs_bits: %d\n", (temp_ib >> bs_bits));
-                //printf("\nhit\n");
                 break;
             }
 
@@ -175,27 +175,27 @@ int main(int argc, char * argv []) {
                         la = a;
                    }
             }
-            if(dirty[(temp_ib >> bs_bits)][a])
+            if(dirty[(temp_ib >> bs_bits)][la])
             {
                 //dirty
                 //write-back to memory
-                //miss_cycles = miss_cycles + miss_penalty + 2
-                dirty[(temp_ib >> bs_bits)][a] = 0;
+                miss_cycles = miss_cycles + miss_penalty + 2;
+                dirty_evicts++;
+                dirty[(temp_ib >> bs_bits)][la] = 0;
             }
             else
             {
                 //clean
-                //miss_cycles = miss_cycles + miss_penalty
+                miss_cycles = miss_cycles + miss_penalty;
             }
             tdArray[(temp_ib >> bs_bits)][la] = temp_tb;
             lru[(temp_ib >> bs_bits)][la] = i;
             valid[(temp_ib >> bs_bits)][la] = 1;
-            //printf("masked index: %x\ntag index: %x\n", temp_ib, temp_tb);
         }
     }
     else if(loadstore == 1) //store
     {
-        //printf("store: %x, marker: %x\n", icount, marker);
+        mem_axe++;
         unsigned int temp_ib;
         unsigned int temp_tb;
         temp_ib = index_mask & address;
@@ -211,11 +211,13 @@ int main(int argc, char * argv []) {
                 lru[(temp_ib >> bs_bits)][a] = i;
                 dirty[(temp_ib >> bs_bits)][a] = 1;
                 hit = 1;
+                store_hit++;
                 break;
             }
         }
         if(!hit)
         {
+            store_miss++;
             //if it's not in the array, find the lru and evict it.
             int la = 0;
             for(a = 0; a < associativity; a++)
@@ -225,16 +227,17 @@ int main(int argc, char * argv []) {
                         la = a;
                    }
             }
-            if(dirty[(temp_ib >> bs_bits)][a])
+            if(dirty[(temp_ib >> bs_bits)][la])
             {
                 //dirty
                 //write-back to memory
-                //miss_cycles = miss_cycles + miss_penalty + 2
+                miss_cycles = miss_cycles + miss_penalty + 2;
+                dirty_evicts++;
             }
             else
             {
                 //clean
-                //miss_cycles = miss_cycles + miss_penalty
+                miss_cycles = miss_cycles + miss_penalty;
             }
             lru[(temp_ib >> bs_bits)][la] = i;
             tdArray[(temp_ib >> bs_bits)][la] = temp_tb;
@@ -242,13 +245,7 @@ int main(int argc, char * argv []) {
             valid[(temp_ib >> bs_bits)][la] = 1;
         }
     }
-
-	printf("\t%c %d %lx %d\n",marker, loadstore, address, icount);
 	i++;
-
-
-
-
   }
   // Here is where you want to print out stats
   printf("Lines found = %i \n",i);
@@ -258,19 +255,19 @@ int main(int argc, char * argv []) {
   //  your calcuations.
   
   
-  //printf("\texecution time %ld cycles\n", ?);
-  //printf("\tinstructions %ld\n", ?);
-  //printf("\tmemory accesses %ld\n", ?);
+  printf("\texecution time %ld cycles\n",(long)(inst + miss_cycles));
+  printf("\tinstructions %ld\n", inst);
+  printf("\tmemory accesses %ld\n", mem_axe);
   //printf("\toverall miss rate %.2f\n", ? );
   //printf("\tread miss rate %.2f\n", ? );
   //printf("\tmemory CPI %.2f\n", ?);
   //printf("\ttotal CPI %.2f\n", ?);
   //printf("\taverage memory access time %.2f cycles\n",  ?);
-  //printf("dirty evictions %d\n", ?);
+  printf("dirty evictions %d\n", dirty_evicts);
   printf("load_misses %d\n", load_miss);
-  //printf("store_misses %d\n", ?);
+  printf("store_misses %d\n", store_miss);
   printf("load_hits %d\n", load_hit);
-  //printf("store_hits %d\n", ?);
+  printf("store_hits %d\n", store_hit);
   
 
 }

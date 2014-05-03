@@ -248,7 +248,7 @@ int main(int argc, char * argv []) {
 	i++;
   }
   // Here is where you want to print out stats
-  printf("Lines found = %i \n",i);
+  //printf("Lines found = %i \n",i);
   printf("Simulation results:\n");
   //  Use your simulator to output the following statistics.  The 
   //  print statements are provided, just replace the question marks with
@@ -258,11 +258,11 @@ int main(int argc, char * argv []) {
   printf("\texecution time %ld cycles\n",(long)(inst + miss_cycles));
   printf("\tinstructions %ld\n", inst);
   printf("\tmemory accesses %ld\n", mem_axe);
-  //printf("\toverall miss rate %.2f\n", ? );
-  //printf("\tread miss rate %.2f\n", ? );
-  //printf("\tmemory CPI %.2f\n", ?);
-  //printf("\ttotal CPI %.2f\n", ?);
-  //printf("\taverage memory access time %.2f cycles\n",  ?);
+  printf("\toverall miss rate %.2f\n", (float)(load_miss + store_miss)/mem_axe);
+  printf("\tread miss rate %.2f\n", (float)(load_miss)/(load_miss + load_hit));
+  printf("\tmemory CPI %.2f\n", (float)(miss_cycles)/inst);
+  printf("\ttotal CPI %.2f\n",(float)(inst+miss_cycles)/inst);
+  printf("\taverage memory access time %.2f cycles\n", (float)(miss_cycles)/mem_axe);
   printf("dirty evictions %d\n", dirty_evicts);
   printf("load_misses %d\n", load_miss);
   printf("store_misses %d\n", store_miss);

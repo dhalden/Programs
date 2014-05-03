@@ -17,6 +17,11 @@ Simulation results:
 	execution time 143963250 cycles
 	instructions 19999998
 	memory accesses 6943857
+	overall miss rate 0.42
+	read miss rate 0.36
+	memory CPI 6.20
+	total CPI 7.20
+	average memory access time 17.85 cycles
 dirty evictions 995694
 load_misses 2036666
 store_misses 867426

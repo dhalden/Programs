@@ -1,0 +1,37 @@
+Running: /home/jebediah/Desktop/Derek... Seriously... This desktop.../14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/Lab2_UpDown_tb_isim_translate.exe -prj /home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/Lab2_UpDown_tb_translate.prj work.Lab2_UpDown_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/netgen/translate/Lab2updown_translate.vhd" into library work
+Parsing VHDL file "/home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/lab2updown_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 141484 KB
+Fuse CPU Usage: 1490 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling package vital_timing
+Compiling package vcomponents
+Compiling package vital_primitives
+Compiling package vpackage
+Compiling architecture x_ff_v of entity X_FF [\X_FF(true,true,true,"UNPLACED",...]
+Compiling architecture x_lut3_v of entity X_LUT3 [\X_LUT3(true,true,"UNPLACED",(0,...]
+Compiling architecture x_buf_v of entity X_BUF [\X_BUF(true,true,"UNPLACED",(0,0...]
+Compiling architecture x_inv_v of entity X_INV [\X_INV(true,true,"UNPLACED",(0,0...]
+Compiling architecture x_ckbuf_v of entity X_CKBUF [\X_CKBUF(true,true,"UNPLACED",(0...]
+Compiling architecture x_obuf_v of entity X_OBUF [\X_OBUF(true,true,"DONT_CARE",12...]
+Compiling architecture x_one_v of entity X_ONE [\X_ONE("UNPLACED")(1,8)\]
+Compiling architecture x_zero_v of entity X_ZERO [\X_ZERO("UNPLACED")(1,8)\]
+Compiling architecture x_roc_v of entity X_ROC [\X_ROC("UNPLACED",100000,"*")(1,...]
+Compiling architecture x_toc_v of entity X_TOC [\X_TOC("UNPLACED",0,"*")(1,8,1,1...]
+Compiling architecture structure of entity Lab2updown [lab2updown_default]
+Compiling architecture behavior of entity lab2_updown_tb
+Time Resolution for simulation is 1ps.
+Waiting for 9 sub-compilation(s) to finish...
+Compiled 30 VHDL Units
+Built simulation executable /home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/Lab2_UpDown_tb_isim_translate.exe
+Fuse Memory Usage: 718368 KB
+Fuse CPU Usage: 1870 ms
+GCC CPU Usage: 5910 ms

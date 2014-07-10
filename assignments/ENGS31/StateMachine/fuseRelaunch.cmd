@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/Lab2_UpDown_tb_isim_translate.exe" -prj "/home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/Lab2_UpDown_tb_translate.prj" "work.Lab2_UpDown_tb" 

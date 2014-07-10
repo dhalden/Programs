@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/Lab2updown.ncd
+OUTFILE=/home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine/Lab2updown.bit
+FAMILY=Spartan6
+PART=xc6slx4-2csg225
+WORKINGDIR=/home/jebediah/My_Stuff/Programs/assignments/ENGS31/StateMachine
+LICENSE=WebPack
+USER_INFO=210852742_0_0_878

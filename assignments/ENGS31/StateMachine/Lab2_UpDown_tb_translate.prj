@@ -1,0 +1,2 @@
+vhdl work "netgen/translate/Lab2updown_translate.vhd"
+vhdl work "lab2updown_tb.vhd"

@@ -5,14 +5,31 @@
 <!--     behavior or data corruption.  It is strongly advised that -->
 <!--     users do not edit the contents of this file.              -->
 <!--                                                               -->
-<!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<<<<<<< HEAD
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/students/home/dhalden/Programs/assignments/cs318/lab_2/InstROM.v&quot; into library work</arg>
-=======
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/ALU.v&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/Control.v&quot; into library work</arg>
->>>>>>> 1c345190586a4179a688d53399b200471a444ddd
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/DataRAM.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/IF.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/InstROM.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/InstROM.v</arg>&quot; Line <arg fmt="%d" index="2">4</arg>. <arg fmt="%s" index="3">Syntax error near &quot;&lt;&lt;&lt;&quot;.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/TopLevel.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/jebediah/My_Stuff/Programs/assignments/cs318/lab_2/reg_file.v&quot; into library work</arg>
 </msg>
 
 </messages>

@@ -1,0 +1,29 @@
+Command line:
+   Lab2_UpDown_tb_isim_translate.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  48409
+
+Wed Jul  9 23:06:49 2014
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 196.354 Meg
+
+ Total Signals          : 115
+ Total Nets             : 83
+ Total Signal Drivers   : 60
+ Total Blocks           : 32
+ Total Primitive Blocks : 21
+ Total Processes        : 60
+ Total Traceable Variables  : 218
+ Total Scalar Nets and Variables : 4810
+Total Line Count : 220
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 271.856 Meg
+
+Wed Jul  9 23:10:47 2014
+

@@ -1,0 +1,13 @@
+I tested the following:
+	chill asdf    // improper input
+	chill 12 14   // a correct input
+	chill -1.4 0.6  // a correct input for both temp, and wind speed
+	chill 12.0 		// a correct input for just temperature
+	chill 			// standard input
+	chill 61 0.1    // both numbers are out of range
+	chill 49 0.1    // one of the numbers is fixed
+	chill 49 0.51   // both numbers are fixed to be within range
+	chill 51		// number is out of range
+	chill 0.0 0.0   // corner case because zero is also FALSE in C
+	chill 0.0 0.6   // in case the 0.0 would not be caught unless wind speed is with range
+	chill 0.0 0.1 0.3 // too many inputs

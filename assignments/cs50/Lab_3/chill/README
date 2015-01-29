@@ -1,0 +1,20 @@
+To make/compile the program:
+ $make chill
+
+To run the program: 
+Simply run the program with any of the intended inputs.
+Anything that is not described in the written prompt should fail
+with one of the following errors:
+	Error: you entered a non-numeric entry for temperature
+	Error: you entered a non-numeric entry for wind speed
+	Error: Too many arguments provided
+	Error: Temperature must be less than 50.0 degrees Fahrenheit
+	Error: Wind velocity must be greater than 0.5 MPH
+
+There is a hierarchy to the order in which you will receive these errors if
+you have more than one thing wrong, but it is too complicated explain in 
+this readme.
+
+
+I tried to make no assumptions other than the ones specifically stated 
+in the prompt. We'll see if I succeeded.

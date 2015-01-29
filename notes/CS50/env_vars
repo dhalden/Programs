@@ -1,0 +1,5 @@
+#! /bin/bash
+echo $0 is the name of the script
+echo $# is the number of parameters entered by the user
+echo $$ is the process ID
+echo $@ is the list of parameters entered

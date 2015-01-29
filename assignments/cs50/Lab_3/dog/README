@@ -1,0 +1,6 @@
+To make/compile the program:
+ $make dog
+
+Assumptions:
+-mM is an invalid call
+if you do '-m -M mapfile.txt', it will count that as an incorrect option

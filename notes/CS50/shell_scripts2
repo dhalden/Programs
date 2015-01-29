@@ -1,0 +1,12 @@
+#! /bin/bash
+
+prime=31
+echo -n "guess a prime between 1-100: "
+read guess
+
+while [ $guess != $prime ]; do
+    echo "Wrong! Try again"
+    echo -n "Guess a prime between 1-100 "
+    read guess
+done
+exit 0

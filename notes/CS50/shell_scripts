@@ -1,0 +1,22 @@
+2 commands in a row
+date; who
+
+&& - conjunction - functions like an if statement with no else statement.
+(who | grep -q dhalden) && echo prof is watching us
+if this,                   do this
+
+|| - disjunction - functions like a negative if statement with no else statement.
+(who | grep -q dhalden) || echo prof is watching us
+if not this,               do this
+
+
+if [-f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
+
+-f file exists -d directory exists, file exists and is: -r readable, -w writeable, -x executable
+
+lab1=available
+echo $lab1
+    available
+     

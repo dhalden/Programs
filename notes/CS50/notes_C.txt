@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include "myheader.h"
+
+// all "included" header files found here-> /usr/include
+
+
+#define MAX_SIZE 5  // Constant 5
+
+#define SQR(x) ((x) * (x))  // Define a function
+
+
+#ifdef DEBUG
+#define myprintf(...) fprintf(stderr, __VA_ARGS__)  // Variable number of arguments
+#else
+#define myprintf(...) /* be quiet! */
+#endif
+
+myprintf("success %d\n", i); --> fprintf(stderr, "success %d\n", i);
+
+
+#define eprintf(format, ...) fprintf(stderr, ##__VA_ARGS__)
+
+eprintf(stderr, "success %d\n", )
+
+
+
+int x = SQR(i+1);  // -> i+1*i+1 Make sure to use parentheses
+
+char myarray[MAXSIZE];
+
+gcc -E sqr.c > sqr.pp

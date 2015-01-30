@@ -1,0 +1,7 @@
+I tested the following, checking each one for correct errors, or outputs:
+./weather KMWN
+./weather KMWNa
+./weather KMas
+./weather KMWH
+./weather KMWN asdfa
+./weather

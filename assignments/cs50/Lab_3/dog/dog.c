@@ -30,6 +30,7 @@ struct Encrypt{
 	int letters[128];
 };
 
+//See dog.h for a description of each of these functions
 void int_flags(int *nflag, int *mflag, int *Mflag, int *dflag, char *mfile[], char *Mfile[], int argc, char * argv[]);
 
 void set_mflag(int *mflag, char *mfile[], int i, int argc, char * argv[]);
@@ -96,11 +97,25 @@ void int_flags(int *nflag, int *mflag, int *Mflag, int *dflag, char *mfile[], ch
 			else if(!strcmp(argv[i], "-M")) {
 				set_mflag(Mflag, Mfile, i, argc, argv);
 			}
+			else if(!strcmp(argv[i], "--help")){
+				printf("dog: works like cat, (but is clearly superior in every way)\n");
+				printf("It can be called as: \n$ dog <file> <flags>");
+				printf("\n the order of the files is unimportant, unless it is a mapfile");
+				printf("flags: \n -m <mapfile> : encrypt the input with given mapfile \
+					    \n -M <mapfile> : decrypt the input with given mapfile \
+						\n -n : number each line of output	 \
+						\n - : move into an interactive mode, where it"\
+						" will output what you type. Can be closed with control-d\n");
+				printf("If you are seeing this text, it means you typed"\
+						" '--help' if you don't want to see this text retype"\
+						" your command without '--help'\n");
+				exit(0);
+			}
 			else if(!strcmp(argv[i], "-")){
 				*dflag = 1;
 			}
 			else{
-				fprintf(stderr, "Error: Incorrect option '%s'", argv[i]);
+				fprintf(stderr, "Error: Invalid option '%s'", argv[i]);
 				exit(0);
 			}
 		}

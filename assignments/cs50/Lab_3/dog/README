@@ -4,3 +4,5 @@ To make/compile the program:
 Assumptions:
 -mM is an invalid call
 if you do '-m -M mapfile.txt', it will count that as an incorrect option
+
+--help, will take precedence over any other flag.

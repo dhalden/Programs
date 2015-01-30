@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Mount Washington, NH</location>
+	<station_id>KMWN</station_id>
+	<latitude>44.26667</latitude>
+	<longitude>-71.3</longitude>
+	<observation_time>Last Updated on Jan 29 2015, 5:55 pm EST</observation_time>
+        <observation_time_rfc822>Thu, 29 Jan 2015 17:55:00 -0500</observation_time_rfc822>
+	<weather>Overcast and Windy</weather>
+	<temperature_string>12.0 F (-11.0 C)</temperature_string>
+	<temp_f>12.0</temp_f>
+	<temp_c>-11.0</temp_c>
+	<relative_humidity>31</relative_humidity>
+	<wind_string>South at 46.0 MPH (40 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>190</wind_degrees>
+	<wind_mph>46.0</wind_mph>
+	<wind_kt>40</wind_kt>
+	<dewpoint_string>-13.0 F (-25.0 C)</dewpoint_string>
+	<dewpoint_f>-13.0</dewpoint_f>
+	<dewpoint_c>-25.0</dewpoint_c>
+	<windchill_string>-13 F (-25 C)</windchill_string>
+      	<windchill_f>-13</windchill_f>
+      	<windchill_c>-25</windchill_c>
+	<visibility_mi>100.00</visibility_mi>
+ 	<icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KMWN.html</two_day_history_url>
+	<icon_url_name>wind.png</icon_url_name>
+	<ob_url>http://www.weather.gov/data/METAR/KMWN.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>
+
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Mount Washington, NH</location>
+	<station_id>KMWN</station_id>
+	<latitude>44.26667</latitude>
+	<longitude>-71.3</longitude>
+	<observation_time>Last Updated on Jan 29 2015, 5:55 pm EST</observation_time>
+        <observation_time_rfc822>Thu, 29 Jan 2015 17:55:00 -0500</observation_time_rfc822>
+	<weather>Overcast and Windy</weather>
+	<temperature_string>12.0 F (-11.0 C)</temperature_string>
+	<temp_f>12.0</temp_f>
+	<temp_c>-11.0</temp_c>
+	<relative_humidity>31</relative_humidity>
+	<wind_string>South at 46.0 MPH (40 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>190</wind_degrees>
+	<wind_mph>46.0</wind_mph>
+	<wind_kt>40</wind_kt>
+	<dewpoint_string>-13.0 F (-25.0 C)</dewpoint_string>
+	<dewpoint_f>-13.0</dewpoint_f>
+	<dewpoint_c>-25.0</dewpoint_c>
+	<windchill_string>-13 F (-25 C)</windchill_string>
+      	<windchill_f>-13</windchill_f>
+      	<windchill_c>-25</windchill_c>
+	<visibility_mi>100.00</visibility_mi>
+ 	<icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KMWN.html</two_day_history_url>
+	<icon_url_name>wind.png</icon_url_name>
+	<ob_url>http://www.weather.gov/data/METAR/KMWN.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>
+
+1 <?xml version="1.0" encoding="ISO-8859-1"?> 
+2 <?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+3 <current_observation version="1.0"
+4 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+5 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+6 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+7 <credit>NOAA's National Weather Service</credit>
+8 <credit_URL>http://weather.gov/</credit_URL>
+9 <image>
+10 <url>http://weather.gov/images/xml_logo.gif</url>
+11 <title>NOAA's National Weather Service</title>
+12 <link>http://weather.gov</link>
+13 </image>
+14 <suggested_pickup>15 minutes after the hour</suggested_pickup>
+15 <suggested_pickup_period>60</suggested_pickup_period>
+16 <location>Mount Washington, NH</location>
+17 <station_id>KMWN</station_id>
+18 <latitude>44.26667</latitude>
+19 <longitude>-71.3</longitude>
+20 <observation_time>Last Updated on Jan 29 2015, 5:55 pm EST</observation_time>
+21 <observation_time_rfc822>Thu, 29 Jan 2015 17:55:00 -0500</observation_time_rfc822>
+22 <weather>Overcast and Windy</weather>
+23 <temperature_string>12.0 F (-11.0 C)</temperature_string>
+24 <temp_f>12.0</temp_f>
+25 <temp_c>-11.0</temp_c>
+26 <relative_humidity>31</relative_humidity>
+27 <wind_string>South at 46.0 MPH (40 KT)</wind_string>
+28 <wind_dir>South</wind_dir>
+29 <wind_degrees>190</wind_degrees>
+30 <wind_mph>46.0</wind_mph>
+31 <wind_kt>40</wind_kt>
+32 <dewpoint_string>-13.0 F (-25.0 C)</dewpoint_string>
+33 <dewpoint_f>-13.0</dewpoint_f>
+34 <dewpoint_c>-25.0</dewpoint_c>
+35 <windchill_string>-13 F (-25 C)</windchill_string>
+36 <windchill_f>-13</windchill_f>
+37 <windchill_c>-25</windchill_c>
+38 <visibility_mi>100.00</visibility_mi>
+39 <icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
+40 <two_day_history_url>http://www.weather.gov/data/obhistory/KMWN.html</two_day_history_url>
+41 <icon_url_name>wind.png</icon_url_name>
+42 <ob_url>http://www.weather.gov/data/METAR/KMWN.1.txt</ob_url>
+43 <disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+44 <copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+45 <privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+credit: location: station_id: €observation_time: 0Œ¦[ÿweather: temperature_string: relative_humidity: xÏtbÿwind_string: visibility_mi: 

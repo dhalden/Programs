@@ -1,0 +1,7 @@
+To make/compile:
+	make weather
+
+Assumptions: 
+	I did assume, that it is fine, that I don't have access to the second half
+	of the page that is curled. For reasons I don't fully understand, I was
+	only able to get the parts of the data that were needed for the assignment

@@ -1,0 +1,5 @@
+make clean
+make index
+./indexer data/ index.dat 
+
+./index data/ index.dat index.dat new_index.dat

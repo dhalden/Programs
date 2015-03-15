@@ -1,0 +1,6 @@
+make instructions:
+	make crawl
+	// Note: this will also clean up all of the data files;
+
+
+Created the folder "data" to put the webpages in feel free to use that, or any other folder.

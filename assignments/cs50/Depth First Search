@@ -1,0 +1,76 @@
+
+
+// This is how DFS works
+DFS(Graph G(V,E)){
+	initialize G,
+		for each v in V
+			d[v] = 0
+	DFSsearch(v(x,y),E)  //Random starting place
+}
+
+DFSsearch(v(x,y), E){
+	d[v]=1;
+	for u in adj(v){
+		if (d[u] == 0){
+			DFSsearch(u(x,y), E);
+		}
+	}
+
+	d[v] = 2
+}
+
+
+Each actor would have some code like the following:
+goalx,  // 0,0 for now
+goaly, 	// 0,0 for now
+currx,  // updates when the server sends a message
+curry, 	// updates when the server sends a message
+Move(direction){
+		East = goalx - currx;
+		South = goaly - curry;
+		North = curry - goaly;
+		West = currx - goalx;
+
+		// Because this is recursive, the other parts won't get called
+		// unless it has to back track
+		if(North > East > West > South)
+		{
+			if !visited(North){
+				Move(North);
+				if we successfully moved before{
+					Move(South);
+				}
+			}
+			if !visited(East){
+				Move(East);
+				if we successfully moved before{
+					Move(West);
+				}
+			}
+			if !visited(West){
+				Move(West);
+				if we successfully moved before{
+					Move(East);
+				}
+			}
+			if !visited(South){
+				Move(South);
+				if we successfully moved before{
+					Move(North);
+				}
+			}
+
+			if visited(North){
+				Move(North);
+			}
+			if visited(East){
+				Move(East);
+			}
+			if visited(West){
+				Move(West);
+			}
+			if visited(South){
+				Move(South);
+			}
+		}
+}

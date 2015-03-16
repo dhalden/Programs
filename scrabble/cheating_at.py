@@ -7,13 +7,16 @@ word =""
 word = raw_input("your letters are: ")
 while(word != ''):
     word = ''.join(sorted(word))
-    words = []
-    for i in range(len(word)+1, 0, -1):
+    for i in range(len(word), 0, -1):
         sets = set(itertools.combinations(word, i))
+        words = []
         for s in sets:
             sub = ''.join(sorted(s))
             if sub in wdict:
                 words = words + wdict[sub]
-    print(words)
+        if(words != []):
+            print("words of length %s" % i)
+            print(words)
+            print('\n')
+    print('\n\n\n')
     word = raw_input("your letters are: ")
-    word = word[:len(word)-1]

@@ -47,7 +47,8 @@ def calc_mean(words, rm, m):
 #main, when I figure out how to do this...
 word=""
 word=raw_input("your letters are: ")
-while(word != '' and word != 'exit' and word != 'quit'):
+finish = ['','exit','quit','q']
+while(word not in finish):
     word = ''.join(sorted(word))
     words = {}
     rm = 0

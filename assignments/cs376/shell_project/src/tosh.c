@@ -209,7 +209,7 @@ int main()
     char *cd = "cd";
 
     //Command to take input
-    printf("tosh$ ");
+    printf("dash$ ");
     fgets(input, sizeof input, stdin);    
  
     while(strcmp(input, exits))

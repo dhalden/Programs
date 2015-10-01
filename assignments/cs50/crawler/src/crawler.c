@@ -146,7 +146,7 @@ int main(int argc, char* argv[])
             char* str = calloc(MAX_URL*sizeof(char), 1);
             strcpy(str, *result);
             // add seed page to hashtable
-            if(!strstr(str, "http://old-www.cs.dartmouth.edu/~cs50/tse")){
+            if(!strstr(str, "http://shop.tcgplayer.com/magic/")){
                 //printf("wp: %s\n", *result);
                 goto url_exists;
             }

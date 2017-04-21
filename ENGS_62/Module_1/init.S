@@ -1,0 +1,82 @@
+/* filename: init.S */
+.thumb
+.word 0x20010000
+.word RESET_HANDLER
+.word DEFAULT_HANDLER
+/* The 4 Faults minus the "It's not My" */
+.word FAULT_HANDLER
+.word FAULT_HANDLER
+.word FAULT_HANDLER
+.word FAULT_HANDLER
+
+/*The 5 Reserved things*/
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+
+/*Supervisor call, Debug Monitor, reserved, and service call*/
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word SYSTICK_HANDLER
+
+.global RESET_HANDLER
+.type RESET_HANDLER, %function
+.type FAULT_HANDLER, %function
+.type DEFAULT_HANDLER, %function
+.type SYSTICK_HANDLER, %function
+
+MYROUTINE:
+  PUSH {R3, R4, R5, LR}
+  ADD R3, R0, R1
+  ADD R4, R1, R2
+  ADD R5, R0, R2
+  MUL R3, R4
+  MUL R3, R5
+  MOV R0, R3
+  POP {R3, R4, R5, PC}
+
+
+FACTORIAL:
+  PUSH {R1, LR}
+  MOV R1, R0
+  CMP R1, #0
+  BNE LOOP
+  MOV R0, #1
+  LOOP:
+    SUB R1, #1
+    MUL R0, R1
+    CMP R1, #0x1
+    BNE LOOP
+  POP {R1, PC}
+
+RESET_HANDLER:
+  MOV R0, #10
+  MOV R1, #1
+  MOV R2, #2
+  BL MYROUTINE
+  
+  MOV R0, #10
+  BL FACTORIAL
+  MOV R0, #9
+  BL FACTORIAL
+  MOV R0, #8
+  BL FACTORIAL
+
+  B FOREVER
+
+
+DEFAULT_HANDLER:
+  B FOREVER
+
+FAULT_HANDLER:
+  B FOREVER
+
+SYSTICK_HANDLER:
+  B FOREVER
+
+FOREVER:
+  B FOREVER
+.end

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0 user-scalable=no" name="viewport"/>
+  <title>
+   Town Hall Project || Find a Town Hall Near you
+  </title>
+  <meta content="Z-DITr7yziksJNk7OlwHxiD2WK31wNO0GbRP7px3xL8" name="google-site-verification"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="Town Hall Project 2018 is a progressive, volunteer-based initiative working to
+      identify and promote upcoming Congressional forums nationwide." name="description"/>
+  <link href="./Images/THP_favicon.png" rel="shortcut icon" type="image/x-icon"/>
+  <!-- Social media meta tags -->
+  <!-- Schema.org markup for Google+ -->
+  <meta content="Town Hall Project" itemprop="name"/>
+  <meta content="Town Hall Project is a progressive, volunteer-powered initiative working to
+    identify and promote upcoming Congressional forums nationwide." itemprop="description"/>
+  <meta content="https://townhallproject-86312.firebaseapp.com/Images/THP_logo_horizontal_facebook.png" itemprop="image"/>
+  <!-- Twitter Card data -->
+  <meta content="summary" name="twitter:card"/>
+  <meta content="@townhallproject" name="twitter:site"/>
+  <meta content="Town Hall Project" name="twitter:title"/>
+  <meta content="Town Hall Project is a progressive, volunteer-powered initiative working to
+    identify and promote upcoming Congressional forums nationwide." name="twitter:description"/>
+  <meta content="@townhallproject" name="twitter:creator"/>
+  <!-- Twitter summary card must be at least 120px x 120px -->
+  <meta content="https://townhallproject-86312.firebaseapp.com/Images/THP_logo_vertical_twitter.png" name="twitter:image"/>
+  <meta content="The Town Hall Project wordmark with a podium" name="twitter:image:alt"/>
+  <!-- Open Graph data -->
+  <meta content="Town Hall Project" property="og:title"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://townhallproject-86312.firebaseapp.com/" property="og:url"/>
+  <meta content="https://townhallproject-86312.firebaseapp.com/Images/THP_logo_horizontal_facebook.png" property="og:image"/>
+  <meta content="Town Hall Project is a progressive, volunteer-powered initiative working to
+    identify and promote upcoming Congressional forums nationwide." property="og:description"/>
+  <meta content="Town Hall Project" property="og:site_name"/>
+  <link href="https://actionnetwork.org/css/style-embed-whitelabel.css" rel="stylesheet" type="text/css"/>
+  <link href="https://actionnetwork.org/css/style-embed-whitelabel.css" rel="stylesheet" type="text/css"/>
+  <script src="https://use.fontawesome.com/316bfde8e8.js">
+  </script>
+  <link href="https://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css"/>
+  <link href="/vendor/styles/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/vendor/styles/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,900" rel="stylesheet"/>
+  <link href="/styles/css/bootstrap.min.css" rel="stylesheet"/>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-92247600-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+ </head>
+ <body>
+  <nav class="navbar navbar-default navbar-main">
+   <div class="container-fluid">
+    <div class="navbar-header">
+     <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#main-nav" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+     <a class="navbar-brand hash-link" data-toggle="tab" href="#home" id="brand-icon">
+      <img alt="" src="/Images/THP_logo_horizontal_simple.png"/>
+     </a>
+    </div>
+    <div class="collapse navbar-collapse" id="main-nav">
+     <ul class="nav navbar-nav navbar-left" roll="tablists">
+      <li>
+      </li>
+      <li>
+       <a class="hash-link" data-toggle="tab" href="#submit">
+        Submit an Event
+       </a>
+      </li>
+      <li>
+       <a class="hash-link" data-toggle="tab" href="#about">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="hash-link" data-toggle="tab" href="#join">
+        Get Event Updates
+       </a>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+      <li>
+       <a class="btn" href="https://secure.actblue.com/contribute/page/townhallproject" id="donate-button" role="button" target="_blank">
+        Donate
+       </a>
+      </li>
+      <li>
+       <a class="social-icons" href="https://twitter.com/townhallproject">
+        <i aria-hidden="true" class="fa fa-twitter-square fa-2x">
+        </i>
+       </a>
+      </li>
+      <li>
+       <a class="social-icons" href="https://www.facebook.com/TownHallProject/">
+        <i aria-hidden="true" class="fa fa-facebook-square fa-2x">
+        </i>
+       </a>
+      </li>
+      <li>
+       <a class="social-icons" href="mailto:info@townhallproject.com">
+        <i aria-hidden="true" class="fa fa-envelope-square fa-2x">
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </nav>
+  <div class="tab-content">
+   <div class="tab-pane page active" id="home" role="tabpanel">
+    <header class="site-header clearfix">
+     <section class=" container container-fluid">
+      <div class="row">
+       <div class="col-md-6 left-panels">
+        <div class=" text-left site-header clearfix displayoff ">
+         <div class="form-text-results col-md-12">
+          <div class="text-toggle header-large">
+           <img alt="" src="/Images/THP_logo_inverse.png"/>
+          </div>
+          <div class="text-toggle header-small hidden ">
+           <!-- <img src="/Images/THP_logo_inverse_simple.png" alt=""> -->
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col-md-6 right-panels">
+        <div class="spacer">
+        </div>
+        <form action="index.html" class="form-inline text-center" id="look-up" method="post">
+         <div class="form-group text-center">
+          <label for="zip">
+          </label>
+          <input class="form-control input-lg " name="" placeholder="Zip Code" type="zip" value=""/>
+          <button class="btn btn-primary btn-lg" name="button" type="submit">
+           Find A Town Hall
+          </button>
+          <div class="text-center " id="textresults">
+          </div>
+         </div>
+        </form>
+        <div id="signupform ">
+         <div class="text-center hidden" id="button-to-form">
+          <h4>
+           Sign up to stay up to date on town halls in your area
+          </h4>
+          <a class="btn btn-lg btn-white" data-toggle="tab" href="#join">
+           <strong>
+            Join Us
+           </strong>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </header>
+    <div class="container-fluid">
+     <div class="row map-large">
+      <div id="map">
+      </div>
+     </div>
+    </div>
+    <div class="header-with-results">
+     <section class="container container-fluid">
+      <div class="row">
+       <div class="col-md-6 no-padding ">
+        <section class="results">
+         <div class="flexcroll" id="nearest">
+         </div>
+        </section>
+       </div>
+       <div class="col-md-6 map-small no-padding">
+       </div>
+      </div>
+     </section>
+    </div>
+    <!-- Cards showing representatives and their contact info -->
+    <div id="representativeCards">
+     <section class="container container-fluid">
+     </section>
+    </div>
+    <section class="scroll-to-form text-center">
+     <p>
+      <a class="scroll-button btn btn-white btn-lg" href="#events-table">
+       <i aria-hidden="true" class="fa fa-chevron-down fa-2x">
+       </i>
+      </a>
+     </p>
+    </section>
+    <a id="events-table" name="events-table">
+    </a>
+    <section class=" container container-fluid">
+     <h2 class="text-primary table-title text-center">
+      Upcoming Events
+     </h2>
+     <div class="row">
+      <small>
+       <ul class="list-unstyled container">
+        <li>
+         <span class="text-secondary">
+          Town Hall
+         </span>
+         <span>
+          - A forum where members of Congress give updates on the current affairs of Congress and answer questions from constituents
+         </span>
+        </li>
+        <li>
+         <span class="text-secondary">
+          Office Hours
+         </span>
+         <span>
+          - Serves the same purpose as a Town Hall, however Elected Officials are not always expected to attend
+         </span>
+        </li>
+        <li>
+         <span class="text-secondary">
+          Ticketed Event
+         </span>
+         <span>
+          - Oftentimes county party events, local fundraisers, or campaign functions. There may be a fee for admission.
+         </span>
+        </li>
+        <li>
+         <span class="text-secondary">
+          TeleTown Hall Meeting
+         </span>
+         <span>
+          - A town hall conducted by conference call.
+         </span>
+        </li>
+        <li>
+         <span class="text-secondary">
+          DC Event
+         </span>
+         <span>
+          - Event held in the MOC's DC Office.
+         </span>
+        </li>
+        <li>
+         <span class="text-secondary">
+          Coffee
+         </span>
+         <span>
+          - Usually a small regular meeting with constituents in Washington D.C. while Congress is in session.
+         </span>
+        </li>
+       </ul>
+      </small>
+     </div>
+     <div>
+      <ul class="list-group" id="all-events-table">
+       <li class="list-group-item list-group-heading">
+        <nav class="navbar navbar-default navbar-static-top ">
+         <ul class="nav navbar-nav navbar-left" id="filter-info">
+          <li>
+           <span data-current="0" data-total="0" id="current-state">
+           </span>
+          </li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+           <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+            Member
+            <span class="caret">
+            </span>
+           </a>
+           <ul class="dropdown-menu">
+            <li class="downdown-title">
+             Search by member of Congress
+            </li>
+            <li class="divider" role="separator">
+            </li>
+            <li>
+             <input autocomplete="off" class="form-control dropdown-item filter" data-filter="Member" data-provide="typeahead" id="memberTypeahead" placeholder="Search by member" type="text"/>
+            </li>
+           </ul>
+          </li>
+          <li class="dropdown">
+           <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+            Party
+            <span class="caret">
+            </span>
+           </a>
+           <ul class="dropdown-menu filter">
+            <li class="downdown-title">
+             Filtery by party
+            </li>
+            <li class="divider" role="separator">
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="Party" href="#" id="Democratic">
+              Democratic
+             </a>
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="Party" href="#" id="Republican">
+              Republican
+             </a>
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="Party" href="#" id="Independent">
+              Independent
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="dropdown">
+           <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+            State
+            <span class="caret">
+            </span>
+           </a>
+           <ul class="dropdown-menu">
+            <li class="downdown-title">
+             Search by State
+            </li>
+            <li class="divider" role="separator">
+            </li>
+            <li>
+             <input autocomplete="off" class="form-control dropdown-item filter" data-filter="State" data-provide="typeahead" id="stateTypeahead" placeholder="Search by state" type="text"/>
+            </li>
+           </ul>
+          </li>
+          <li class="dropdown">
+           <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+            Event Type
+            <span class="caret">
+            </span>
+           </a>
+           <ul class="dropdown-menu filter">
+            <li class="downdown-title">
+             Filter by Event Type
+            </li>
+            <li class="divider" role="separator">
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="meetingType" href="#" id="Town Hall">
+              Town Hall
+             </a>
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="meetingType" href="#" id="Office Hours">
+              Office Hours
+             </a>
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="meetingType" href="#" id="Ticketed Event">
+              Ticketed Event
+             </a>
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="meetingType" href="#" id="Tele-Town Hall">
+              Tele-Town Hall
+             </a>
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="meetingType" href="#" id="Empty Chair Town Hall">
+              Empty Chair Town Hall
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="dropdown">
+           <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+            Sort
+            <span class="caret">
+            </span>
+           </a>
+           <ul class="dropdown-menu sort">
+            <li class="downdown-title">
+             Sort Table
+            </li>
+            <li class="divider" role="separator">
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="dateObj" href="#" id="byDate">
+              By Date
+             </a>
+            </li>
+            <li>
+             <a class="dropdown-item" data-filter="State" href="#" id="byState">
+              By State
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </li>
+       <!-- end header-->
+      </ul>
+      <!--end table-->
+     </div>
+    </section>
+   </div>
+   <div class="tab-pane " id="submit" role="tabpanel">
+    <div class="embed-container">
+     <iframe frameborder="0" height="600" src="https://docs.google.com/forms/d/e/1FAIpQLSfvIJikraQCZcqUpYfDZHC7KvxDUp4zcfzlLQ7RoaDQcBZUbQ/viewform?c=0&amp;w=1" style=" border-width:0 " width="800">
+     </iframe>
+    </div>
+   </div>
+   <div class="tab-pane page" id="about" role="tabpanel">
+    <header>
+     <section class="container container-fluid quote-header">
+      <blockquote class="col-sm-6 col-sm-offset-3">
+       <p class="text-white">
+        "It falls to each of us to be those anxious, jealous guardians of our democracy. Embrace the joyous task we have been given to continually try to improve this great nation of ours because, for all our outward differences, we in fact all share the same proud type, the most important office in a democracy,
+        <span class="text-secondary">
+         citizen
+        </span>
+        ."
+       </p>
+       <footer class="text-success">
+        President Obama,
+        <cite title="Source Title">
+         Farewell Address
+        </cite>
+       </footer>
+      </blockquote>
+     </section>
+    </header>
+    <section class="container">
+     <article class="center-block about">
+      <h2 class="text-secondary-dark">
+       About Town Hall Project
+      </h2>
+      <p class="lead">
+       Town Hall Project empowers constituents across the country to have face-to-face conversations with their elected representatives. We are campaign veterans and first time volunteers. We come from a diversity of backgrounds and live across the country. We share progressive values and believe strongly in civic engagement. We research every district and state for public events with members of Congress. Then we share our findings to promote participation in the democratic process.
+      </p>
+      <p class="lead">
+       This movement is diverse, open source, and powered by citizens. We are proud to be a part of it.
+      </p>
+      <p class="text-primary">
+       <strong>
+        Show Up. Speak Out.
+       </strong>
+      </p>
+     </article>
+     <article class="row">
+      <div class="col-sm-4">
+       <h3>
+        Why Town Halls
+       </h3>
+       <p>
+        There is no better way to influence your representatives than in-person conversations. Town halls are a longstanding American tradition--where our elected representatives must listen and respond to the concerns of their constituents. Remember: you are their boss.
+       </p>
+       <p>
+        We believe every citizen, no matter the party of their members of Congress, should have the opportunity to speak with his or her representatives.
+       </p>
+       <p>
+        You have more power than you think. Town halls are one of the most effective ways to use it.
+       </p>
+      </div>
+      <div class="col-sm-4">
+       <h3>
+        About the Events
+       </h3>
+       <p>
+        Our project is currently focused on federal elected officials. We strongly believe that state legislatures deserve attention and citizen engagement, but at the moment these events are outside our current mission.
+       </p>
+       <ul>
+        Our event listing includes:
+        <li>
+         Town halls
+        </li>
+        <li>
+         Other public events with members of Congress in their district/state
+        </li>
+        <li>
+         Ticketed events in the district/state
+        </li>
+        <li>
+         Staff office hours
+        </li>
+        <li>
+         Opportunities in Washington, D.C. to speak with your representative
+        </li>
+       </ul>
+       <ul>
+        We do not currently include:
+        <li>
+         Fundraisers outside the district/state
+        </li>
+        <li>
+         Events where it would be inappropriate to ask policy questions of your representative (i.e. a funeral)
+        </li>
+        <li>
+         Campaign events where the member will not take questions
+        </li>
+       </ul>
+      </div>
+      <div class="col-sm-4">
+       <h3>
+        What to expect
+       </h3>
+       <p>
+        The most powerful thing you can do, as a constituent, is
+        <strong>
+         ask an earnest, pressing question on an issue close to you.
+        </strong>
+        Your personal story is incredibly valuable. It’s precisely how sometimes dry policy is connected with the lives of real people. It’s not always easy to speak up, but these times call for courage in all of us. Take the mic and tell your representative why she or he needs to act in your best interest.
+       </p>
+       <p>
+        The Town Hall Project strongly encourages you to only attend and ask questions of your own representatives. Remember that any town hall has limited time, and a question you take is one less question for a constituent.
+       </p>
+       <p>
+        For more, we recommend the valuable
+        <a href="https://www.indivisibleguide.com/">
+         Indivisible Guide
+        </a>
+        , which goes into detail on town hall best practices and other ways to hold your elected representatives accountable.
+       </p>
+      </div>
+     </article>
+    </section>
+    <div class="banner" id="hand-raised">
+    </div>
+    <section class="container">
+     <article class="row">
+      <div class="col-sm-5 col-offset-1">
+       <h3>
+        Can I send you town halls that I find?
+       </h3>
+       <p>
+        Yes! Please send town hall or any other congressional events to us
+        <a href="#submit">
+         here
+        </a>
+        . Please include as much detail as you can, including a date, time, and link or other source of the event information.
+       </p>
+      </div>
+      <div class="col-sm-5 col-sm-offset-2">
+       <h3>
+        What if my representatives have no public events scheduled?
+       </h3>
+       <p>
+        Call their
+        <a href="https://www.govtrack.us/congress/members">
+         district offices
+        </a>
+        and let them know you expect them to hold public events with their constituents. To have even more impact, join with other citizens in your district or state and organize group efforts. Visit the district office together, deliver petitions, inform your local press, or even hold an “Empty Chair” town hall and invite your member of Congress to fill that chair.
+       </p>
+      </div>
+     </article>
+     <article class="row text-center">
+      <h3>
+       Get connected locally!
+      </h3>
+      <p>
+       <a href="mailto:info@townhallproject.com">
+        Email us
+       </a>
+       and one of our organizers will connect you with groups in your area.
+      </p>
+     </article>
+     <div class="col-sm-4">
+     </div>
+    </section>
+    <section class="container">
+     <div class="row">
+      <div class="col-sm-12" id="disclaimer">
+       <small>
+        The information available on or from this website is compiled by Town Hall Project volunteers and provided for general informational purposes only. While all efforts are made to verify accuracy of events, event details can change at short notice and are not guaranteed to be complete or up-to-date. Please contact your representative’s office to confirm. Town Hall Project shall not be liable for any special or consequential damages that result from the direct or indirect use of, or the inability to use, the information on this site.
+       </small>
+      </div>
+     </div>
+    </section>
+   </div>
+   <div class="tab-pane " id="join" role="tabpanel">
+    <header>
+     <section class="container container-fluid">
+      <div class="col-md-6 col-md-offset-3">
+       <p class="lead">
+        Sign up now for personalized event updates for your congressional district and state!
+       </p>
+       <p>
+        We will email you town hall events with your members of Congress, as well as send the latest news on upcoming debates in Congress and updates on our project.
+       </p>
+      </div>
+     </section>
+    </header>
+    <section class="container container-fluid">
+     <div class=" col-md-6 col-md-offset-3" id="can-form-area-stay-up-to-date-on-our-work">
+     </div>
+    </section>
+    <div class="banner" id="cover">
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container text-center">
+     <ul class="list-unstyled">
+      <li>
+       <a class="text-white" href="mailto:info@townhallproject.com">
+        <i aria-hidden="true" class="fa fa-envelope-square fa-3x">
+        </i>
+       </a>
+       <a class="text-white" href="https://twitter.com/townhallproject">
+        <i aria-hidden="true" class="fa fa-twitter-square fa-3x">
+        </i>
+       </a>
+       <a class="text-white" href="https://www.facebook.com/TownHallProject/">
+        <i aria-hidden="true" class="fa fa-facebook-square fa-3x">
+        </i>
+       </a>
+      </li>
+      <li>
+       <small>
+        Compiled by Town Hall Project volunteers. All efforts are made to verify accuracy of events.
+       </small>
+      </li>
+      <li>
+       <small>
+        Event details can change at short notice, please contact your representative to confirm.
+       </small>
+      </li>
+      <li>
+       <small>
+        <a href="mailto:techsupport@townhallproject.com">
+         Report site issues
+        </a>
+       </small>
+      </li>
+     </ul>
+    </div>
+   </footer>
+   <!-- Vendor Files -->
+   <script src="/vendor/scripts/jquery-2.1.4.js">
+   </script>
+   <script src="/vendor/scripts/jquery-ui.js">
+   </script>
+   <script src="/vendor/scripts/bootstrap.min.js">
+   </script>
+   <script src="/vendor/scripts/bootstrap3-typeahead.min.js">
+   </script>
+   <script src="/vendor/scripts/tether.js">
+   </script>
+   <script src="/vendor/scripts/handlebars-v4.0.5.js">
+   </script>
+   <script src="templates.js">
+   </script>
+   <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js">
+   </script>
+   <script src="https://actionnetwork.org/widgets/v2/form/stay-up-to-date-on-our-work?format=js&amp;source=widget">
+   </script>
+   <script type="text/javascript">
+    (function () {
+            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+                var h = d[g]('body')[0];h.appendChild(s); }})();
+   </script>
+   <!-- Script Files -->
+   <script src="/scripts/models/event.js">
+   </script>
+   <script src="/scripts/views/mapView.js">
+   </script>
+   <script src="/scripts/views/eventView.js">
+   </script>
+   <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALLuOh_q8phgScmZiVEJwkaK8NkUPkkrM&amp;callback=initMap&amp;libraries=visualization,geometry">
+   </script>
+  </div>
+ </body>
+</html>

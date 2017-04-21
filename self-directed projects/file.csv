@@ -1,0 +1,4 @@
+id,first_name,last_name,stripe_customer_token,paypal_customer_token,email,billing_address1,billing_address2,billing_zip,billing_city,billing_country,billing_phone
+asdfasdfsdf,Hi,There,person,magic,abc@def.ghi,1109 E 12 W,,12866,Saratoga Springs,USA,8018675309
+123,,abba,hehehe,new,def@def.ghi,19 E 12 W,abc,12866,Saratoga Springs,USA,8018675309
+456abcdef11a,BUNYON,Person,ehehe,interesting,ghi@def.ghi,110 E 12 W,,12866,Saratoga Springs,USA,8018675309

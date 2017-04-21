@@ -1,26 +1,22 @@
 #! /usr/bin/python
 import scrapy
-from scrapy.selector import HtmlXPathSelector
+from bs4 import BeautifulSoup
 
 class MagicSpider(scrapy.Spider):
-    name = 'baseball'
+    name = 'townhall'
     start_urls = []
-    URL = 'http://www.baseball-reference.com/boxes/2012.shtml'
+    URL = 'https://townhallproject.com/#events-table'
     file_name = ''
 
     def __init__(self):
-        self.URL = raw_input("input url: ")
-        self.start_urls.append(self.URL) 
-        self.file_name = raw_input("input name of file: ")
+        self.start_urls.append(self.URL)
+        self.file_name = "html.log" #raw_input("input name of file: ")
 
     def parse( self, response):
         html_dump = open(self.file_name, "w")
-        hxs = HtmlXPathSelector(response)
-        url_starts_with = raw_input("href links start with: ")
-        for url in hxs.select('//a/@href').extract():
-            temp_url = url
-            if not (url.startswith('http://') or url.startswith('https://')):
-                temp_url = self.URL + url + "\n"
-            if url.startswith(url_starts_with):
-                html_dump.write(temp_url)
-                yield scrapy.Request(temp_url, callback=self.parse)
+        yield response
+        soup = BeautifulSoup(response.text, 'lxml')
+        alphabet = soup.find_all("li", class_="event-row list-group-item")
+        for li in alphabet:
+            html_dump.write(li.text)
+        html_dump.write(soup.prettify("utf-8"))

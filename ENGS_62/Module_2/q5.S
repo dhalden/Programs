@@ -1,0 +1,109 @@
+/* filename: init.S */
+.thumb
+.syntax unified
+.word 0x20010000
+.word RESET_HANDLER
+.word DEFAULT_HANDLER
+/* The 4 Faults minus the "It's not My" */
+.word FAULT_HANDLER
+.word FAULT_HANDLER
+.word FAULT_HANDLER
+.word FAULT_HANDLER
+
+/*The 5 Reserved things*/
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+
+/*Supervisor call, Debug Monitor, reserved, and service call*/
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word DEFAULT_HANDLER
+.word SYSTICK_HANDLER
+
+.global RESET_HANDLER
+.type RESET_HANDLER, %function
+.type FAULT_HANDLER, %function
+.type DEFAULT_HANDLER, %function
+.type SYSTICK_HANDLER, %function
+.equ GPIOD_MODER, 0x40020C00
+.equ GPIOD_IDR, 0x40020C10
+.equ GPIOD_ODR, 0x40020C14
+.equ GPIOD_BSRR, 0x40020C18
+.equ RCC_AHB1ENR, 0x40023830
+.equ SYSTICK_CTRL, 0xE000E010
+.equ SYSTICK_LOAD, 0xE000E014
+
+RESET_HANDLER:
+  BL LED_INIT
+  BL SYSTICK_INIT
+ /*MOV R0, #11 //Fault
+  MOV PC, R0 */
+  B FOREVER
+
+
+LED_INIT:
+  PUSH {R0,R1,R2,R3,LR}
+  MOV R0, #1
+
+  LDR R1, =RCC_AHB1ENR
+  LDR R3, [R1]
+  LSL R2, R0, #3
+  ORR R2, R3, R2
+  STR R2, [R1]
+
+  MOV R0, #0b1010101
+  LDR R1, =GPIOD_MODER
+  LSL R2, R0, #24
+  STR R2, [R1]
+  POP {R0,R1,R2,R3,PC}
+
+SYSTICK_INIT:
+  PUSH {R1,R2,R3,LR}
+  LDR R1, =SYSTICK_CTRL
+  LDR R3, [R1]
+  MOV R2, #0x7
+  ORR R2, R3, R2
+  STR R2, [R1]
+
+  LDR R1, =SYSTICK_LOAD
+  LDR R3, [R1]
+  MOVW R2, #0x11FF
+  MOVT R2, #0x7A
+  ORR R2, R3, R2
+  STR R2, [R1]
+  POP {R1,R2,R3,PC}
+
+
+
+LED_TOGGLE_GREEN:
+  PUSH {R0,R1,R2,R3,LR}
+  MOV R0, #1
+  LDR R1, =GPIOD_ODR
+  LDR R3, [R1]
+  LSL R2, R0, #12
+  EOR R2, R3, R2
+  STR R2, [R1]
+  POP {R0,R1,R2,R3,PC}
+
+DEFAULT_HANDLER:
+  B FOREVER
+
+FAULT_HANDLER:
+ LDR R1, =GPIOD_BSRR
+ LDR R3, [R1]
+ LSL R2, R0, #14
+ ORR R2, R3, R2
+ STR R2, [R1]
+ B FOREVER
+
+SYSTICK_HANDLER:
+  PUSH {LR}
+  BL LED_TOGGLE_GREEN
+  POP {PC}
+
+FOREVER:
+  B FOREVER
+.end
